@@ -24,8 +24,15 @@ tl,dr : **At the end of this blog you'll be able to select which website or IP a
 This file tells our VPN client the configuration of our VPN.
 
 Save the below config file as vpn-config.conf anywhere on your computer
-
-{% gist b443e20658cdf3e762a4e9df1a6e31bb vpn-config.conf %}
+```
+host = vpn.iiitd.edu.in
+port = 10443
+username = <your username>
+password = <your pass>
+set-routes = 0
+set-dns = 0
+pppd-use-peerdns = 0
+```
 
 `set-routes = 0` specifies to not make any routes through the VPN, now we will whitelist the websites to use through the VPN.
 
@@ -48,7 +55,25 @@ sudo chmod a+x /etc/ppp/ip-up.d/fortivpn
 
 Edit the above script with your favourite editor, it shall look like:
 
-{% gist b443e20658cdf3e762a4e9df1a6e31bb my-pppscript.sh %}
+```bash
+#!/bin/bash
+#
+# Whitelist here all domains that need to go through openfortivpn
+# Domains and IPs are separated by a space
+#
+ips='192.168.2.217 192.168.29.151'
+domains='example.com example.fr'
+
+let resolved
+for domain in $domains; do
+  resolved=`dig +short $domain | tail -n1`
+  ips="$ips $resolved"
+done
+
+for ip in $ips; do
+  route add $ip dev ppp0
+done
+```
 
 Now add the ips and domains you want to access through the VPN. 
 
@@ -90,7 +115,22 @@ sudo touch /etc/systemd/system/openfortivpn.service
 
 Open it with your favorite editor and enter this configuration. Thanks to [DimitriPapadopoulos](https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-620720265) for helping me with it.
 
-{% gist b443e20658cdf3e762a4e9df1a6e31bb openfortivpn.service %}
+```
+[Unit]
+Description = OpenFortiVPN
+After=network-online.target
+Documentation=man:openfortivpn(1)
+
+[Service]
+Type=idle
+ExecStart = /usr/bin/openfortivpn -c <path to your config file>
+StandardOutput=file:<any-place-where you want to save your logs>
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
 
 To start this service, simply run
 

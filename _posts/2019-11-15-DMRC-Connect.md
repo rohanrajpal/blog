@@ -5,7 +5,7 @@ date:   2019-11-15 16:00:00 +0530
 comments: true
 ---
 
-From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human Centered Systems.
+From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.
 
 <div class="container">
   <img class="logo" src="{{ site.baseurl }}/images/DMRC/logo.png">  <br>
