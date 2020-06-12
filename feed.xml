@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-12T13:19:57-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey in the tech world.</subtitle><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-12T14:03:35-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
 
 &lt;p&gt;I was trying to figure out a way to use VPN specifically for the server in college and let the other traffic move normally. That’s when I came across &lt;a href=&quot;https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-437783005&quot;&gt;this solution&lt;/a&gt;. In this blog I’ll explain the solution step by step.&lt;/p&gt;
 
@@ -26,9 +26,14 @@
 &lt;p&gt;This file tells our VPN client the configuration of our VPN.&lt;/p&gt;
 
 &lt;p&gt;Save the below config file as vpn-config.conf anywhere on your computer&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/b443e20658cdf3e762a4e9df1a6e31bb.js?file=vpn-config.conf&quot;&gt; &lt;/script&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;host = vpn.iiitd.edu.in
+port = 10443
+username = &amp;lt;your username&amp;gt;
+password = &amp;lt;your pass&amp;gt;
+set-routes = 0
+set-dns = 0
+pppd-use-peerdns = 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;set-routes = 0&lt;/code&gt; specifies to not make any routes through the VPN, now we will whitelist the websites to use through the VPN.&lt;/p&gt;
 
@@ -50,8 +55,24 @@
 
 &lt;p&gt;Edit the above script with your favourite editor, it shall look like:&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/b443e20658cdf3e762a4e9df1a6e31bb.js?file=my-pppscript.sh&quot;&gt; &lt;/script&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Whitelist here all domains that need to go through openfortivpn&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Domains and IPs are separated by a space&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ips&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'192.168.2.217 192.168.29.151'&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;domains&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'example.com example.fr'&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;let &lt;/span&gt;resolved
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;domain &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$domains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do
+  &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;resolved&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;dig +short &lt;span class=&quot;nv&quot;&gt;$domain&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n1&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;ips&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ips&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$resolved&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done
+
+for &lt;/span&gt;ip &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ips&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do
+  &lt;/span&gt;route add &lt;span class=&quot;nv&quot;&gt;$ip&lt;/span&gt; dev ppp0
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now add the ips and domains you want to access through the VPN.&lt;/p&gt;
 
@@ -90,8 +111,21 @@ link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
 
 &lt;p&gt;Open it with your favorite editor and enter this configuration. Thanks to &lt;a href=&quot;https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-620720265&quot;&gt;DimitriPapadopoulos&lt;/a&gt; for helping me with it.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/b443e20658cdf3e762a4e9df1a6e31bb.js?file=openfortivpn.service&quot;&gt; &lt;/script&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Unit]
+Description = OpenFortiVPN
+After=network-online.target
+Documentation=man:openfortivpn(1)
+
+[Service]
+Type=idle
+ExecStart = /usr/bin/openfortivpn -c &amp;lt;path to your config file&amp;gt;
+StandardOutput=file:&amp;lt;any-place-where you want to save your logs&amp;gt;
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;To start this service, simply run&lt;/p&gt;
 
@@ -127,7 +161,7 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
   &lt;li&gt;&lt;a href=&quot;https://github.com/adrienverge/openfortivpn/wiki&quot;&gt;openfortivpn&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docstore.mik.ua/orelly/linux/run/ch15_02.htm&quot;&gt;ppp&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docstore.mik.ua/orelly/networking_2ndEd/tcp/appa_02.htm&quot;&gt;ppp daemon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.</summary></entry><entry><title type="html">DMRC Connect</title><link href="https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect.html" rel="alternate" type="text/html" title="DMRC Connect" /><published>2019-11-15T04:30:00-06:00</published><updated>2019-11-15T04:30:00-06:00</updated><id>https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect.html">&lt;p&gt;From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human Centered Systems.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.</summary></entry><entry><title type="html">DMRC Connect</title><link href="https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect.html" rel="alternate" type="text/html" title="DMRC Connect" /><published>2019-11-15T04:30:00-06:00</published><updated>2019-11-15T04:30:00-06:00</updated><id>https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect.html">&lt;p&gt;From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.&lt;/p&gt;
 
 &lt;div class=&quot;container&quot;&gt;
   &lt;img class=&quot;logo&quot; src=&quot;/blog/images/DMRC/logo.png&quot; /&gt;  &lt;br /&gt;
@@ -239,7 +273,7 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
   &lt;img class=&quot;director&quot; src=&quot;/blog/images/DMRC/BBI/director.jpg&quot; /&gt;
 
   &lt;img class=&quot;with-pk&quot; src=&quot;/blog/images/DMRC/BBI/with-pk.jpg&quot; /&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human Centered Systems.</summary></entry><entry><title type="html">My GSoC experience with VideoLAN</title><link href="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" rel="alternate" type="text/html" title="My GSoC experience with VideoLAN" /><published>2019-08-12T02:30:00-05:00</published><updated>2019-08-12T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html">&lt;h2 id=&quot;introduction-&quot;&gt;Introduction &lt;img src=&quot;/blog/images/videoLANLogo.png&quot; alt=&quot;videolan&quot; /&gt;&lt;/h2&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.</summary></entry><entry><title type="html">My GSoC experience with VideoLAN</title><link href="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" rel="alternate" type="text/html" title="My GSoC experience with VideoLAN" /><published>2019-08-12T02:30:00-05:00</published><updated>2019-08-12T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html">&lt;h2 id=&quot;introduction-&quot;&gt;Introduction &lt;img src=&quot;/blog/images/videoLANLogo.png&quot; alt=&quot;videolan&quot; /&gt;&lt;/h2&gt;
 &lt;p&gt;This summer, I participated as a &lt;a href=&quot;https://summerofcode.withgoogle.com/&quot;&gt;Google Summer of Code&lt;/a&gt; student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff!&lt;br /&gt;
 I was blessed to have great mentors and learned a lot about the open-source community.&lt;/p&gt;
 
