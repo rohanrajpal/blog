@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>My GSoC experience with VideoLAN | Rohan Rajpal</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="My GSoC experience with VideoLAN" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction This summer, I participated as a Google Summer of Code student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff! I was blessed to have great mentors and learned a lot about the open-source community." />
+<meta property="og:description" content="Introduction This summer, I participated as a Google Summer of Code student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff! I was blessed to have great mentors and learned a lot about the open-source community." />
+<link rel="canonical" href="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" />
+<meta property="og:url" content="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" />
+<meta property="og:site_name" content="Rohan Rajpal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-12T02:30:00-05:00" />
+<script type="application/ld+json">
+{"headline":"My GSoC experience with VideoLAN","dateModified":"2019-08-12T02:30:00-05:00","datePublished":"2019-08-12T02:30:00-05:00","description":"Introduction This summer, I participated as a Google Summer of Code student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff! I was blessed to have great mentors and learned a lot about the open-source community.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>My GSoC experience with VideoLAN | Rohan Rajpal</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="My GSoC experience with VideoLAN" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction This summer, I participated as a Google Summer of Code student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff! I was blessed to have great mentors and learned a lot about the open-source community." />
+<meta property="og:description" content="Introduction This summer, I participated as a Google Summer of Code student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff! I was blessed to have great mentors and learned a lot about the open-source community." />
+<link rel="canonical" href="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" />
+<meta property="og:url" content="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" />
+<meta property="og:site_name" content="Rohan Rajpal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-12T02:30:00-05:00" />
+<script type="application/ld+json">
+{"headline":"My GSoC experience with VideoLAN","dateModified":"2019-08-12T02:30:00-05:00","datePublished":"2019-08-12T02:30:00-05:00","description":"Introduction This summer, I participated as a Google Summer of Code student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff! I was blessed to have great mentors and learned a lot about the open-source community.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+
+<script data-ad-client="ca-pub-2665834374828244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Rohan Rajpal</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">My GSoC experience with VideoLAN</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2019-08-12T02:30:00-05:00" itemprop="datePublished">
+        Aug 12, 2019
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#GSoC">GSoC</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="introduction-">Introduction <img src="/blog/images/videoLANLogo.png" alt="videolan" /></h2>
+<p>This summer, I participated as a <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff!<br />
+I was blessed to have great mentors and learned a lot about the open-source community.</p>
+
+<h3 id="project-and-proposal">Project and Proposal</h3>
+
+<p>The VLC media player has an Editor which enables you to customize the player controlbar UI; you can arrange buttons like the play button as per your liking. My main task was to implement this Editor functionality in the new UI for VLC.</p>
+
+<p>You can have a look at my <a href="https://summerofcode.withgoogle.com/projects/#5519642150305792">project page</a> on the GSoC website. Feel free to check out my <a href="https://docs.google.com/document/d/1h6ABFFuIs7gJh4_zwkN23aYkeuDNsn3GkMUPgzeB7OI/edit">proposal.</a></p>
+
+<h3 id="patches">Patches</h3>
+
+<p>I made an account on <a href="code.videolan.org">VideoLAN’s Gitlab</a> and worked on <a href="https://code.videolan.org/rohanrajpal/vlc-qml">this</a> repository. I used to push all my commits there to get them reviewed. Then made patches out of them and sent commits to the VLC-developer mailing list. A few other people would then review the patches. Finally, after making the required changes, the patches would get merged.</p>
+
+<p><span style="font-size: 14pt">
+<a href="https://patches.videolan.org/project/vlc-devel/list/?submitter=908&amp;state=*">Here</a> is a list of all my patches.
+</span></p>
+<h2 id="the-team">The Team</h2>
+
+<p>A big thanks to the team and my mentors who helped me with my endless doubts!</p>
+
+<ul>
+  <li><a href="https://code.videolan.org/AbelTesfaye">Abel Tesfaye</a> (GSoC Student)</li>
+  <li><a href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;tf=1&amp;source=mailto&amp;to=kohli.sagar2@gmail.com">Sagar Kohli</a> (GSoC Student)</li>
+  <li><a href="https://code.videolan.org/jbk">Jean-Baptiste Kempf</a> (VideoLAN president)</li>
+  <li><a href="https://code.videolan.org/chub">Pierre Lamot</a> (Software engineer at Videolabs)</li>
+  <li><a href="https://code.videolan.org/alexandre-janniaux">Alexandre Janniaux</a> (Software engineer at Videolabs)</li>
+  <li><a href="https://code.videolan.org/rohanrajpal">Rohan Rajpal</a> (Me)</li>
+</ul>
+
+<p>Our communication was mainly via emails and #vlc-gsoc on IRC.</p>
+
+<h2 id="the-project">The Project</h2>
+
+<h3 id="what-work-was-done">What work was done?</h3>
+
+<p>I had made some contributions towards the player controlbar and further wanted to work on it. Jean then suggested I should work on the Editor. Making the Editor was a big task to do, we divided it into the following parts:</p>
+
+<ol>
+  <li>Create a model of all the buttons/widgets on the player ControlBar.</li>
+  <li>Load the player buttons from the model instead of hardcoding them.</li>
+  <li>Make a simple drag and drop interface which changes the model by dragging and dropping and updates the config</li>
+  <li>Make a View from which you can drag and add buttons to the player ControlBar.</li>
+  <li>Add profiles combobox via which you can load, make and delete configurations for the player.</li>
+  <li>Populate the miniplayer from the model</li>
+  <li>Make miniplayer editable and add a tab for it in the editor</li>
+</ol>
+
+<p>I have also worked on a few other things</p>
+
+<ol>
+  <li>Add all the missing buttons and widgets. I’ve added the following:
+    <ul>
+      <li>Volume Widget<br />
+ <img src="/blog/images/volumeDemo.gif" alt="volume" /></li>
+      <li>Teletext Widget<br />
+ <img src="/blog/images/teletextPopup.png" alt="teletext" /></li>
+      <li>Aspect Ratio widget<br />
+ <img src="/blog/images/aspectRatioWidget.png" alt="aspect" /></li>
+      <li>Record button</li>
+      <li>Spacer widget</li>
+      <li>Extended Spacer widget</li>
+      <li>FullScreen button</li>
+      <li>Record button</li>
+      <li>AB Loop button</li>
+      <li>Snapshot button</li>
+      <li>Stop button</li>
+      <li>Media Info button</li>
+      <li>Frame by frame button</li>
+      <li>Faster button</li>
+      <li>Slower button</li>
+      <li>Open media button</li>
+      <li>Extended settings button</li>
+      <li>Step forward button</li>
+      <li>Step backward button</li>
+      <li>Quit button</li>
+    </ul>
+  </li>
+  <li>Create a topbar for non editable buttons
+ <img src="/blog/images/topBar.png" alt="topBar" /></li>
+</ol>
+
+<h3 id="whats-left-to-do">What’s left to do?</h3>
+
+<p>Although I completed every task I was assigned, below-mentioned tasks are best suited as a follow-up for my work done:</p>
+
+<ol>
+  <li>If too many widgets come on one side the center buttons don’t remain in the center anymore. This has to be fixed.</li>
+  <li>The design of the Teletext and a few other widgets isn’t final and work needs to be done.</li>
+</ol>
+
+<h2 id="demo">Demo</h2>
+<p>Have a look on how the VLC Editor works below:</p>
+<div class="embed-container">
+  <iframe width="640" height="480" src="https://drive.google.com/file/d/1HChkHipXaNVgkkA8ZMF5IMyHLtQv3N20/preview" frameborder="0" allowfullscreen="">
+  </iframe>
+</div>
+
+<h2 id="highlights-and-challenges">Highlights and Challenges</h2>
+
+<h3 id="make-a-generic-player-controlbar">Make a generic player controlbar</h3>
+
+<p>The first task was to make a model that had all the button and widget data. Then I had to use that model to populate the player ControlBar. Loaders are quite helpful when you have to load a component in QML.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">Loader</span> <span class="p">{</span>
+       <span class="nl">id:</span> <span class="n">myLoader</span>
+       <span class="nl">source:</span> <span class="s">"MyItem.qml"</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>After making the buttons model. The next step was to make a QtAbstractListModel to maintain a list of the buttons in current config. This is how the player ControlBar is populated now:</p>
+<ul>
+  <li>The model would load the config from VLC Core API.</li>
+  <li>The player controlbar model would then add the respective buttons to the list.</li>
+  <li>The main controlbar would then use this model to get the list and ids which would then load the button from the buttons model.</li>
+</ul>
+
+<h3 id="make-sure-vlc-is-accessible-via-keyboard">Make sure VLC is accessible via keyboard</h3>
+
+<p>One had to make sure that VLC is easily useable via the Keyboard as well. KeyNavigation and Focuscope are the critical things you’ll work with when you are working with Focus.</p>
+
+<p>With a lot of documentation reading, experimenting, and Pierre’s help, I successfully got the KeyNavigation right.</p>
+
+<h3 id="drag-and-drop">Drag and Drop</h3>
+
+<p>We all use drag and drop interfaces quite frequently. Making such interfaces made me understand the design and the logic behind it.</p>
+
+<p>To make an item draggable, you have to set it as a drag target. Similarly, to make it possible to drop a draggable, you need to declare a DropArea.</p>
+
+<p>I also had to add functionalities like move, insert and delete to the model, because Drag and Drop involve all these actions.<br />
+Have a look at some of the actions below:<br />
+<img src="/blog/images/DNDDemo.gif" alt="" /></p>
+
+<p>The next task was to code the cancel and close buttons. The player controlbar should only be updated when the user presses the close button. To implement this, I used signals.</p>
+
+<p>When you press the close button, the toolbarConfUpdated signal emits, and the playerControlBar is updated.</p>
+
+<p><a href="https://doc.qt.io/archives/qt-4.8/signalsandslots.html">Signals and Slots</a> are used for communication between objects in Qt. Here’s the signal sent when toolbar is updated:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">if</span><span class="p">(</span> <span class="n">toolbarEditor</span><span class="o">-&gt;</span><span class="n">exec</span><span class="p">()</span> <span class="o">==</span> <span class="n">QDialog</span><span class="o">::</span><span class="n">Accepted</span> <span class="p">)</span>
+    <span class="n">emit</span> <span class="nf">toolBarConfUpdated</span><span class="p">();</span></code></pre></figure>
+
+<h3 id="hinting-the-user">Hinting the user</h3>
+<p>For the user to easily use the drag and drop interface, we have to provide some hints.<br />
+When you hover over a draggable item, the cursor changes to an open hand cursor. If you click and hold over it, the cursor changes to a closed hand cursor.<br />
+<img src="/blog/images/cursorShape.jpg" alt="" /><br />
+The cursor changes to ForbiddenCursor if you take the draggable to a place where it’s not possible to drop.</p>
+
+<h3 id="profiles">Profiles</h3>
+<p>Profiles help someone easily save their preferences. For this, I kept the configs of both the player and the mini-player controlbar and split them using a delimiter.
+<img src="/blog/images/profileDemo.gif" alt="" /></p>
+
+<h3 id="different-parts-of-the-editor">Different parts of the Editor</h3>
+<p>One interesting thing about this editor is that it is a mix of QML and Qt/C++. The window, profiles section and action buttons are coded in Qt. The whole drag and drop part is in QML.</p>
+
+<p>Why use Qt when all can be done in QML? Because:</p>
+<ul>
+  <li>qml takes more  ram</li>
+  <li>qml accessibility is hard to get</li>
+  <li>qml is harder to debug, and helps doing some big qml files, which we want to avoid at all cost.</li>
+</ul>
+
+<p>The picture below shows the division.
+<img src="/blog/images/EditorDivision.png" alt="Alt Text" /></p>
+
+<h3 id="things-i-learned">Things I learned</h3>
+<ul>
+  <li>Git
+    <ul>
+      <li><a href="https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html">Tricks</a> like fixup and autosquash help a lot in keeping the commits clean.</li>
+      <li>Rebase and reset is quite helpful when you need to edit or rearrange commits.</li>
+      <li>How to work with patches, send emails from git directly.</li>
+      <li>Handling merge conflicts like a pro.</li>
+      <li>How to split commits? A nice trick is if the commit message has bullet points, it can further be split.</li>
+    </ul>
+  </li>
+  <li>Code
+    <ul>
+      <li>Avoid writing <a href="https://www.youtube.com/watch?v=-AQfQFcXac8">over-engineered</a> code</li>
+      <li>How to work on a huge codebase. Things like Memory leaks, ram consumption, learned how to use the VLC Core API.</li>
+      <li>Design patterns like the <a href="https://wiki.qt.io/D-Pointer">D-pointer strategy</a>  and <a href="https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html">Model View Delegate</a>.</li>
+      <li>Qt/C++, QML and writing production-level code in them.</li>
+      <li>QtCreator, one of the best IDEs I’ve used.</li>
+    </ul>
+  </li>
+  <li>Design
+    <ul>
+      <li>Learned design concepts like form follows the flow.</li>
+      <li>Prototyping, brainstorming on interactions.</li>
+      <li>Clipping</li>
+      <li>Thinking design solutions keeping the code in mind.</li>
+    </ul>
+  </li>
+</ul>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="rohanrajpal/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A minimal site where I write about my journey in the tech world.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/rohanrajpal" title="rohanrajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.instagram.com/rohan__rajpal" title="rohan__rajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#instagram"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/rohanrajpal" title="rohanrajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/rohan__rajpal" title="rohan__rajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

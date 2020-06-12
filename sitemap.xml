@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://rohanrajpal.github.io/blog/markdown/2020/01/14/test-markdown-post.html</loc>
-<lastmod>2020-01-14T00:00:00-06:00</lastmod>
+<loc>https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html</loc>
+<lastmod>2019-08-12T02:30:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://rohanrajpal.github.io/blog/jupyter/2020/02/20/test.html</loc>
-<lastmod>2020-02-20T00:00:00-06:00</lastmod>
+<loc>https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect.html</loc>
+<lastmod>2019-11-15T04:30:00-06:00</lastmod>
+</url>
+<url>
+<loc>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html</loc>
+<lastmod>2020-04-25T02:30:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://rohanrajpal.github.io/blog/about/</loc>

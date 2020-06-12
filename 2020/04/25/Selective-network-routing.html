@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Selective network routing/Split Tunneling via VPN | Rohan Rajpal</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Selective network routing/Split Tunneling via VPN" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing." />
+<meta property="og:description" content="Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing." />
+<link rel="canonical" href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" />
+<meta property="og:url" content="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" />
+<meta property="og:site_name" content="Rohan Rajpal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-25T02:30:00-05:00" />
+<script type="application/ld+json">
+{"headline":"Selective network routing/Split Tunneling via VPN","dateModified":"2020-04-25T02:30:00-05:00","datePublished":"2020-04-25T02:30:00-05:00","description":"Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Selective network routing/Split Tunneling via VPN | Rohan Rajpal</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Selective network routing/Split Tunneling via VPN" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing." />
+<meta property="og:description" content="Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing." />
+<link rel="canonical" href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" />
+<meta property="og:url" content="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" />
+<meta property="og:site_name" content="Rohan Rajpal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-25T02:30:00-05:00" />
+<script type="application/ld+json">
+{"headline":"Selective network routing/Split Tunneling via VPN","dateModified":"2020-04-25T02:30:00-05:00","datePublished":"2020-04-25T02:30:00-05:00","description":"Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+
+<script data-ad-client="ca-pub-2665834374828244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Rohan Rajpal</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Selective network routing/Split Tunneling via VPN</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-25T02:30:00-05:00" itemprop="datePublished">
+        Apr 25, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.</p>
+
+<p>I was trying to figure out a way to use VPN specifically for the server in college and let the other traffic move normally. That’s when I came across <a href="https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-437783005">this solution</a>. In this blog I’ll explain the solution step by step.</p>
+
+<p>tl,dr : <strong>At the end of this blog you’ll be able to select which website or IP addresses you want to route through the VPN.</strong></p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+  <li>Ubuntu (Should work on other Linux distros as well)
+    <ul>
+      <li>If you are using windows, this method works with Windows Subsystem for Linux. Do <a href="https://github.com/microsoft/WSL/issues/4201#issuecomment-539034470">ensure that you have WSL2</a> before proceeding.</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/adrienverge/openfortivpn">Openfortivpn</a>
+    <ul>
+      <li>Ensure that you can connect to a VPN using it.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="steps-for-selective-routing">Steps for selective routing</h2>
+
+<h3 id="1-vpn-configuration-file">1. VPN configuration file</h3>
+
+<p>This file tells our VPN client the configuration of our VPN.</p>
+
+<p>Save the below config file as vpn-config.conf anywhere on your computer</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/b443e20658cdf3e762a4e9df1a6e31bb.js?file=vpn-config.conf"> </script>
+
+<p><code class="highlighter-rouge">set-routes = 0</code> specifies to not make any routes through the VPN, now we will whitelist the websites to use through the VPN.</p>
+
+<h3 id="2-setup-the-ppp-script">2. Setup the PPP script</h3>
+
+<p><strong>What’s PPP?</strong>: PPP is Point to Point protocol. Linux uses this protocol to communicate over TCP/IP to your Internet Provider.<a href="https://docstore.mik.ua/orelly/linux/run/ch15_02.htm">read more</a></p>
+
+<p>We are now going to write a script that will whitelist specific domains to pass through the VPN.</p>
+
+<p>Use the following commands to create the script</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo touch</span> /etc/ppp/ip-up.d/fortivpn
+<span class="nb">sudo chmod </span>a+x /etc/ppp/ip-up.d/fortivpn
+</code></pre></div></div>
+
+<p><strong>What’s pppd?</strong> The PPP Daemon (pppd) is a freely available implementation of the Point-to-Point Protocol (PPP) that runs on many Unix systems. <a href="docstore.mik.ua/orelly/networking_2ndEd/tcp/appa_02.htm">read more</a></p>
+
+<p><strong>What’s ip-up?</strong> /etc/ppp/ip-up is a shell script executed by pppd when the link/internet comes up. <a href="docstore.mik.ua/orelly/networking_2ndEd/tcp/appa_02.htm">read more</a></p>
+
+<p>Edit the above script with your favourite editor, it shall look like:</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/b443e20658cdf3e762a4e9df1a6e31bb.js?file=my-pppscript.sh"> </script>
+
+<p>Now add the ips and domains you want to access through the VPN.</p>
+
+<h3 id="3-run-the-vpn">3. Run the VPN</h3>
+
+<p>The following command should connect you to your VPN now.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>openfortivpn <span class="nt">-c</span> vpn-config.conf
+</code></pre></div></div>
+
+<p>Below you can see the routes added for the ip addresses. ppp0 is the vpn interface and enp2s0 is the ethernet.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rohan@rohan-laptop ~&gt; route                                                                  <span class="o">(</span>base<span class="o">)</span>
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         _gateway        0.0.0.0         UG    100    0        0 enp2s0
+one.one.one.one 0.0.0.0         255.255.255.255 UH    0      0        0 ppp0
+103.25.231.4    0.0.0.0         255.255.255.255 UH    0      0        0 ppp0
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp2s0
+192.168.0.0     0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
+192.168.2.217   0.0.0.0         255.255.255.255 UH    0      0        0 ppp0
+192.168.29.151  0.0.0.0         255.255.255.255 UH    0      0        0 ppp0
+</code></pre></div></div>
+
+<p><strong>That’s about it!</strong> You can now work on your server and enjoy fast internet along :)</p>
+
+<h3 id="bonus-automatically-start-vpn-on-boot">Bonus: Automatically start VPN on boot</h3>
+
+<p>It’s quite irritating to log into the VPN everytime before starting work. So I created a system service to automatically connect to VPN on boot.
+<em>Disclaimer:</em> this will not work with WSL2</p>
+
+<p>Run these commands to setup the service</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo touch</span> /etc/systemd/system/openfortivpn.service
+</code></pre></div></div>
+
+<p>Open it with your favorite editor and enter this configuration. Thanks to <a href="https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-620720265">DimitriPapadopoulos</a> for helping me with it.</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/b443e20658cdf3e762a4e9df1a6e31bb.js?file=openfortivpn.service"> </script>
+
+<p>To start this service, simply run</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>openfortivpn
+<span class="nb">sudo </span>systemctl start openfortivpn
+</code></pre></div></div>
+
+<p>To check if it is running</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rohan@rohan-laptop ~&gt; <span class="nb">sudo </span>systemctl status openfortivpn
+● openfortivpn.service - OpenFortiVPN
+   Loaded: loaded <span class="o">(</span>/etc/systemd/system/openfortivpn.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+   Active: active <span class="o">(</span>running<span class="o">)</span> since Sat 2020-04-25 13:22:26 IST<span class="p">;</span> 3h 43min ago
+     Docs: man:openfortivpn<span class="o">(</span>1<span class="o">)</span>
+ Main PID: 1851 <span class="o">(</span>openfortivpn<span class="o">)</span>
+    Tasks: 6 <span class="o">(</span>limit: 4915<span class="o">)</span>
+   CGroup: /system.slice/openfortivpn.service
+           ├─1851 /usr/bin/openfortivpn <span class="nt">-c</span> /home/rohan/Documents/vpn-configs/iiitd.conf
+           └─1852 /usr/sbin/pppd 38400 :1.1.1.1 noipdefault noaccomp noauth default-asyncmap nopcomp
+
+Apr 25 13:22:26 rohan-laptop systemd[1]: Started OpenFortiVPN.
+Apr 25 13:22:26 rohan-laptop pppd[1852]: pppd 2.4.7 started by root, uid 0
+Apr 25 13:22:26 rohan-laptop pppd[1852]: Using interface ppp0
+Apr 25 13:22:26 rohan-laptop pppd[1852]: Connect: ppp0 &lt;<span class="nt">--</span><span class="o">&gt;</span> /dev/pts/0
+Apr 25 13:22:27 rohan-laptop pppd[1852]: <span class="nb">local  </span>IP address 10.212.134.101
+Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
+</code></pre></div></div>
+
+<p>Thanks for reading :) If this did help you, feels free to like, comment and share this blog.</p>
+
+<h4 id="references">References</h4>
+<ul>
+  <li><a href="https://github.com/adrienverge/openfortivpn/wiki">openfortivpn</a></li>
+  <li><a href="https://docstore.mik.ua/orelly/linux/run/ch15_02.htm">ppp</a></li>
+  <li><a href="https://docstore.mik.ua/orelly/networking_2ndEd/tcp/appa_02.htm">ppp daemon</a></li>
+</ul>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="rohanrajpal/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/2020/04/25/Selective-network-routing.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A minimal site where I write about my journey in the tech world.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/rohanrajpal" title="rohanrajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.instagram.com/rohan__rajpal" title="rohan__rajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#instagram"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/rohanrajpal" title="rohanrajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/rohan__rajpal" title="rohan__rajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
