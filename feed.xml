@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-12T14:08:44-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-13T05:29:29-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
 
 &lt;p&gt;I was trying to figure out a way to use VPN specifically for the server in college and let the other traffic move normally. That’s when I came across &lt;a href=&quot;https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-437783005&quot;&gt;this solution&lt;/a&gt;. In this blog I’ll explain the solution step by step.&lt;/p&gt;
 
@@ -161,10 +161,11 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
   &lt;li&gt;&lt;a href=&quot;https://github.com/adrienverge/openfortivpn/wiki&quot;&gt;openfortivpn&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docstore.mik.ua/orelly/linux/run/ch15_02.htm&quot;&gt;ppp&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docstore.mik.ua/orelly/networking_2ndEd/tcp/appa_02.htm&quot;&gt;ppp daemon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.</summary></entry><entry><title type="html">DMRC Connect</title><link href="https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect.html" rel="alternate" type="text/html" title="DMRC Connect" /><published>2019-11-15T04:30:00-06:00</published><updated>2019-11-15T04:30:00-06:00</updated><id>https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2019/11/15/DMRC-Connect.html">&lt;p&gt;From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.&lt;/p&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.soundtraining.net/2013/03/how-to-configure-split-tunneling-on.html&quot;&gt;thumbnail image&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/split_tunnel.jpg" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/split_tunnel.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">DMRC Connect: Improve your daily commute</title><link href="https://rohanrajpal.github.io/blog/android/2019/11/15/DMRC-Connect.html" rel="alternate" type="text/html" title="DMRC Connect: Improve your daily commute" /><published>2019-11-15T04:30:00-06:00</published><updated>2019-11-15T04:30:00-06:00</updated><id>https://rohanrajpal.github.io/blog/android/2019/11/15/DMRC-Connect</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/android/2019/11/15/DMRC-Connect.html">&lt;p&gt;From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.&lt;/p&gt;
 
-&lt;div class=&quot;container&quot;&gt;
-  &lt;img class=&quot;logo&quot; src=&quot;/blog/images/DMRC/logo.png&quot; /&gt;  &lt;br /&gt;
+&lt;div class=&quot;dmrc-container&quot;&gt;
+  &lt;img class=&quot;dmrc-logo&quot; src=&quot;/blog/images/DMRC/logo.png&quot; /&gt;  &lt;br /&gt;
   DMRC-Connect
 &lt;/div&gt;
 
@@ -172,9 +173,12 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
 &lt;p&gt;The metro has been the backbone of transport in Delhi NCR, with daily ridership in excess of 5 million riders. It is famous for providing world-class transit with reach to almost all corners of the city with a reputation of punctuality and quality. At the core of these values lie the vision and mission of DMRC that aim to have the best possible experience for riders from all walks of life and have that with trust and reliability.&lt;/p&gt;
 
 &lt;p&gt;DMRC has always tried to take an extra step ahead to connect better with the riders and provide them with the best experience. Social media plays an important role in their endeavour to build this connection, with DMRC being active on all social media platforms and constantly engaging with the riders.&lt;/p&gt;
-&lt;div class=&quot;container&quot;&gt;
-  &lt;img class=&quot;tweets&quot; src=&quot;/blog/images/DMRC/6_q_r.png&quot; /&gt;
-  &lt;img class=&quot;tweets&quot; src=&quot;/blog/images/DMRC/7_q_r.png&quot; /&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Red Line Update&lt;br /&gt;&lt;br /&gt;Delay in service from Shastri Park towards Dilshad Garden due to a passenger on track at Welcome.&lt;br /&gt;&lt;br /&gt;Normal service on all other lines.&lt;/p&gt;&amp;mdash; Delhi Metro Rail Corporation (@OfficialDMRC) &lt;a href=&quot;https://twitter.com/OfficialDMRC/status/1158191977617227776?ref_src=twsrc%5Etfw&quot;&gt;August 5, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Hi. Metro services shall be resumed as per government directions. We shall update the information on our social media channels. Thank You!&lt;/p&gt;&amp;mdash; Delhi Metro Rail Corporation (@OfficialDMRC) &lt;a href=&quot;https://twitter.com/OfficialDMRC/status/1271368741285060608?ref_src=twsrc%5Etfw&quot;&gt;June 12, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/div&gt;
 
 &lt;p&gt;However, the question remains, do all Delhi metro users really use Twitter? While DMRC is putting in full efforts to relay this information to riders, is it really reaching the intended audience? Are complaints being solved fast enough for affected riders to benefit from it? Do all complaints be it from Twitter, or from their helplines come with complete information?&lt;/p&gt;
@@ -231,52 +235,214 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
 
 &lt;p&gt;After 3 iterations of user testing through Task analysis on the lo-fidelity prototypes, we arrived at the first version of the hi-fidelity prototype and conducted testing on it.&lt;/p&gt;
 
-&lt;div class=&quot;container&quot;&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/hi-fed/1.png&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/hi-fed/2.png&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/hi-fed/3.png&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/hi-fed/4.png&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/hi-fed/5.png&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/hi-fed/6.png&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/hi-fed/7.png&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/hi-fed/8.png&quot; /&gt;
-&lt;/div&gt;
+&lt;figure&gt;
+  &lt;div style=&quot;display:flex&quot;&gt;
+  
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/hi-fed/1.png&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/hi-fed/1.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/hi-fed/2.png&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/hi-fed/2.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/hi-fed/3.png&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/hi-fed/3.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/hi-fed/4.png&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/hi-fed/4.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+      &lt;/div&gt;
+      &lt;div style=&quot;display:flex&quot;&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/hi-fed/5.png&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/hi-fed/5.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/hi-fed/6.png&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/hi-fed/6.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/hi-fed/7.png&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/hi-fed/7.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/hi-fed/8.png&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/hi-fed/8.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+  &lt;/div&gt;
+  
+    &lt;figcaption&gt;High Fidelity prototypes
+&lt;/figcaption&gt;
+  
+&lt;/figure&gt;
+
 &lt;p&gt;One of the major changes after user testing on the Hi-Fidelity prototype was to change the colour scheme to one with less hue, i.e primarily blue-based instead of red-based, and to shift from side navigation to bottom navigation instead.&lt;/p&gt;
 
 &lt;h3 id=&quot;final-color-scheme-and-typography&quot;&gt;Final Color Scheme and Typography&lt;/h3&gt;
 
 &lt;p&gt;The typography used throughout was Roboto, as it is standardly used by Google and the colour scheme is mentioned below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;colorscheme&quot; src=&quot;/blog/images/DMRC/color-scheme.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;dmrc-colorscheme&quot; src=&quot;/blog/images/DMRC/color-scheme.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;final-application&quot;&gt;Final Application&lt;/h3&gt;
 
 &lt;p&gt;The final application, made with help of Android Studio and a Flask backend, was made live on the play store for users to use. The application is available &lt;a href=&quot;https://bit.ly/2NVhIEV&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;container&quot;&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/final-app/1.webp&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/final-app/2.webp&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/final-app/3.webp&quot; /&gt;
-  &lt;br /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/final-app/4.webp&quot; /&gt;
-  &lt;img class=&quot;final-app&quot; src=&quot;/blog/images/DMRC/final-app/5.webp&quot; /&gt;
-&lt;/div&gt;
+&lt;figure&gt;
+  &lt;div style=&quot;display:flex&quot;&gt;
+  
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/final-app/1.webp&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/final-app/1.webp&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/final-app/2.webp&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/final-app/2.webp&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/final-app/3.webp&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/final-app/3.webp&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/final-app/4.webp&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/final-app/4.webp&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4&quot;&gt;
+    
+    
+      &lt;a href=&quot;/blog/images/DMRC/final-app/5.webp&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/final-app/5.webp&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+  &lt;/div&gt;
+  
+    &lt;figcaption&gt;The final application
+&lt;/figcaption&gt;
+  
+&lt;/figure&gt;
 
 &lt;h2 id=&quot;building-better-interfaces-bbi2019&quot;&gt;Building Better Interfaces #BBI2019&lt;/h2&gt;
 
-&lt;div class=&quot;container&quot;&gt;
-  &lt;img class=&quot;group-pic&quot; src=&quot;/blog/images/DMRC/BBI/them-bois.jpg&quot; /&gt;
+&lt;div class=&quot;dmrc-container&quot;&gt;
+  &lt;img class=&quot;dmrc-group-pic&quot; src=&quot;/blog/images/DMRC/BBI/them-bois.jpg&quot; /&gt;
   
-  &lt;img class=&quot;station&quot; src=&quot;/blog/images/DMRC/BBI/bbi-station.jpg&quot; /&gt;
-  &lt;img class=&quot;prop&quot; src=&quot;/blog/images/DMRC/BBI/bbi-mainprop.jpg&quot; /&gt;
+  &lt;img class=&quot;dmrc-station&quot; src=&quot;/blog/images/DMRC/BBI/bbi-station.jpg&quot; /&gt;
+  &lt;img class=&quot;dmrc-prop&quot; src=&quot;/blog/images/DMRC/BBI/bbi-mainprop.jpg&quot; /&gt;
 
-  &lt;img class=&quot;director&quot; src=&quot;/blog/images/DMRC/BBI/director.jpg&quot; /&gt;
+  &lt;img class=&quot;dmrc-director&quot; src=&quot;/blog/images/DMRC/BBI/director.jpg&quot; /&gt;
 
-  &lt;img class=&quot;with-pk&quot; src=&quot;/blog/images/DMRC/BBI/with-pk.jpg&quot; /&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.</summary></entry><entry><title type="html">My GSoC experience with VideoLAN</title><link href="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" rel="alternate" type="text/html" title="My GSoC experience with VideoLAN" /><published>2019-08-12T02:30:00-05:00</published><updated>2019-08-12T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html">&lt;h2 id=&quot;introduction-&quot;&gt;Introduction &lt;img src=&quot;/blog/images/videoLANLogo.png&quot; alt=&quot;videolan&quot; /&gt;&lt;/h2&gt;
+  &lt;img class=&quot;dmrc-with-pk&quot; src=&quot;/blog/images/DMRC/BBI/with-pk.jpg&quot; /&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/dmrc-connect.jpg" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/dmrc-connect.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">My GSoC experience with VideoLAN: Redesigning the VLC media player</title><link href="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" rel="alternate" type="text/html" title="My GSoC experience with VideoLAN: Redesigning the VLC media player" /><published>2019-08-12T02:30:00-05:00</published><updated>2019-08-12T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This summer, I participated as a &lt;a href=&quot;https://summerofcode.withgoogle.com/&quot;&gt;Google Summer of Code&lt;/a&gt; student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff!&lt;br /&gt;
-I was blessed to have great mentors and learned a lot about the open-source community.&lt;/p&gt;
-
+I was blessed to have great mentors and learned a lot about the open-source community.&lt;br /&gt;
+&lt;img src=&quot;/blog/images/videoLANLogo.png&quot; alt=&quot;videolan&quot; class=&quot;dp&quot; /&gt;&lt;/p&gt;
 &lt;h3 id=&quot;project-and-proposal&quot;&gt;Project and Proposal&lt;/h3&gt;
 
 &lt;p&gt;The VLC media player has an Editor which enables you to customize the player controlbar UI; you can arrange buttons like the play button as per your liking. My main task was to implement this Editor functionality in the new UI for VLC.&lt;/p&gt;
@@ -366,10 +532,10 @@ I was blessed to have great mentors and learned a lot about the open-source comm
 
 &lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
 &lt;p&gt;Have a look on how the VLC Editor works below:&lt;/p&gt;
-&lt;div class=&quot;embed-container&quot;&gt;
-  &lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;https://drive.google.com/file/d/1HChkHipXaNVgkkA8ZMF5IMyHLtQv3N20/preview&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
-  &lt;/iframe&gt;
-&lt;/div&gt;
+
+&lt;center&gt;
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xOE-sx4Gark&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/center&gt;
 
 &lt;h2 id=&quot;highlights-and-challenges&quot;&gt;Highlights and Challenges&lt;/h2&gt;
 
@@ -465,4 +631,4 @@ The cursor changes to ForbiddenCursor if you take the draggable to a place where
       &lt;li&gt;Thinking design solutions keeping the code in mind.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Introduction This summer, I participated as a Google Summer of Code student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff! I was blessed to have great mentors and learned a lot about the open-source community.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Introduction This summer, I participated as a Google Summer of Code student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff! I was blessed to have great mentors and learned a lot about the open-source community. Project and Proposal</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/gsoc.gif" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/gsoc.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

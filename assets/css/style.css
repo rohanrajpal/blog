@@ -485,24 +485,22 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 
 .dp { width: 30%; margin: 10pt; float: right; }
 
-.tweets { width: 40%; border: 1px solid #021a40; margin: 10pt; align-content: center; }
-
-.logo { margin: 8pt; width: 10%; }
+.dmrc-logo { margin: 8pt; width: 10%; }
 
 img[alt=lofi] { display: block; margin: 0 auto; width: 80%; }
 
-.colorscheme { display: block; margin: 0 auto; border: 1px solid #021a40; }
+.dmrc-colorscheme { display: block; margin: 0 auto; border: 1px solid #021a40; }
 
-.final-app { width: 20%; border: none; background: none; margin: 8pt; }
+.dmrc-final-app { width: 20%; margin: 8pt; }
 
-.container { text-align: center; }
+.dmrc-container { text-align: center; }
 
-.group-pic { width: 60%; margin: 8pt; }
+.dmrc-group-pic { width: 60%; margin: 8pt; }
 
-.station { width: 70%; margin: 8pt; }
+.dmrc-station { width: 70%; margin: 8pt; }
 
-.prop { width: 25%; }
+.dmrc-prop { width: 25%; }
 
-.director { width: 80%; margin: 10pt; }
+.dmrc-director { width: 80%; margin: 10pt; }
 
 /*# sourceMappingURL=style.css.map */
