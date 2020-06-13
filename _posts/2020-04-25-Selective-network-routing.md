@@ -2,6 +2,7 @@
 layout: post
 title:  "Selective network routing/Split Tunneling via VPN"
 date:   2020-04-25 13:00:00 +0530
+image:  images/previews/split_tunnel.jpg
 comments: true
 ---
 Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.  
@@ -167,6 +168,7 @@ Thanks for reading :) If this did help you, feels free to like, comment and shar
 - [openfortivpn](https://github.com/adrienverge/openfortivpn/wiki)
 - [ppp](https://docstore.mik.ua/orelly/linux/run/ch15_02.htm)
 - [ppp daemon](https://docstore.mik.ua/orelly/networking_2ndEd/tcp/appa_02.htm)
+- [thumbnail image](http://blog.soundtraining.net/2013/03/how-to-configure-split-tunneling-on.html)  
 
 [1]: https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-437783005
 [2]: https://github.com/adrienverge/openfortivpn/wiki

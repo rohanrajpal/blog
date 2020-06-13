@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "My GSoC experience with VideoLAN"
+title:  "My GSoC experience with VideoLAN: Redesigning the VLC media player"
 date:   2019-08-12 13:00:00 +0530
 categories: GSoC
+image: images/previews/gsoc.gif
 comments: true
-driveId: 1HChkHipXaNVgkkA8ZMF5IMyHLtQv3N20/preview
 ---
-## Introduction ![videolan]({{ site.baseurl }}/images/videoLANLogo.png)
+## Introduction
 This summer, I participated as a [Google Summer of Code](https://summerofcode.withgoogle.com/) student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I've learned tons of exciting stuff!  
 I was blessed to have great mentors and learned a lot about the open-source community.  
-
+![videolan]({{ site.baseurl }}/images/videoLANLogo.png){: .dp}
 ### Project and Proposal
 
 The VLC media player has an Editor which enables you to customize the player controlbar UI; you can arrange buttons like the play button as per your liking. My main task was to implement this Editor functionality in the new UI for VLC.  
@@ -87,8 +87,8 @@ Although I completed every task I was assigned, below-mentioned tasks are best s
  2. The design of the Teletext and a few other widgets isn't final and work needs to be done.   
 
 ## Demo  
-Have a look on how the VLC Editor works below:
-{% include googleDrivePlayer.html id=page.driveId %}  
+Have a look on how the VLC Editor works below: 
+{% include youtube.html content="https://youtu.be/xOE-sx4Gark" %}
 
 ## Highlights and Challenges  
 
