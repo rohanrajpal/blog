@@ -1,13 +1,6 @@
 @charset "utf-8";
 
-.tweets {
-  width: 40%;
-  border:1px solid #021a40;
-  margin: 10pt;
-  align-content: center;
-}
-
-.logo {
+.dmrc-logo {
   margin: 8pt;
   width: 10%;
 }
@@ -18,37 +11,38 @@ img[alt=lofi] {
   width: 80%;
 }
 
-.colorscheme {
+.dmrc-colorscheme {
   display: block;
   margin: 0 auto;
   border:1px solid #021a40;
 }
-.final-app{
+
+.dmrc-final-app{
     width: 20%;
-    border: none;
-    background: none;
+    // border: none;
+    // background: none;
     margin: 8pt;
 }
 
-.container{
+.dmrc-container{
   text-align:center;
 }
 
-.group-pic{
+.dmrc-group-pic{
   width: 60%;
   margin: 8pt;
 }
 
-.station{
+.dmrc-station{
   width: 70%;
   margin: 8pt;
 }
 
-.prop{
+.dmrc-prop{
   width: 25%;
 }
 
-.director{
+.dmrc-director{
   width: 80%;
   margin: 10pt;
 }

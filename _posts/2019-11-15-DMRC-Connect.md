@@ -1,14 +1,59 @@
 ---
 layout: post
-title:  "DMRC Connect"
+title:  "DMRC Connect: Improve your daily commute"
 date:   2019-11-15 16:00:00 +0530
 comments: true
+categories: Android
+image: images/previews/dmrc-connect.jpg
+hifed-photo:
+  - aspect: "0.4"
+    url: "images/DMRC/hi-fed/1.png"
+    image_path: "images/DMRC/hi-fed/1.png"
+  - aspect: "0.4"
+    url: "images/DMRC/hi-fed/2.png"
+    image_path: "images/DMRC/hi-fed/2.png"
+  - aspect: "0.4"
+    url: "images/DMRC/hi-fed/3.png"
+    image_path: "images/DMRC/hi-fed/3.png"
+  - aspect: "0.4"
+    url: "images/DMRC/hi-fed/4.png"
+    image_path: "images/DMRC/hi-fed/4.png"
+    end_row: "true"
+  - aspect: "0.4"
+    url: "images/DMRC/hi-fed/5.png"
+    image_path: "images/DMRC/hi-fed/5.png"
+  - aspect: "0.4"
+    url: "images/DMRC/hi-fed/6.png"
+    image_path: "images/DMRC/hi-fed/6.png"
+  - aspect: "0.4"
+    url: "images/DMRC/hi-fed/7.png"
+    image_path: "images/DMRC/hi-fed/7.png"
+  - aspect: "0.4"
+    url: "images/DMRC/hi-fed/8.png"
+    image_path: "images/DMRC/hi-fed/8.png"
+
+finalapp-photo:
+  - aspect: "0.4"
+    url: "/images/DMRC/final-app/1.webp"
+    image_path: "/images/DMRC/final-app/1.webp"
+  - aspect: "0.4"
+    url: "/images/DMRC/final-app/2.webp"
+    image_path: "/images/DMRC/final-app/2.webp"
+  - aspect: "0.4"
+    url: "/images/DMRC/final-app/3.webp"
+    image_path: "/images/DMRC/final-app/3.webp"
+  - aspect: "0.4"
+    url: "/images/DMRC/final-app/4.webp"
+    image_path: "/images/DMRC/final-app/4.webp"
+  - aspect: "0.4"
+    url: "/images/DMRC/final-app/5.webp"
+    image_path: "/images/DMRC/final-app/5.webp"
 ---
 
 From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.
 
-<div class="container">
-  <img class="logo" src="{{ site.baseurl }}/images/DMRC/logo.png">  <br>
+<div class="dmrc-container">
+  <img class="dmrc-logo" src="{{ site.baseurl }}/images/DMRC/logo.png">  <br>
   DMRC-Connect
 </div>
 
@@ -16,10 +61,9 @@ From July-November 2019, my team and I worked on an application. This project wa
 The metro has been the backbone of transport in Delhi NCR, with daily ridership in excess of 5 million riders. It is famous for providing world-class transit with reach to almost all corners of the city with a reputation of punctuality and quality. At the core of these values lie the vision and mission of DMRC that aim to have the best possible experience for riders from all walks of life and have that with trust and reliability.
 
 DMRC has always tried to take an extra step ahead to connect better with the riders and provide them with the best experience. Social media plays an important role in their endeavour to build this connection, with DMRC being active on all social media platforms and constantly engaging with the riders.  
-<div class="container">
-  <img class="tweets" src="{{ site.baseurl }}/images/DMRC/6_q_r.png">
-  <img class="tweets" src="{{ site.baseurl }}/images/DMRC/7_q_r.png">
-</div>
+
+{% twitter https://twitter.com/OfficialDMRC/status/1158191977617227776?s=20 %}
+{% twitter https://twitter.com/OfficialDMRC/status/1271368741285060608?s=20 %}
 
 However, the question remains, do all Delhi metro users really use Twitter? While DMRC is putting in full efforts to relay this information to riders, is it really reaching the intended audience? Are complaints being solved fast enough for affected riders to benefit from it? Do all complaints be it from Twitter, or from their helplines come with complete information?
 
@@ -67,48 +111,34 @@ Key Findings from v0 and v1:
 
 ### Hi-Fidelity Prototypes
 
-After 3 iterations of user testing through Task analysis on the lo-fidelity prototypes, we arrived at the first version of the hi-fidelity prototype and conducted testing on it.   
+After 3 iterations of user testing through Task analysis on the lo-fidelity prototypes, we arrived at the first version of the hi-fidelity prototype and conducted testing on it.  
 
-<div class="container">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/hi-fed/1.png">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/hi-fed/2.png">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/hi-fed/3.png">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/hi-fed/4.png">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/hi-fed/5.png">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/hi-fed/6.png">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/hi-fed/7.png">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/hi-fed/8.png">
-</div>
+{% include flexgallery id="hifed-photo" caption="High Fidelity prototypes"%}
+
 One of the major changes after user testing on the Hi-Fidelity prototype was to change the colour scheme to one with less hue, i.e primarily blue-based instead of red-based, and to shift from side navigation to bottom navigation instead.
 
 ### Final Color Scheme and Typography
 
 The typography used throughout was Roboto, as it is standardly used by Google and the colour scheme is mentioned below.
 
-<img class="colorscheme" src="{{ site.baseurl }}/images/DMRC/color-scheme.jpg">
+<img class="dmrc-colorscheme" src="{{ site.baseurl }}/images/DMRC/color-scheme.jpg">
 
 ### Final Application
 
 The final application, made with help of Android Studio and a Flask backend, was made live on the play store for users to use. The application is available [here](https://bit.ly/2NVhIEV).  
 
-<div class="container">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/final-app/1.webp">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/final-app/2.webp">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/final-app/3.webp">
-  <br>
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/final-app/4.webp">
-  <img class="final-app" src="{{ site.baseurl }}/images/DMRC/final-app/5.webp">
-</div>
+{% include flexgallery id="finalapp-photo" caption="The final application"%}
+
 
 ## Building Better Interfaces #BBI2019 
 
-<div class="container">
-  <img class="group-pic" src="{{ site.baseurl }}/images/DMRC/BBI/them-bois.jpg">
+<div class="dmrc-container">
+  <img class="dmrc-group-pic" src="{{ site.baseurl }}/images/DMRC/BBI/them-bois.jpg">
   
-  <img class="station" src="{{ site.baseurl }}/images/DMRC/BBI/bbi-station.jpg">
-  <img class="prop" src="{{ site.baseurl }}/images/DMRC/BBI/bbi-mainprop.jpg">
+  <img class="dmrc-station" src="{{ site.baseurl }}/images/DMRC/BBI/bbi-station.jpg">
+  <img class="dmrc-prop" src="{{ site.baseurl }}/images/DMRC/BBI/bbi-mainprop.jpg">
 
-  <img class="director" src="{{ site.baseurl }}/images/DMRC/BBI/director.jpg">
+  <img class="dmrc-director" src="{{ site.baseurl }}/images/DMRC/BBI/director.jpg">
 
-  <img class="with-pk" src="{{ site.baseurl }}/images/DMRC/BBI/with-pk.jpg">
+  <img class="dmrc-with-pk" src="{{ site.baseurl }}/images/DMRC/BBI/with-pk.jpg">
 </div>
