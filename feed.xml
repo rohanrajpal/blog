@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-13T05:29:29-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-14T02:01:29-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
 
 &lt;p&gt;I was trying to figure out a way to use VPN specifically for the server in college and let the other traffic move normally. That’s when I came across &lt;a href=&quot;https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-437783005&quot;&gt;this solution&lt;/a&gt;. In this blog I’ll explain the solution step by step.&lt;/p&gt;
 
@@ -168,6 +168,83 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
   &lt;img class=&quot;dmrc-logo&quot; src=&quot;/blog/images/DMRC/logo.png&quot; /&gt;  &lt;br /&gt;
   DMRC-Connect
 &lt;/div&gt;
+
+&lt;h2 id=&quot;media-coverage&quot;&gt;Media Coverage&lt;/h2&gt;
+&lt;p&gt;We were glad that our project was covered by various news channels. Click on any of the images below to read more:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;div style=&quot;display:flex&quot;&gt;
+  
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;https://www.hindustantimes.com/education/students-of-iiit-delhi-showcase-18-innovative-projects/story-91oReLsp2VlGLlJBfTJ5jL.html&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/media/hindustantimes.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;https://www.bhaskar.com/delhi/delhi-ncr/news/increase-taste-with-food-sharing-twitter-clumsy-also-stay-updated-with-dmrc-01688839.html&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/media/dainikbhaskar.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.4&quot;&gt;
+    
+    
+      &lt;a href=&quot;https://www.latestly.com/agency-news/students-of-iiit-delhi-showcase-innovative-projects-1340276.html&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/media/latestly.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+      &lt;/div&gt;
+      &lt;div style=&quot;display:flex&quot;&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.32; padding:0 3% 0 0&quot;&gt;
+    
+    
+      &lt;a href=&quot;https://www.internationalnewsandviews.com/iiit-delhi-students-showcase-innovative-projects-at-bbi/&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/media/intnews.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.32&quot;&gt;
+    
+    
+      &lt;a href=&quot;https://www.indiatvnews.com/news/india/iiit-delhi-students-delhi-metro-live-tracking-innovative-projects-564087&quot;&gt;
+        &lt;img src=&quot;/blog/images/DMRC/media/indiatv.png&quot; alt=&quot;&quot; /&gt;
+      &lt;/a&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+  &lt;/div&gt;
+  
+    &lt;figcaption&gt;Our project featured in news
+&lt;/figcaption&gt;
+  
+&lt;/figure&gt;
 
 &lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;The metro has been the backbone of transport in Delhi NCR, with daily ridership in excess of 5 million riders. It is famous for providing world-class transit with reach to almost all corners of the city with a reputation of punctuality and quality. At the core of these values lie the vision and mission of DMRC that aim to have the best possible experience for riders from all walks of life and have that with trust and reliability.&lt;/p&gt;
@@ -386,7 +463,7 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
     
   
     
-      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+      &lt;div style=&quot;flex:0.4&quot;&gt;
     
     
       &lt;a href=&quot;/blog/images/DMRC/final-app/3.webp&quot;&gt;
@@ -395,10 +472,13 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
     
       &lt;/div&gt;
     
+      &lt;/div&gt;
+      &lt;div style=&quot;display:flex&quot;&gt;
+    
     
   
     
-      &lt;div style=&quot;flex:0.4; padding:0 3% 0 0&quot;&gt;
+      &lt;div style=&quot;flex:0.32; padding:0 3% 0 0&quot;&gt;
     
     
       &lt;a href=&quot;/blog/images/DMRC/final-app/4.webp&quot;&gt;
@@ -410,7 +490,7 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
     
   
     
-      &lt;div style=&quot;flex:0.4&quot;&gt;
+      &lt;div style=&quot;flex:0.32&quot;&gt;
     
     
       &lt;a href=&quot;/blog/images/DMRC/final-app/5.webp&quot;&gt;
