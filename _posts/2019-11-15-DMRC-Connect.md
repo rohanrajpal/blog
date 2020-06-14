@@ -3,7 +3,7 @@ layout: post
 title:  "DMRC Connect: Improve your daily commute"
 date:   2019-11-15 16:00:00 +0530
 comments: true
-categories: Android
+categories: Mobile
 image: images/previews/dmrc-connect.jpg
 hifed-photo:
   - aspect: "0.4"
