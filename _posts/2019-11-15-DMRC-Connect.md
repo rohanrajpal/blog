@@ -149,10 +149,14 @@ The typography used throughout was Roboto, as it is standardly used by Google an
 
 ### Final Application
 
-The final application, made with help of Android Studio and a Flask backend, was made live on the play store for users to use. The application is available [here](https://bit.ly/2NVhIEV).  
+The final application, made with help of Android Studio and a Flask backend, was made live on the play store for users to use. The application is available [here](https://bit.ly/2NVhIEV). However, due to lack of resources, we have closed the backend for now.
 
 {% include flexgallery id="finalapp-photo" caption="The final application"%}
 
+## DMRC Connect is now Open Source!
+
+We have released the source code on github. Feel free to clone and play around with it!
+<https://github.com/gupta-meghna64/DMRC-Connect>
 
 ## Building Better Interfaces #BBI2019 
 
@@ -166,3 +170,11 @@ The final application, made with help of Android Studio and a Flask backend, was
 
   <img class="dmrc-with-pk" src="{{ site.baseurl }}/images/DMRC/BBI/with-pk.jpg">
 </div>
+
+## Team members
+
+- Rohan Rajpal <https://github.com/rohanrajpal>
+- Meghna Gupta <https://github.com/gupta-meghna64>
+- Saatvik Jain <https://github.com/saatvikj>
+- Tanya Gupta <https://github.com/Tanya16107>
+- Siddharth Yadav <https://github.com/sedflix>
