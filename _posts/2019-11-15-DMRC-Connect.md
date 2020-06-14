@@ -42,12 +42,31 @@ finalapp-photo:
   - aspect: "0.4"
     url: "/images/DMRC/final-app/3.webp"
     image_path: "/images/DMRC/final-app/3.webp"
-  - aspect: "0.4"
+    end_row: "true"
+  - aspect: "0.32"
     url: "/images/DMRC/final-app/4.webp"
     image_path: "/images/DMRC/final-app/4.webp"
-  - aspect: "0.4"
+  - aspect: "0.32"
     url: "/images/DMRC/final-app/5.webp"
     image_path: "/images/DMRC/final-app/5.webp"
+
+media-coverage:
+  - aspect: "0.4"
+    url: "https://www.hindustantimes.com/education/students-of-iiit-delhi-showcase-18-innovative-projects/story-91oReLsp2VlGLlJBfTJ5jL.html"
+    image_path: "/images/DMRC/media/hindustantimes.png"
+  - aspect: "0.4"
+    url: "https://www.bhaskar.com/delhi/delhi-ncr/news/increase-taste-with-food-sharing-twitter-clumsy-also-stay-updated-with-dmrc-01688839.html"
+    image_path: "/images/DMRC/media/dainikbhaskar.png"
+  - aspect: "0.4"
+    url: "https://www.latestly.com/agency-news/students-of-iiit-delhi-showcase-innovative-projects-1340276.html"
+    image_path: "/images/DMRC/media/latestly.png"
+    end_row: "true"
+  - aspect: "0.32"
+    url: "https://www.internationalnewsandviews.com/iiit-delhi-students-showcase-innovative-projects-at-bbi/"
+    image_path: "/images/DMRC/media/intnews.png"
+  - aspect: "0.32"
+    url: "https://www.indiatvnews.com/news/india/iiit-delhi-students-delhi-metro-live-tracking-innovative-projects-564087"
+    image_path: "/images/DMRC/media/indiatv.png"
 ---
 
 From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.
@@ -56,6 +75,11 @@ From July-November 2019, my team and I worked on an application. This project wa
   <img class="dmrc-logo" src="{{ site.baseurl }}/images/DMRC/logo.png">  <br>
   DMRC-Connect
 </div>
+
+## Media Coverage
+We were glad that our project was covered by various news channels. Click on any of the images below to read more:
+
+{% include flexgallery id="media-coverage" caption="Our project featured in news"%}
 
 ## Motivation
 The metro has been the backbone of transport in Delhi NCR, with daily ridership in excess of 5 million riders. It is famous for providing world-class transit with reach to almost all corners of the city with a reputation of punctuality and quality. At the core of these values lie the vision and mission of DMRC that aim to have the best possible experience for riders from all walks of life and have that with trust and reliability.
