@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-14T02:06:54-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-14T02:56:37-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
 
 &lt;p&gt;I was trying to figure out a way to use VPN specifically for the server in college and let the other traffic move normally. That’s when I came across &lt;a href=&quot;https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-437783005&quot;&gt;this solution&lt;/a&gt;. In this blog I’ll explain the solution step by step.&lt;/p&gt;
 
@@ -432,7 +432,7 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
 
 &lt;h3 id=&quot;final-application&quot;&gt;Final Application&lt;/h3&gt;
 
-&lt;p&gt;The final application, made with help of Android Studio and a Flask backend, was made live on the play store for users to use. The application is available &lt;a href=&quot;https://bit.ly/2NVhIEV&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The final application, made with help of Android Studio and a Flask backend, was made live on the play store for users to use. The application is available &lt;a href=&quot;https://bit.ly/2NVhIEV&quot;&gt;here&lt;/a&gt;. However, due to lack of resources, we have closed the backend for now.&lt;/p&gt;
 
 &lt;figure&gt;
   &lt;div style=&quot;display:flex&quot;&gt;
@@ -508,6 +508,11 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
   
 &lt;/figure&gt;
 
+&lt;h2 id=&quot;dmrc-connect-is-now-open-source&quot;&gt;DMRC Connect is now Open Source!&lt;/h2&gt;
+
+&lt;p&gt;We have released the source code on github. Feel free to clone and play around with it!
+&lt;a href=&quot;https://github.com/gupta-meghna64/DMRC-Connect&quot;&gt;https://github.com/gupta-meghna64/DMRC-Connect&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;building-better-interfaces-bbi2019&quot;&gt;Building Better Interfaces #BBI2019&lt;/h2&gt;
 
 &lt;div class=&quot;dmrc-container&quot;&gt;
@@ -519,7 +524,17 @@ Apr 25 13:22:27 rohan-laptop pppd[1852]: remote IP address 1.1.1.1
   &lt;img class=&quot;dmrc-director&quot; src=&quot;/blog/images/DMRC/BBI/director.jpg&quot; /&gt;
 
   &lt;img class=&quot;dmrc-with-pk&quot; src=&quot;/blog/images/DMRC/BBI/with-pk.jpg&quot; /&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/dmrc-connect.jpg" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/dmrc-connect.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">My GSoC experience with VideoLAN: Redesigning the VLC media player</title><link href="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" rel="alternate" type="text/html" title="My GSoC experience with VideoLAN: Redesigning the VLC media player" /><published>2019-08-12T02:30:00-05:00</published><updated>2019-08-12T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;team-members&quot;&gt;Team members&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rohan Rajpal &lt;a href=&quot;https://github.com/rohanrajpal&quot;&gt;https://github.com/rohanrajpal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Meghna Gupta &lt;a href=&quot;https://github.com/gupta-meghna64&quot;&gt;https://github.com/gupta-meghna64&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Saatvik Jain &lt;a href=&quot;https://github.com/saatvikj&quot;&gt;https://github.com/saatvikj&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tanya Gupta &lt;a href=&quot;https://github.com/Tanya16107&quot;&gt;https://github.com/Tanya16107&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Siddharth Yadav &lt;a href=&quot;https://github.com/sedflix&quot;&gt;https://github.com/sedflix&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">From July-November 2019, my team and I worked on an application. This project was a part of the course: CSE501-Designing Human-Centered Systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/dmrc-connect.jpg" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/dmrc-connect.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">My GSoC experience with VideoLAN: Redesigning the VLC media player</title><link href="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html" rel="alternate" type="text/html" title="My GSoC experience with VideoLAN: Redesigning the VLC media player" /><published>2019-08-12T02:30:00-05:00</published><updated>2019-08-12T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This summer, I participated as a &lt;a href=&quot;https://summerofcode.withgoogle.com/&quot;&gt;Google Summer of Code&lt;/a&gt; student under VideoLAN. GSoC is undoubtedly one of the best summer programs out there. From designing interfaces and interactions to writing production-level code, I’ve learned tons of exciting stuff!&lt;br /&gt;
 I was blessed to have great mentors and learned a lot about the open-source community.&lt;br /&gt;
 &lt;img src=&quot;/blog/images/videoLANLogo.png&quot; alt=&quot;videolan&quot; class=&quot;dp&quot; /&gt;&lt;/p&gt;
