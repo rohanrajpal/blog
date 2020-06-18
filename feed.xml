@@ -1,13 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-18T13:03:21-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">The Virtual Internship: Learning from the Experts [Draft]</title><link href="https://rohanrajpal.github.io/blog/2020/06/14/Expedia-Internship-Learning.html" rel="alternate" type="text/html" title="The Virtual Internship: Learning from the Experts [Draft]" /><published>2020-06-14T00:00:00-05:00</published><updated>2020-06-14T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/06/14/Expedia-Internship-Learning</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/06/14/Expedia-Internship-Learning.html">&lt;p&gt;&lt;img src=&quot;/blog/images/previews/expedia-preview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-18T14:04:33-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal</title><subtitle>A minimal site where I write about my journey.</subtitle><entry><title type="html">The Virtual Internship: Learning from the Experts [Draft]</title><link href="https://rohanrajpal.github.io/blog/2020/06/14/Expedia-Internship-Learning.html" rel="alternate" type="text/html" title="The Virtual Internship: Learning from the Experts [Draft]" /><published>2020-06-14T00:00:00-05:00</published><updated>2020-06-14T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/06/14/Expedia-Internship-Learning</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/06/14/Expedia-Internship-Learning.html">&lt;blockquote&gt;
+  &lt;p&gt;Anyone who stops learning is old, whether at twenty or eighty.
+--Henry Ford&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h1 id=&quot;leadership&quot;&gt;Leadership&lt;/h1&gt;
+&lt;p&gt;Along with my project, we also had tons of workshops on various subjects: Leadership, Engineering, Branding and Mental Health!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/previews/expedia-preview.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;leadership-series&quot;&gt;Leadership Series&lt;/h1&gt;
+
+&lt;p&gt;Every week, we got a chance to meet one of the leaders in Expedia and know about their journey. It was quite interesting to know how they solved the problems and inspired others to lead.&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Tech Leaders
+  &lt;li&gt;&lt;strong&gt;Stephen Lochhead&lt;/strong&gt;, Global Head of Talent Acquisition&lt;br /&gt;
+  &lt;sup&gt;27th May, 2020&lt;/sup&gt;
     &lt;ul&gt;
-      &lt;li&gt;We have organized Leadership Series where you will get to interact with our APAC leaders and Travel Leadership Team (TLT).&lt;/li&gt;
+      &lt;li&gt;Stephen talked about his previous roles, brand building, how the people and diverse opinions can actually turn from a differentiator to a competitive advantage for an organisation.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/stephen.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Greg Schulze&lt;/strong&gt;, Senior Vice President at Expedia Group&lt;br /&gt;
+  &lt;sup&gt;2nd June, 2020&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;How the COVID situation is affecting us, and he talked about the previous dark times in travel and how Expedia fought through.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;blockquote&gt;
+          &lt;p&gt;Travel gets the best of the Ups and worst of the downs&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/greg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;APAC leaders and Travel Leadership Team (TLT)&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;9th June, 2020&lt;/sup&gt;
+    &lt;ul&gt;
       &lt;li&gt;Dareen Alhiyari, Technology Lead – Retail Product &amp;amp; Technology&lt;/li&gt;
       &lt;li&gt;Anita Dodia, VP, Engineering - Vrbo&lt;/li&gt;
       &lt;li&gt;Nitish Khanapure, VP, Product and Technology - Retail Product &amp;amp; Technology&lt;/li&gt;
+      &lt;li&gt;We had a very diverse set of opinions, talked about network effect and more stuff.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -17,7 +55,7 @@
   
   
     
-      &lt;div style=&quot;flex:0.4; padding:0 3% 3% 0&quot;&gt;
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
     
     
       &lt;a href=&quot;/blog/images/expedia/learning/tech-leaders-1.png&quot;&gt;
@@ -29,7 +67,7 @@
     
   
     
-      &lt;div style=&quot;flex:0.4; padding:0 3% 3% 0&quot;&gt;
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
     
     
       &lt;a href=&quot;/blog/images/expedia/learning/tech-leaders-2.png&quot;&gt;
@@ -41,7 +79,7 @@
     
   
     
-      &lt;div style=&quot;flex:0.4&quot;&gt;
+      &lt;div style=&quot;flex:1&quot;&gt;
     
     
       &lt;a href=&quot;/blog/images/expedia/learning/tech-leaders-3.png&quot;&gt;
@@ -60,52 +98,23 @@
 &lt;/figure&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Leadership talk
-    &lt;ul&gt;
-      &lt;li&gt;Greg Schulze
-&lt;img src=&quot;/blog/images/expedia/learning/greg.png&quot; alt=&quot;&quot; class=&quot;single&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Leadership talk
-    &lt;ul&gt;
-      &lt;li&gt;Stephen Lochhead
-&lt;img src=&quot;/blog/images/expedia/learning/stephen.png&quot; alt=&quot;&quot; class=&quot;single&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Jonty Neal
+  &lt;li&gt;&lt;strong&gt;Jonty Neal&lt;/strong&gt;,Senior Vice President of Expedia Groups Retail Local Markets and Partnerships organization&lt;br /&gt;
+  &lt;sup&gt;16th June, 2020&lt;/sup&gt;
     &lt;ul&gt;
       &lt;li&gt;Talked about his journey with Expedia&lt;/li&gt;
-      &lt;li&gt;Company is more platform orientated&lt;/li&gt;
-      &lt;li&gt;clickthorugh rate
-&lt;img src=&quot;/blog/images/expedia/learning/jonty-neal.png&quot; alt=&quot;&quot; class=&quot;single&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Where is the company is investing and how are they hedging their risks right now&lt;/li&gt;
+      &lt;li&gt;clickthrough rate&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/jonty-neal.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
 &lt;h1 id=&quot;learning&quot;&gt;Learning&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Emotional Intelligence
-    &lt;ul&gt;
-      &lt;li&gt;Rebecca Shepherd, Principal Program Manager.
-&lt;img src=&quot;/blog/images/expedia/learning/rebecca-emotional.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Growth Mindset
-    &lt;ul&gt;
-      &lt;li&gt;Rebecca Shepherd, Principal Program Manager.
-&lt;img src=&quot;/blog/images/expedia/learning/rebecca-growth.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Mental Health
-    &lt;ul&gt;
-      &lt;li&gt;Investing in your Mental Wealth by Rehana Nanji, Rachel Luff &amp;amp; Pallavi Tandon&lt;/li&gt;
-      &lt;li&gt;Session not recorded so that people can share freely&lt;/li&gt;
-      &lt;li&gt;Attached is the whiteboard you all came up with on Resilience and warning signs to look out for – use it to remind yourselves!
-&lt;img src=&quot;/blog/images/expedia/learning/mental-health-2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Product for Non-PMs
+  &lt;li&gt;&lt;strong&gt;Product for Non-PMs&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;20th May, 2020&lt;/sup&gt;
     &lt;ul&gt;
       &lt;li&gt;Kirsty LaBruniy &amp;amp; Sam Varendorff &amp;amp; Sara Harda&lt;/li&gt;
       &lt;li&gt;Get to know the role and responsibilities of a Product Manager at Expedia.  Learn how the PM manages end-to-end delivery of Expedia products and ultimately defines what we build and why&lt;/li&gt;
@@ -113,94 +122,152 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;figure&gt;
-  &lt;div style=&quot;display:flex&quot;&gt;
-  
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;a href=&quot;/blog/images/expedia/learning/product-non-pm-1.png&quot;&gt;
-        &lt;img src=&quot;/blog/images/expedia/learning/product-non-pm-1.png&quot; alt=&quot;&quot; /&gt;
-      &lt;/a&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:0.5&quot;&gt;
-    
-    
-      &lt;a href=&quot;/blog/images/expedia/learning/product-non-pm-2.png&quot;&gt;
-        &lt;img src=&quot;/blog/images/expedia/learning/product-non-pm-2.png&quot; alt=&quot;&quot; /&gt;
-      &lt;/a&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-  &lt;/div&gt;
-  
-    &lt;figcaption&gt;Product for Non PM
-&lt;/figcaption&gt;
-  
-&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/product-non-pm-1.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/expedia/learning/product-non-pm-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Agile @ EG
+  &lt;li&gt;&lt;strong&gt;Agile @ EG&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;21st May, 2020&lt;/sup&gt;
     &lt;ul&gt;
+      &lt;li&gt;Rima Sliat, Technical Product Manager&lt;/li&gt;
       &lt;li&gt;Introduce Agile methodology and foundations. Practice using Scrum and Kanban to estimate, track and improve development workflow.&lt;/li&gt;
-      &lt;li&gt;Rima Sliat
-&lt;img src=&quot;/blog/images/expedia/learning/agile.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/agile.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Emotional Intelligence&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;28th May, 2020&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Rebecca Shepherd, Principal Program Manager.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/rebecca-emotional.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Investing in your Mental Wealth&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;4th June, 2020&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Rehana Nanji, Engagement &amp;amp; Learning Manager&lt;/li&gt;
+      &lt;li&gt;Rachel Luff, Inclusion &amp;amp; Learning Programme Manager&lt;/li&gt;
+      &lt;li&gt;Pallavi Tandon, Learning Architect and Behaviour Scientist&lt;/li&gt;
+      &lt;li&gt;Session not recorded so that people can share freely&lt;/li&gt;
+      &lt;li&gt;Attached is the whiteboard you all came up with on Resilience and warning signs to look out for – use it to remind yourselves!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/mental-health-2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Growth Mindset&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;11th June, 2020&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Rebecca Shepherd, Principal Program Manager&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/rebecca-growth.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Allyship&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;18th June, 2020&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Paul Berkman, Data Scientist and Full Stack Developer&lt;/li&gt;
+      &lt;li&gt;Pallavi Tandon, Learning Architect and Behaviour Scientist&lt;/li&gt;
+      &lt;li&gt;Focus on biases, Charlie Chaplin and depression, innocent-looking Ted Bundy but serial killer, Beethoven the eight son, non-alcoholic vegetarian Adolf Hitler&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;engineering&quot;&gt;Engineering&lt;/h1&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Code Quality
+  &lt;li&gt;&lt;strong&gt;Code Quality&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;19th May, 2020&lt;/sup&gt;
     &lt;ul&gt;
-      &lt;li&gt;Learn about EG best practices and code standards as they relate to building high quality software that is safe, secure, and reliable.&lt;/li&gt;
-      &lt;li&gt;Anuraag Godika
-&lt;img src=&quot;/blog/images/expedia/learning/code-quality.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Anuraag Godika, Director of Engineering&lt;/li&gt;
+      &lt;li&gt;Building high-quality software that is safe, secure, and reliable&lt;/li&gt;
+      &lt;li&gt;Various exercises and interactions to improve code&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Platform Architecture
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/code-quality.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Research &amp;amp; Covid-19 Data Work&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;20th May, 2020&lt;/sup&gt;
     &lt;ul&gt;
+      &lt;li&gt;Julie Lauzon, Senior User Researcher&lt;/li&gt;
+      &lt;li&gt;Baraah AlNawaiseh, Lead User Researcher&lt;/li&gt;
+      &lt;li&gt;Learn how researchers at Expedia leverage technology to study and experiment with our user base to better understand traveler needs.  See how research helps craft our response to the ongoing Covid-19 pandemic.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/ux-1.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/expedia/learning/ux-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Platform Architecture&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;21st May, 2020&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;James Lewis, Senior Chaos Engineer&lt;/li&gt;
       &lt;li&gt;Learn how Expedia engineers leverage our platform and design for site reliability, tolerance, scale, capacity, security, elasticity and resiliency.&lt;/li&gt;
-      &lt;li&gt;James Lewis
-&lt;img src=&quot;/blog/images/expedia/learning/platform-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;A/B Testing
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/platform-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;A/B Testing&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;21st May, 2020&lt;/sup&gt;
     &lt;ul&gt;
+      &lt;li&gt;Guisseppe Gaeta, Technology Lead&lt;/li&gt;
+      &lt;li&gt;John Meakin, Lead Statistician (Head of Experimentation) - ‎Vrbo&lt;/li&gt;
       &lt;li&gt;Cover the design and analysis of A/B tests  and how Expedia uses online experiments to test potential improvements to our websites and mobile applications.&lt;/li&gt;
-      &lt;li&gt;Guisseppe Gaeta &amp;amp; John Meakin
-&lt;img src=&quot;/blog/images/expedia/learning/ab-testing.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Data Science &amp;amp; Machine Learning
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/ab-testing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Data Science &amp;amp; Machine Learning&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;22nd May, 2020&lt;/sup&gt;
     &lt;ul&gt;
-      &lt;li&gt;Review the foundations of data science and learn how machine learning is applied to real world applications at Expedia.&lt;/li&gt;
-      &lt;li&gt;Robert Dickerson, Aditya Mundle
-&lt;img src=&quot;/blog/images/expedia/learning/ml-1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/expedia/learning/ml-2.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Robert Dickerson, Machine Learning Engineer&lt;/li&gt;
+      &lt;li&gt;Aditya Mundle, Senior Data Scientist&lt;/li&gt;
+      &lt;li&gt;Review the foundations of data science and learn how machine learning is applied to real-world applications at Expedia.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Mobile
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/ml-1.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/blog/images/expedia/learning/ml-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Mobile&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;22nd May, 2020&lt;/sup&gt;
     &lt;ul&gt;
+      &lt;li&gt;Rajan Kochhar, Engineering Manager&lt;/li&gt;
+      &lt;li&gt;Gaurav Madaan, Engineering Manager&lt;/li&gt;
       &lt;li&gt;Introduce Expedia Group mobile application design and environment and learn about the unique challenges of mobile development. (Live &amp;amp; Recorded session)&lt;/li&gt;
-      &lt;li&gt;Corbin Montague, Alyjan Daya, Rajan Kochhar &amp;amp; Gaurav Madaan
-&lt;img src=&quot;/blog/images/expedia/learning/mobile-1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/expedia/learning/mobile-2.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Security (Hacking and Developing with Security as a focus)
+  &lt;li&gt;&lt;strong&gt;Security (Hacking and Developing with Security as a focus)&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;22nd May, 2020&lt;/sup&gt;
     &lt;ul&gt;
+      &lt;li&gt;Dale Churchett, Senior Software Architect&lt;/li&gt;
+      &lt;li&gt;Joe Tulowiecki, Staff Application Security Engineer&lt;/li&gt;
       &lt;li&gt;Discuss hacking and how Expedia meets the threat by building secure networks and applications.&lt;/li&gt;
-      &lt;li&gt;Dale Churchett &amp;amp; Joe Tulowiecki&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -242,23 +309,22 @@
 &lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/security-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Test Quality
+  &lt;li&gt;&lt;strong&gt;Test-Driven Development&lt;/strong&gt;&lt;br /&gt;
+  &lt;sup&gt;5th June, 2020&lt;/sup&gt;
     &lt;ul&gt;
+      &lt;li&gt;Jason Morefield, Principal SDE&lt;/li&gt;
       &lt;li&gt;Review practical techniques and strategies to use in overall software testing and quality assurance methodologies. Learn about EG testing concepts and how Expedia engineers design, develop and document different kinds of tests.&lt;/li&gt;
-      &lt;li&gt;Jason Morefield
-&lt;img src=&quot;/blog/images/expedia/learning/test-quality.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Research &amp;amp; Covid-19 Data Work
-    &lt;ul&gt;
-      &lt;li&gt;Learn how researchers at Expedia leverage technology to study and experiment with our user base to better understand traveler needs.  See how research helps craft our response to the ongoing Covid-19 pandemic.&lt;/li&gt;
-      &lt;li&gt;Julie Lauzon &amp;amp; Baraah AlNawaiseh&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/ux-1.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/blog/images/expedia/learning/ux-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/test-quality.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;the-organizing-team&quot;&gt;The organizing team&lt;/h1&gt;
+
+&lt;p&gt;Thanks to the organizing team for arranging these sessions!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/learning/organizers.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Anyone who stops learning is old, whether at twenty or eighty. --Henry Ford</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Selective network routing/Split Tunneling via VPN</title><link href="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html" rel="alternate" type="text/html" title="Selective network routing/Split Tunneling via VPN" /><published>2020-04-25T02:30:00-05:00</published><updated>2020-04-25T02:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html">&lt;p&gt;Everyone is working from home and for me it is remotely working on the servers in my college. I can only connect to them via a VPN, but that slows down my browsing and video conferencing.&lt;/p&gt;
 
 &lt;p&gt;I was trying to figure out a way to use VPN specifically for the server in college and let the other traffic move normally. That’s when I came across &lt;a href=&quot;https://github.com/adrienverge/openfortivpn/issues/371#issuecomment-437783005&quot;&gt;this solution&lt;/a&gt;. In this blog I’ll explain the solution step by step.&lt;/p&gt;
 
