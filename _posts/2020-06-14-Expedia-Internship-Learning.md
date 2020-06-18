@@ -94,8 +94,7 @@ Every week, we got a chance to meet one of the leaders in Expedia and know about
     - Rehana Nanji, Engagement & Learning Manager
     - Rachel Luff, Inclusion & Learning Programme Manager
     - Pallavi Tandon, Learning Architect and Behaviour Scientist
-    - Session not recorded so that people can share freely
-    - Attached is the whiteboard you all came up with on Resilience and warning signs to look out for – use it to remind yourselves!
+    - Assess your mental stress, tackling anxiety, did some activities
 
 ![]({{ site.baseurl }}/images/expedia/learning/mental-health-2.jpg)
 
