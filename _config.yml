@@ -45,6 +45,8 @@ minima:
     instagram: rohan__rajpal
     linkedin: rohanrajpal
 
+disqus:
+  shortname: https-rohanrajpal-github-io
 # Set this to true to get LaTeX math equation support
 use_math: 
 
