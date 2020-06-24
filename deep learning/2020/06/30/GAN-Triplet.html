@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>GAN Triplet Training | Rohan Rajpal</title>
+<title>Generative Adversarial Networks: Triplet Training via Pytorch | Rohan Rajpal</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="GAN Triplet Training" />
+<meta property="og:title" content="Generative Adversarial Networks: Triplet Training via Pytorch" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A minimal site where I write about my journey." />
 <meta property="og:description" content="A minimal site where I write about my journey." />
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-30T00:00:00-05:00" />
 <script type="application/ld+json">
-{"headline":"GAN Triplet Training","dateModified":"2020-06-30T00:00:00-05:00","datePublished":"2020-06-30T00:00:00-05:00","description":"A minimal site where I write about my journey.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html","@context":"https://schema.org"}</script>
+{"headline":"Generative Adversarial Networks: Triplet Training via Pytorch","dateModified":"2020-06-30T00:00:00-05:00","datePublished":"2020-06-30T00:00:00-05:00","description":"A minimal site where I write about my journey.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -24,9 +24,9 @@
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
 
 <link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>GAN Triplet Training | Rohan Rajpal</title>
+<title>Generative Adversarial Networks: Triplet Training via Pytorch | Rohan Rajpal</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="GAN Triplet Training" />
+<meta property="og:title" content="Generative Adversarial Networks: Triplet Training via Pytorch" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A minimal site where I write about my journey." />
 <meta property="og:description" content="A minimal site where I write about my journey." />
@@ -36,7 +36,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-30T00:00:00-05:00" />
 <script type="application/ld+json">
-{"headline":"GAN Triplet Training","dateModified":"2020-06-30T00:00:00-05:00","datePublished":"2020-06-30T00:00:00-05:00","description":"A minimal site where I write about my journey.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html","@context":"https://schema.org"}</script>
+{"headline":"Generative Adversarial Networks: Triplet Training via Pytorch","dateModified":"2020-06-30T00:00:00-05:00","datePublished":"2020-06-30T00:00:00-05:00","description":"A minimal site where I write about my journey.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -97,7 +97,7 @@ window.onload = wrap_img;
 
   <header class="post-header">
     <script data-ad-client="ca-pub-2665834374828244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <h1 class="post-title p-name" itemprop="name headline">GAN Triplet Training</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-30T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Generative Adversarial Networks: Triplet Training via Pytorch</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-30T00:00:00-05:00" itemprop="datePublished">
         Jun 30, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -424,11 +424,15 @@ Created an array with noise and sent it to the generator to get the image. Have 
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reference https://github.com/Sleepychord/ImprovedGAN-pytorch/blob/master/Datasets.py</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<span class="c1"># Reference https://github.com/Sleepychord/ImprovedGAN-pytorch/blob/master/Datasets.py</span>
 <span class="k">def</span> <span class="nf">MNISTLabel</span><span class="p">(</span><span class="n">class_num</span><span class="p">):</span>
   <span class="n">raw_dataset</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span><span class="s1">'../data'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                   <span class="n">transform</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
@@ -507,6 +511,7 @@ Created an array with noise and sent it to the generator to get the image. Have 
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -680,11 +685,15 @@ Transform: Compose(
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reference: https://github.com/Sleepychord/ImprovedGAN-pytorch/blob/master/ImprovedGAN.py</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<span class="c1"># Reference: https://github.com/Sleepychord/ImprovedGAN-pytorch/blob/master/ImprovedGAN.py</span>
 <span class="k">class</span> <span class="nc">ImprovedGAN</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">labeled</span><span class="p">,</span> <span class="n">unlabeled</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">G</span> <span class="o">=</span> <span class="n">G</span>
@@ -799,6 +808,7 @@ Transform: Compose(
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
