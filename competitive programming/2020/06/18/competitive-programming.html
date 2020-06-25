@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Competitive Programming: Problems and Tricks on various concepts. | Rohan Rajpal</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Competitive Programming: Problems and Tricks on various concepts." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this blog I’ll document all the challenging competitive programming problems with the focus on motivation rather than the solution." />
+<meta property="og:description" content="In this blog I’ll document all the challenging competitive programming problems with the focus on motivation rather than the solution." />
+<link rel="canonical" href="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html" />
+<meta property="og:url" content="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html" />
+<meta property="og:site_name" content="Rohan Rajpal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"headline":"Competitive Programming: Problems and Tricks on various concepts.","dateModified":"2020-06-18T00:00:00-05:00","datePublished":"2020-06-18T00:00:00-05:00","description":"In this blog I’ll document all the challenging competitive programming problems with the focus on motivation rather than the solution.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Competitive Programming: Problems and Tricks on various concepts. | Rohan Rajpal</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Competitive Programming: Problems and Tricks on various concepts." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this blog I’ll document all the challenging competitive programming problems with the focus on motivation rather than the solution." />
+<meta property="og:description" content="In this blog I’ll document all the challenging competitive programming problems with the focus on motivation rather than the solution." />
+<link rel="canonical" href="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html" />
+<meta property="og:url" content="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html" />
+<meta property="og:site_name" content="Rohan Rajpal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"headline":"Competitive Programming: Problems and Tricks on various concepts.","dateModified":"2020-06-18T00:00:00-05:00","datePublished":"2020-06-18T00:00:00-05:00","description":"In this blog I’ll document all the challenging competitive programming problems with the focus on motivation rather than the solution.","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script></head><body><header class="site-header">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Rohan Rajpal</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+  
+          <div class="trigger">
+            <a class="page-link" href="/blog/resume/Rohan_Resume.pdf">Resume</a><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+        </nav></div>
+  </header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <script data-ad-client="ca-pub-2665834374828244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <h1 class="post-title p-name" itemprop="name headline">Competitive Programming: Problems and Tricks on various concepts.</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-18T00:00:00-05:00" itemprop="datePublished">
+        Jun 18, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#Competitive Programming">Competitive Programming</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#5-problem-solving-tips-for-cracking-coding-interview-questions-youtube">5 Problem Solving Tips for Cracking Coding Interview Questions [Youtube]</a></li>
+<li class="toc-entry toc-h1"><a href="#study-plan">Study Plan</a></li>
+<li class="toc-entry toc-h1"><a href="#best-of-the-best-blogs">Best of the best blogs</a></li>
+<li class="toc-entry toc-h1"><a href="#array">Array</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#remove-duplicates-from-sorted-array">Remove Duplicates from Sorted Array</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#dynamic-programming">Dynamic Programming</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#coin-change-2">Coin Change 2</a></li>
+<li class="toc-entry toc-h2"><a href="#dungeon-game">Dungeon Game</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#maths">Maths</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#permutation-sequence">Permutation Sequence</a></li>
+<li class="toc-entry toc-h2"><a href="#single-number-xor">Single Number (XOR)</a></li>
+<li class="toc-entry toc-h2"><a href="#single-number-ii-bit-manipulation">Single Number II (Bit Manipulation)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#graphs">Graphs</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#cheapest-flights-within-k-stops-dijkstra">Cheapest Flights Within K Stops (Dijkstra)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#tree">Tree</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#count-complete-tree-nodes">Count Complete Tree Nodes</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#binary-search">Binary Search</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#longest-duplicate-substring-rolling-hashes">Longest Duplicate Substring (Rolling Hashes)</a></li>
+</ul>
+</li>
+</ul><p>In this blog I’ll document all the challenging competitive programming problems with the focus on <em>motivation</em> rather than the solution.</p>
+
+<h1 id="5-problem-solving-tips-for-cracking-coding-interview-questions-youtube">
+<a class="anchor" href="#5-problem-solving-tips-for-cracking-coding-interview-questions-youtube" aria-hidden="true"><span class="octicon octicon-link"></span></a>5 Problem Solving Tips for Cracking Coding Interview Questions [<a href="https://www.youtube.com/watch?v=GBuHSRDGZBY">Youtube</a>]</h1>
+<p>Tip #1: Come up with a brute-force solution -<br>
+Tip #2: Think of a simpler version of the problem -<br>
+Tip #3: Think with simpler examples -&gt; try noticing a pattern -<br>
+Tip #4: Use some visualization -<br>
+Tip #5: Test your solution on a few examples -</p>
+
+<h1 id="study-plan">
+<a class="anchor" href="#study-plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Study Plan</h1>
+
+<p><a href="https://leetcode.com/explore/interview/card/top-interview-questions-medium/">Leetcode top interview questions</a><br>
+Generic preparation tips I give to freshers to clear any algorithmic interview anywhere: <br>
+1) Data Structures and Algorithms (online course on NPTEL by Naveen Garg)<br>
+2) Analysis and Design of Algorithms (online course on Coursera by Tim Roughgarden, part 1 and part 2<br>
+3) 1 programming language, everything about it including inbuilt things like maps, binary search, sort, stacks, priority queues, vectors / lists, pairs etc<br>
+4) all Codeforces contests from now till interviews<br>
+5) 200+ Leetcode questions</p>
+
+<p>Take competitive programming course if you haven’t done that already.</p>
+
+<h1 id="best-of-the-best-blogs">
+<a class="anchor" href="#best-of-the-best-blogs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Best of the best blogs</h1>
+
+<ul>
+  <li>
+<a href="https://medium.com/@yashgirdhar/11-companies-55-interviews-9-offers-including-google-and-amazon-heres-what-i-have-to-share-293852c1c98f">Yash girdhar</a>
+    <ul>
+      <li>Good plan of how to prepare</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://medium.com/codealchemist/how-to-prepare-for-campus-placements-b9fa571d45e6">Abinav Bhardwaj</a>
+    <ul>
+      <li>Screenshots of contests of various company contests</li>
+    </ul>
+  </li>
+  <li><a href="">A sheet of leetcode probs</a></li>
+  <li><a href="https://techdevguide.withgoogle.com/?_ga=2.120392461.486813392.1576836508-1967957252.1576836508">Resources by google</a></li>
+  <li><a href="https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questionshttps://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions">Five Essential Phone Screen Questions by Steve Yegge</a></li>
+  <li><a href="https://www.youtube.com/watch?v=oWbUtlUhwa8&amp;feature=youtu.be">How to: Work at Google — Candidate Coaching Session for Technical Interviewing</a></li>
+  <li><a href="http://www.kegel.com/academy/getting-hired.html">How To Get Hired – What CS Students Need to Know</a></li>
+  <li><a href="https://www.topcoder.com/community/competitive-programming/tutorials/">Topcoder tutorials</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1_6c6eu1oaDcJeKGcu43wtal8OeFNL6xMmmoSiDt9l5A/edit#slide=id.g3b1a8a6735_157_5">Google resource</a></li>
+</ul>
+
+<h1 id="array">
+<a class="anchor" href="#array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array</h1>
+
+<h2 id="remove-duplicates-from-sorted-array">
+<a class="anchor" href="#remove-duplicates-from-sorted-array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remove Duplicates from Sorted Array</h2>
+<p><a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/">Leetcode</a></p>
+
+<p>The question is interesting because you have to ensure the array is modified, too, not just return the answer.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+public:
+    int removeDuplicates(vector&lt;int&gt;&amp; nums) {
+        int j=!nums.empty();
+        for(int i=1;i&lt;nums.size();i++){
+            if(nums[i]&gt;nums[j-1]){
+                nums[j++]=nums[i];
+            }
+        }
+        return j;
+    }
+};
+</code></pre></div></div>
+
+<h1 id="dynamic-programming">
+<a class="anchor" href="#dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic Programming</h1>
+<p>A smart brute force and your algorithm goes from cubic to linear complexity. That’s dynamic programming.</p>
+
+<h2 id="coin-change-2">
+<a class="anchor" href="#coin-change-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coin Change 2</h2>
+<p><a href="https://leetcode.com/problems/coin-change-2/">Leetcode</a></p>
+
+<p>We can use a coin infinite number of times, but how many times do we <em>need</em>?<br>
+We know that the amounts a coin can make, so why not just store the count of the amount that we have made? Out of all the possible amount, if you add that value to</p>
+
+<p>Say we have used a part of the array to build our answer, now we come across a new coin:
+For a coin of value c, if previously we had n number of ways to make vaulue i-c, in how many ways can we make i? ways[i-c] + already existing ways to make i.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">change</span><span class="p">(</span><span class="kt">int</span> <span class="n">amount</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">coins</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">amount</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="n">coin</span><span class="o">:</span> <span class="n">coins</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">coin</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">amount</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">coin</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">amount</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="dungeon-game">
+<a class="anchor" href="#dungeon-game" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dungeon Game</h2>
+<p><a href="https://leetcode.com/problems/dungeon-game/">Leetcode</a>
+Mistakes I made: please dry run before coding</p>
+
+<p>Notice that the minimum initial health will be at least 1 even if we have an example like [1,0,0].</p>
+
+<p>When we reach the queen, say value in that cell is -3, so we must have 1-(-2) health to save the queen. The minimum initial length at the bottom right should be <code class="highlighter-rouge">max(1,1-dungeon[i][j])</code>.</p>
+
+<p>Now at any i,j, if we need 3 points of health for future, we will add requirements of health for current i,j, so health will be 3 - (-4). We should have <code class="highlighter-rouge">max(1,min(dp[i+1][j],dp[i][j+1])-dungeon[i][j])</code> health.</p>
+
+<p>Top down DP (Easier to understand)</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">calculateMinimumHP</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">dungeon</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">dungeon</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">n</span><span class="o">=</span><span class="n">dungeon</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+        <span class="k">return</span> <span class="n">calcMin</span><span class="p">(</span><span class="n">dungeon</span><span class="p">,</span><span class="n">dp</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">calcMin</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">dungeon</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">dp</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">m</span> <span class="n">or</span> <span class="n">j</span><span class="o">&gt;=</span><span class="n">n</span><span class="p">)</span> <span class="k">return</span> <span class="n">INT_MAX</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span> <span class="n">and</span> <span class="n">j</span><span class="o">==</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span> <span class="o">-</span> <span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+        <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">min</span><span class="p">(</span><span class="n">calcMin</span><span class="p">(</span><span class="n">dungeon</span><span class="p">,</span><span class="n">dp</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">calcMin</span><span class="p">(</span><span class="n">dungeon</span><span class="p">,</span><span class="n">dp</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">))</span> <span class="o">-</span> <span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Bottom up DP (Space optimized)
+We dont really need to make an extra array when doing bottom up.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">calculateMinimumHP</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">dungeon</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="n">dungeon</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="n">n</span><span class="o">=</span><span class="n">dungeon</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">--</span><span class="p">)</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span> <span class="n">and</span> <span class="n">j</span><span class="o">==</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="o">-</span><span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+                <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+                <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+                <span class="k">else</span>
+                    <span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">min</span><span class="p">(</span><span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span><span class="o">-</span><span class="n">dungeon</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+        <span class="k">return</span> <span class="n">dungeon</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h1 id="maths">
+<a class="anchor" href="#maths" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maths</h1>
+
+<h2 id="permutation-sequence">
+<a class="anchor" href="#permutation-sequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Permutation Sequence</h2>
+<p><a href="https://leetcode.com/problems/permutation-sequence/">Leetcode</a> | <a href="https://leetcode.com/problems/permutation-sequence/discuss/22507/%22Explain-like-I'm-five%22-Java-Solution-in-O(n)">Solution Reference</a></p>
+
+<p>C++ has an inbuilt function <code class="highlighter-rouge">next_permuation</code></p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">string</span> <span class="n">getPermutation</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">string</span> <span class="n">seq</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="n">seq</span><span class="o">+=</span><span class="p">(</span><span class="sc">'1'</span><span class="o">+</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">while</span><span class="p">(</span><span class="o">--</span><span class="n">k</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">next_permutation</span><span class="p">(</span><span class="n">seq</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">seq</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="k">return</span> <span class="n">seq</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Complexity: O(k)</p>
+
+<p>Can we do better? Absolutely!<br>
+Let’s take n=4; the permutations will be</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 - (2,3,4)
+    (2,4,3)
+    ...
+2 - (1,4,3)
+    ...
+3 - (1,2,4)
+    ...
+4 - (1,2,3)
+    ...
+</code></pre></div></div>
+<p>On removing the first index, the rest of the permutations are repeating. If we want to find the 22nd permutation. The first index will be <code class="highlighter-rouge">k/(n-1)! = 21 / (4-1)! = 21 / 3! =  3</code>. 3rd index of <code class="highlighter-rouge">[1,2,3,4]</code> is 4. So the first number would be 4.<br>
+The permutation till here is “4”<br>
+Now how do we find the index in the remaining combinations? Before the index, we have covered <code class="highlighter-rouge">index*(n-1)!</code> permutations. Subtracting this from k will give us the index for the new sub problem
+<code class="highlighter-rouge">k = k % (n-1) = 21 % (4-1)! = 21 - 18 = 3</code>
+We also remove 4 from the set now. Set is now</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 - (2,3)
+    (3,2)
+2 - (3,1)
+    ...
+3 - (1,2)
+    (2,1)
+</code></pre></div></div>
+<p><code class="highlighter-rouge">index = 3 / (n-2)! = 3 / 2! = 1</code> Now the index at 1 in <code class="highlighter-rouge">[1, 2, 3]</code> is 2.
+Permutation now is “42”
+Left out set is <code class="highlighter-rouge">[1 , 3]</code>
+<code class="highlighter-rouge">k = 3 % 2! = 1</code>
+<code class="highlighter-rouge">index = 1 / 1! = 1</code>. Elem at 1 is 3, permutation is “423”
+Finally, <code class="highlighter-rouge">k = 1 - 1*0! = 0</code>
+Adding the left-out element
+perm is finally = “4231”</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">string</span> <span class="n">getPermutation</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">string</span> <span class="n">seq</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="n">k</span><span class="o">--</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nums</span><span class="p">,</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">nums</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">fact</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fact</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">i</span><span class="p">;</span>
+        
+        <span class="k">for</span><span class="p">(;</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span><span class="n">n</span><span class="o">--</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">k</span> <span class="o">/</span> <span class="n">fact</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+            <span class="n">seq</span> <span class="o">+=</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="sc">'1'</span><span class="p">;</span>
+            <span class="n">k</span> <span class="o">%=</span> <span class="n">fact</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+            <span class="n">nums</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="n">idx</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">seq</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<h2 id="single-number-xor">
+<a class="anchor" href="#single-number-xor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Single Number (XOR)</h2>
+<p><a href="https://leetcode.com/problems/single-number/">Leetcode link</a></p>
+
+<p>If we XOR a number with itself, it nulls out. So XOR all the numbers in the array and voila!</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">singleNumber</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">i</span><span class="o">:</span><span class="n">nums</span><span class="p">){</span>
+            <span class="n">ans</span> <span class="o">^=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<h2 id="single-number-ii-bit-manipulation">
+<a class="anchor" href="#single-number-ii-bit-manipulation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Single Number II (Bit Manipulation)</h2>
+<p><a href="https://leetcode.com/problems/single-number-ii/">Leetcode</a> |
+<a href="https://leetcode.com/problems/single-number-ii/discuss/43295/Detailed-explanation-and-generalization-of-the-bitwise-operation-method-for-single-numbers">Solution reference</a></p>
+
+<p>Of course we can use a dictionary, but can we do it in constant memory? We can, but it’s not that straightforward.</p>
+
+<p>We’ll have to think of integers in terms of bits to solve this problem.</p>
+
+<p>Aim: Develop a counter which</p>
+<ul>
+  <li>Resets after k elements</li>
+  <li>Counter should be unaffected by 0</li>
+  <li>It should increment by 1 if it sees one</li>
+</ul>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">singleNumber</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">x1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">x2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">mask</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">x2</span> <span class="o">^=</span> <span class="n">x1</span> <span class="o">&amp;</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">x1</span> <span class="o">^=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="o">~</span><span class="p">(</span><span class="n">x1</span> <span class="o">&amp;</span> <span class="n">x2</span><span class="p">);</span>
+            <span class="n">x1</span> <span class="o">&amp;=</span> <span class="n">mask</span><span class="p">;</span>
+            <span class="n">x2</span> <span class="o">&amp;=</span> <span class="n">mask</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">x1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h1 id="graphs">
+<a class="anchor" href="#graphs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graphs</h1>
+
+<h2 id="cheapest-flights-within-k-stops-dijkstra">
+<a class="anchor" href="#cheapest-flights-within-k-stops-dijkstra" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cheapest Flights Within K Stops (Dijkstra)</h2>
+
+<p>We can take the Dijkstra algorithm and modify it so that distances greater than k hops will not be considered.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define INF 0x3f3f3f3f
+</span><span class="k">class</span> <span class="nc">Point</span> 
+<span class="p">{</span> 
+    <span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">node</span><span class="p">;</span> 
+    <span class="kt">int</span> <span class="n">dist</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">hops</span><span class="p">;</span>
+    <span class="n">Point</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">){</span>
+        <span class="n">node</span><span class="o">=</span><span class="n">a</span><span class="p">;</span><span class="n">dist</span><span class="o">=</span><span class="n">b</span><span class="p">;</span><span class="n">hops</span><span class="o">=</span><span class="n">c</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">class</span> <span class="nc">myComparator</span> 
+<span class="p">{</span> 
+<span class="nl">public:</span> 
+    <span class="kt">int</span> <span class="k">operator</span><span class="p">()</span> <span class="p">(</span><span class="k">const</span> <span class="n">Point</span><span class="o">&amp;</span> <span class="n">p1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Point</span><span class="o">&amp;</span> <span class="n">p2</span><span class="p">)</span> 
+    <span class="p">{</span> 
+        <span class="k">return</span> <span class="n">p1</span><span class="p">.</span><span class="n">dist</span> <span class="o">&gt;</span> <span class="n">p2</span><span class="p">.</span><span class="n">dist</span><span class="p">;</span> 
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">findCheapestPrice</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">flights</span><span class="p">,</span> <span class="kt">int</span> <span class="n">src</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dst</span><span class="p">,</span> <span class="kt">int</span> <span class="n">K</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">flights</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span> <span class="n">or</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;&gt;&gt;</span> <span class="n">adj</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">flights</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">adj</span><span class="p">[</span><span class="n">flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]));</span>
+        <span class="p">}</span>
+        
+        <span class="n">priority_queue</span> <span class="o">&lt;</span><span class="n">Point</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">myComparator</span><span class="o">&gt;</span> <span class="n">pq</span><span class="p">;</span>
+        
+        <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dist</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">INF</span><span class="p">);</span>
+        <span class="n">dist</span><span class="p">[</span><span class="n">src</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        
+        <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">pq</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+            <span class="n">Point</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+            <span class="n">pq</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">node</span> <span class="o">==</span> <span class="n">dst</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">cur</span><span class="p">.</span><span class="n">dist</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">hops</span> <span class="o">&gt;</span> <span class="n">K</span><span class="p">)</span>
+                <span class="k">continue</span><span class="p">;</span>
+            
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">adj</span><span class="p">[</span><span class="n">cur</span><span class="p">.</span><span class="n">node</span><span class="p">].</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">adj</span><span class="p">[</span><span class="n">cur</span><span class="p">.</span><span class="n">node</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">first</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cur</span><span class="p">.</span><span class="n">dist</span><span class="o">+</span><span class="n">adj</span><span class="p">[</span><span class="n">cur</span><span class="p">.</span><span class="n">node</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">second</span><span class="p">)</span>
+                    <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="n">adj</span><span class="p">[</span><span class="n">cur</span><span class="p">.</span><span class="n">node</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">first</span><span class="p">,</span><span class="n">cur</span><span class="p">.</span><span class="n">dist</span><span class="o">+</span><span class="n">adj</span><span class="p">[</span><span class="n">cur</span><span class="p">.</span><span class="n">node</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">second</span><span class="p">,</span><span class="n">cur</span><span class="p">.</span><span class="n">hops</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<h1 id="tree">
+<a class="anchor" href="#tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tree</h1>
+
+<h2 id="count-complete-tree-nodes">
+<a class="anchor" href="#count-complete-tree-nodes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Count Complete Tree Nodes</h2>
+
+<p><a href="https://leetcode.com/explore/challenge/card/june-leetcoding-challenge/542/week-4-june-22nd-june-28th/3369/">Leetcode link</a></p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">countNodes</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="n">findHeight</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">height</span><span class="o">&lt;</span> <span class="mi">0</span><span class="o">?</span> <span class="mi">0</span><span class="o">:</span> \
+            <span class="n">findHeight</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span><span class="o">==</span><span class="n">height</span><span class="o">-</span><span class="mi">1</span><span class="o">?</span> \
+            <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">height</span><span class="p">)</span> <span class="o">+</span> <span class="n">countNodes</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">height</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="n">countNodes</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">findHeight</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">node</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">node</span><span class="o">==</span><span class="nb">NULL</span><span class="o">?-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="o">+</span><span class="n">findHeight</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h1 id="binary-search">
+<a class="anchor" href="#binary-search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search</h1>
+
+<h2 id="longest-duplicate-substring-rolling-hashes">
+<a class="anchor" href="#longest-duplicate-substring-rolling-hashes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Longest Duplicate Substring (Rolling Hashes)</h2>
+<p><a href="https://leetcode.com/problems/longest-duplicate-substring/">Leetcode link</a></p>
+
+<ul>
+  <li>Do a binary search on length
+    <ul>
+      <li>Have the least length as 0 and highest as n-1</li>
+      <li>Take the mid-length, if you find a duplicate, try for a bigger length</li>
+      <li>If not, try for a smaller length</li>
+    </ul>
+  </li>
+  <li>Sliding window (Robin Karp)
+    <ul>
+      <li>Have a look at the <a href="link%20something">rolling hash</a> approach</li>
+    </ul>
+  </li>
+  <li><a href="https://leetcode.com/problems/longest-duplicate-substring/discuss/291048/C%2B%2B-solution-using-Rabin-Karp-and-binary-search-with-detailed-explaination">robin karp solution</a></li>
+  <li><a href="https://leetcode.com/problems/longest-duplicate-substring/discuss/695101/C%2B%2B-short-O(n-log(n))-solution-with-std%3A%3Aunordered_setlessstd%3A%3Astring_viewgreater">c++ 17 solution</a></li>
+</ul>
+
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html';
+      this.page.identifier = 'https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://https-rohanrajpal-github-io.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/blog/competitive%20programming/2020/06/18/competitive-programming.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A minimal site where I write about my journey.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/rohanrajpal" title="rohanrajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.instagram.com/rohan__rajpal" title="rohan__rajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#instagram"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/rohanrajpal" title="rohanrajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/rohan__rajpal" title="rohan__rajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
