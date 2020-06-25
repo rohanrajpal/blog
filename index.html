@@ -2,7 +2,17 @@
 layout: home
 search_exclude: true
 ---
+{% assign categories = "" | split:"" %}
+{% for c in site.categories %}
+  {% assign categories = categories | push: c[0] %}
+{% endfor %}
+{% assign categories = categories | sort_natural %}
 # Posts
-📝*A blog about:* Android · Design · Linux · Competitive Programming
+<p>
+📝A blog about:
+    {% for category in categories %}
+    <a href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a> ·
+    {% endfor %}
+</p>
 
 > The more that you read, the more things you will know. The more that you learn, the more places you’ll go. -- Dr. Seus
