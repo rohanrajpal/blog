@@ -6,9 +6,9 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Rohan Rajpal
+title: Rohan Rajpal · Blog
 email: rohan17089@iiitd.ac.in
-description: A minimal site where I write about my journey.
+description: Read about Data Science · Programming · Design · Mobile
 github_username: rohanrajpal
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "blog"
