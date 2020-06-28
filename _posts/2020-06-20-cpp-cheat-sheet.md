@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Competitive Programming: C++ Cheat Sheet"
+title:  "Competitive Programming: C++ Cheat Sheet [Draft]"
 toc: true
 comments: true
 categories: ["Competitive Programming"]
@@ -67,4 +67,15 @@ public:
         return sum;
     }
 };
+```
+
+# Pointers and Adresses
+
+A pointer stores a memory address.
+
+Some ways to do the same thing
+```c++
+ListNode *root=new ListNode(),*node=root;
+ListNode root,*node=&root;
+//node is the same above
 ```

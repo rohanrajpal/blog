@@ -22,7 +22,7 @@ stack:
   - aspect: "1"
     image_path: "images/expedia/stack/consul.svg"
   - aspect: "1"
-    image_path: "images/expedia/stack/vscode.svg"
+    image_path: "images/expedia/stack/packer.svg"
     end_row: "true"
   - aspect: "1"
     image_path: "images/expedia/stack/ec2.jpg"
