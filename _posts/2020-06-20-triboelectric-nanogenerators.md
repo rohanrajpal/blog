@@ -2,12 +2,15 @@
 layout: post
 title:  "Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives"
 categories: ["Paper Summary"]
+image: /images/paper-summary/triboelectric.png
 comments: true
 ---
 
 > Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives. Faraday Discuss. 176, (2014), 447–458.
 
 This paper aims to review and give updated progress of Triboelectric Nanogenerators or TENG. The TENG is based on the principle of triboelectrification and electrostatic induction. This article also discusses its applications as a new energy generation technology and self-powered active sensors. There has been a boom in mobile computing devices in recent decades. To power these billions of devices, we require billions of batteries. However, the battery has a limited lifetime, and replacing the batteries of billions of gadgets is a humongous task. The direction of portable electronics is towards low power consumption; this makes it possible to harvest energy from the environment around the device. A newly emerging field of nano energy is to create independent nanotech-based power sources. They can harness energy from micro-scale like daily activities to macro-scale like ocean waves. The article also discusses TENG as self-powered sensors.
+
+![]({{ site.baseurl }}/images/paper-summary/triboelectric.png "Taken from Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives.")
 
 The author lays down four fundamental modes of triboelectric nanogenerators. There is vertical contact, lateral sliding, single-electrode, and freestanding triboelectric-layer. With these primary modes, TENGs are explored as both a micro and macro source for power generation. Micro here refers to powering small and mobile gadgets. Macro refers to large-scale energy generation. This article explores the contact electrification between a solid and liquid surface for macro purposes. With these modes and applications, some fundamental problems with triboelectric are discussed as well. First, more clarity is needed on the underlying mechanism of the triboelectric effect. The effect has to be investigated much more in-depth to understand its working better. This article also found a way to quantify the performance of TENG's based on different modes. This article used a measurement matrix to quantify the performance. Finding the right pair of materials to generate the best output is also a problem to solve. One might say the triboelectric series is helpful, but there is no quantitative measure to compare how much energy two materials in a TENG can generate. External factors like humidity have a significant impact on triboelectricity. This means the TENG should have packaging to protect itself from outdoor conditions. Many more such problems are discussed.
 
