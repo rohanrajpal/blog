@@ -6,15 +6,17 @@ permalink: /about/
 
 ![dpmain]({{ site.baseurl }}/images/about/dp.jpg){: .dp}
 
-I'm a third-year student CSE student at [IIITD](https://www.iiitd.ac.in/), a Google Summer of Code 2019 [student](https://summerofcode.withgoogle.com/archive/2019/projects/6144888880496640/) under [VideoLAN](https://www.videolan.org/index.html) and an incoming intern at Expedia for Summer 2020.
+I'm a third-year student CSE student at [IIITD](https://www.iiitd.ac.in/), a Google Summer of Code 2019 [student](https://summerofcode.withgoogle.com/archive/2019/projects/6144888880496640/) under [VideoLAN](https://www.videolan.org/index.html) and an intern at Expedia for Summer 2020.
 
-Here is my [Resume](https://rohanrajpal.github.io/resume/Rohan_Resume.pdf).
+I have experience in Cloud (AWS,GCP,Spark,Vault), Frontend(Qt,HTML/CSS,Unity) and Database (MongoDB, Elasticsearch, SQL, Logstash).
+
+Here is my [Resume](https://rohanrajpal.github.io/blog/resume/Rohan_Resume.pdf).
 
 ### Notable Coursework
 
-- Deep Learning (Ongoing)
+- Deep Learning
 - Wearable Applications, Research, Devices,
-Interactions (Ongoing)
+Interactions
 - Machine Learning
 - Computer Networks
 - Designing Human Centered Systems
