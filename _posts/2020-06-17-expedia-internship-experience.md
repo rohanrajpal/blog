@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Virtual Internship: My Experience [Draft]"
+title:  "The Virtual Internship: My Experience"
 date:   2020-06-17 16:00:00 +0530
 comments: true
 hide: true
@@ -55,9 +55,21 @@ We kept on having workshops throughout our intern, and there was a lot to learn,
 
 ## My Team - Vrbo: Stayx dot net modernization pod
 
-I was a part of the stay experience team, which looks after the post-booking experience for a traveler. The team was divided into pods, and I worked on the .Net Stack Modernisation pod. I  worked on ### making a microservice and how to deploy it to the cloud.
+I was a part of the stay experience team, which looks after the post-booking experience for a traveler. The team was divided into pods, and I worked on the .Net Stack Modernisation pod. I  worked on making a microservice and how to deploy it to the cloud.
 
 ## The project
+
+### Motivation
+
+We have a database which stores the notifications for guests of guests in a homestay. Now we wanted a way in which we can store the data in S3 and keep it updated.
+
+- Why are you storing the data in two different places?
+  - This data is not only used to send a notification but also by an analyst or data scientist. The MongoDB database also backs the GoG API, and if everyone does their operations on MongoDB, it might severely affect the API.
+
+We finally came up with the idea to use a  Spark Job. This job would take the data from MongoDB and store it in an S3 bucket.
+
+- Why a spark job?
+  - Spark and Scala are the industry standard for data management. The jobs will be able to manage huge amounts of data without any hiccups.
 
 ### Aim: Create a spark job to sync data from MongoDB to S3
 <!-- [The ticket SE-2854](https://jira.homeawaycorp.com/browse/SE-2854) -->
@@ -158,8 +170,7 @@ This can be put back to S3. You can see how this data is in sync with Mongo data
   - Rather than having a token to authenticate vault and get the secrets, a better method would be to use the ec2 metadata in which the spark job will be running to authenticate vault.
   - Making EC2 instances with Terraform and Consul
 - **Setting up EC2 instances**
-  - Setting up an instance is easy, but determining the right VPC, subnet, security groups etc. for production really is a security design issue, and one has to decide carefully.
-  - The majority of the AWS services are hacked because of misconfigurations, they aren't really Amazon's fault.
+  - I had some trouble finding the correct configurations so that I am able to SSH into an instance and make sure the instance can access all VPN links.
 
 ### Demo
 
