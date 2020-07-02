@@ -38,7 +38,7 @@ setup:
   - aspect: "0.74"
     image_path: "images/expedia/experience/setup-2.jpg"
 ---
-These summers, I interned at a one of the largest travel companies of the world, Expedia. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!
+These summers, I interned at one of the largest travel companies of the world, Expedia. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!
 
 Luckily, my [previous intern]({{ site.baseurl }}/gsoc/2019/08/12/GSoC-with-VideoLAN.html) was remote too, so I was kind of used to work from home. In this internship, I majorly worked on cloud and data engineering.
 
@@ -246,3 +246,4 @@ Video: Coming soon.
 - [Vault on AWS: Creating an EC2 Key Pair](https://www.youtube.com/watch?v=F1KC0khe4SU&amp;t=31s)
 - [terraform variable configuration](https://www.terraform.io/docs/configuration/variables.html)
 - [terraform setup](https://www.youtube.com/watch?v=RA1mNClGYJ4&t=887s)
+- [Spark master slave ec2](https://stackoverflow.com/a/31900096/10114752)
