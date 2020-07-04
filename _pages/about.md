@@ -62,3 +62,5 @@ I like contributing to the community, here's what I'm trying to do from my side:
   - Mentoring 7 freshmen and helping them with their academic, social and personal issues.
 
 Feel free to connect with me on [LinkedIn.](https://www.linkedin.com/in/rohanrajpal/)
+
+<embed src="https://wakatime.com/share/@8069ddb1-f7b3-4e88-a57a-25095df142a2/0c65f5ce-4db9-4f5a-bc85-06214c9abba8.svg">
