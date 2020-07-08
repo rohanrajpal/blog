@@ -19,7 +19,7 @@ Here is my [Resume](https://rohanrajpal.github.io/blog/resume/Rohan_Resume.pdf).
 Interactions
 - Machine Learning
 - Computer Networks
-- Designing Human Centered Systems
+- Designing Human-Centered Systems
 - Analysis and Design of Algorithms
 - Database Management System
 - Discrete Maths
@@ -50,7 +50,7 @@ Independent projects:
 ### Research
 
 - Undergraduate Researcher, [Precog](http://precog.iiitd.edu.in/). The social computing lab of IIITD.
-- Working on analzing the social media data of an Indian app. Finding the possibility of an echo chamber within the app.
+- Working on analyzing the social media data of an Indian app. Finding the possibility of an echo chamber within the app.
 - Using NLP techniques like LDA to do Topic Modelling in text
 
 ### Community and Leadership
