@@ -1,4 +1,265 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-07-08T06:24:29-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal · Blog</title><subtitle>Read about Data Science · Programming · Design · Mobile</subtitle><entry><title type="html">Generative Adversarial Networks: Triplet Training via Pytorch [Draft]</title><link href="https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html" rel="alternate" type="text/html" title="Generative Adversarial Networks: Triplet Training via Pytorch [Draft]" /><published>2020-06-30T00:00:00-05:00</published><updated>2020-06-30T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html">&lt;!--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-07-09T23:02:00-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal · Blog</title><subtitle>Read about Data Science · Programming · Design · Mobile</subtitle><entry><title type="html">DBMS: Interview Prep [Draft]</title><link href="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html" rel="alternate" type="text/html" title="DBMS: Interview Prep [Draft]" /><published>2020-07-10T00:00:00-05:00</published><updated>2020-07-10T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xAhfQNTIeOM&amp;amp;list=PLx5CT0AzDJCnO9k98RsrPY9WGAXj8yeKL&quot;&gt;DBMS Course&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;database--dbms--database-management-system&quot;&gt;Database &amp;amp; DBMS | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;Database: Collection of &lt;em&gt;related data.&lt;/em&gt;
+Properties:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;logically coherent relation&lt;/li&gt;
+  &lt;li&gt;some aspect of real world&lt;/li&gt;
+  &lt;li&gt;specific purpose&lt;/li&gt;
+  &lt;li&gt;any size and complexity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;database-vs-filesystem--database-management-system&quot;&gt;Database vs Filesystem | Database Management System&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Query ability&lt;/li&gt;
+  &lt;li&gt;Redundancy control: permissions for each user&lt;/li&gt;
+  &lt;li&gt;Access control: same as above?&lt;/li&gt;
+  &lt;li&gt;Option to store persistent objects
+    &lt;ul&gt;
+      &lt;li&gt;program closed, variables gone&lt;/li&gt;
+      &lt;li&gt;db gives option to store vars&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Backup and migrate&lt;/li&gt;
+  &lt;li&gt;Multiple user interface&lt;/li&gt;
+  &lt;li&gt;Integrity constraints
+    &lt;ul&gt;
+      &lt;li&gt;have relationships between tables&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Relationship among data&lt;/li&gt;
+  &lt;li&gt;Flexibility
+    &lt;ul&gt;
+      &lt;li&gt;change the schema&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;App dev time is reduced&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;data-model--database-management-system&quot;&gt;Data Model | Database Management System&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;logical structure&lt;/li&gt;
+  &lt;li&gt;intro. abstraction&lt;/li&gt;
+  &lt;li&gt;processed and stored&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Three types&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hierachical model
+    &lt;ul&gt;
+      &lt;li&gt;tree like structure&lt;/li&gt;
+      &lt;li&gt;one parent may have multiple chidlren, but the child has only one parent&lt;/li&gt;
+      &lt;li&gt;one-many relationship&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;network model
+    &lt;ul&gt;
+      &lt;li&gt;graph like&lt;/li&gt;
+      &lt;li&gt;child may have multiple parents
+  -many-many relationship&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;relational model
+    &lt;ul&gt;
+      &lt;li&gt;data is in some form of table&lt;/li&gt;
+      &lt;li&gt;relationship among tables&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;schema-instance--metadata--database-management-system&quot;&gt;Schema, Instance &amp;amp; Metadata | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;schema
+    - description of database
+    - specified during design
+    - not expected to change frequently&lt;/p&gt;
+
+&lt;p&gt;instance
+    - snapshot
+    - current state of occurance&lt;/p&gt;
+
+&lt;p&gt;metadata
+    - data about data&lt;/p&gt;
+
+&lt;h3 id=&quot;data-independence--database-management-system&quot;&gt;Data Independence | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;schema
+    - application
+    - logical
+    - physical&lt;/p&gt;
+
+&lt;p&gt;logical data independence
+physical data independence&lt;/p&gt;
+
+&lt;h3 id=&quot;database-abstraction--database-management-system&quot;&gt;Database Abstraction | Database Management System&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Physical level
+    &lt;ul&gt;
+      &lt;li&gt;how the data is actually stored in system&lt;/li&gt;
+      &lt;li&gt;keep it transparent&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Logical level
+    &lt;ul&gt;
+      &lt;li&gt;relationship among data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;View level
+    &lt;ul&gt;
+      &lt;li&gt;describe only a part of the db&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;database-architecture--database-management-system&quot;&gt;Database Architecture | Database Management System&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ODBC (Open database connector)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;er-model--database-management-system&quot;&gt;ER Model | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;a real world representation of db on paper&lt;/p&gt;
+
+&lt;h3 id=&quot;entity-entity-type-entity-set--database-management-system&quot;&gt;Entity, Entity Type, Entity Set | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;entity: object which has indp existence in the real world is called entity
+entity type: table name
+entity set: collection of one or more entity
+attributes: columns
+domain: set of permitted values&lt;/p&gt;
+
+&lt;h3 id=&quot;simple--composite-attributes--database-management-system&quot;&gt;Simple &amp;amp; Composite Attributes | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;composite attribute: the attribute can be divided into further smaller parts, eg: full name&lt;/p&gt;
+
+&lt;h3 id=&quot;single-valued-attributes-vs-multivalued-attributes--database-management-system&quot;&gt;Single Valued Attributes vs Multivalued Attributes | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;pretty self explainatory lol, multi example: phone number&lt;/p&gt;
+
+&lt;h3 id=&quot;stored-attributes-vs-derived-attributes--database-management-system&quot;&gt;Stored Attributes vs Derived Attributes | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;derived is calculated from stored&lt;/p&gt;
+
+&lt;h3 id=&quot;introduction-to-join-in-relational-algebra--database-management-system&quot;&gt;Introduction to Join in Relational Algebra | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;Join is eq to cross product followed by selective operations&lt;/p&gt;
+
+&lt;p&gt;It basically combines tuples from two relations based on some condition&lt;/p&gt;
+
+&lt;p&gt;Join
+    - inner join
+        - output or result only contains the matching tuples
+            - theta join
+            - equi join
+            - natural join
+    - outer join
+        - the result will contain all the tuples from one or both of the relation
+            - left outer
+            - right outer
+            - full outer&lt;/p&gt;
+
+&lt;h3 id=&quot;inner-join--database-management-system&quot;&gt;Inner Join | Database Management System&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Theta join:
+    &lt;ul&gt;
+      &lt;li&gt;most efficient when referential integrity contraints is maintained.&lt;/li&gt;
+      &lt;li&gt;tuples whose joining attributes are null, do not appear in the final result&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Equi join:
+    &lt;ul&gt;
+      &lt;li&gt;type of join where condition is equality&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Natural join:
+    &lt;ul&gt;
+      &lt;li&gt;it is an equijoin where attributes compared are same&lt;/li&gt;
+      &lt;li&gt;the result will not have repeating columns&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;outer-join--database-management-system&quot;&gt;Outer Join | Database Management System&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Left outer&lt;/li&gt;
+  &lt;li&gt;Right outer&lt;/li&gt;
+  &lt;li&gt;Full outer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;division-operation-in-relational-algebra--database-management-system&quot;&gt;Division Operation in Relational Algebra | Database Management System&lt;/h3&gt;
+
+&lt;p&gt;If all is there you use division operator&lt;/p&gt;
+
+&lt;h3 id=&quot;illustration--what-will-be-the-total-number-of-conflicts-serializable-schedules--dbms&quot;&gt;Illustration | What will be the total number of conflicts serializable schedules? | DBMS&lt;/h3&gt;
+
+&lt;p&gt;Conflicting operations : RR, RW, WW&lt;/p&gt;
+
+&lt;h2 id=&quot;sql&quot;&gt;SQL&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/&quot;&gt;SQL Joins&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;INNER JOIN and JOIN are same&lt;/li&gt;
+  &lt;li&gt;left join contains everything from left&lt;/li&gt;
+  &lt;li&gt;right join has everything from right&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;combine-two-tables&quot;&gt;Combine Two Tables&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/combine-two-tables/&quot;&gt;Leetcode link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;mistakes&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;with joins you have to use &lt;code class=&quot;highlighter-rouge&quot;&gt;on&lt;/code&gt; and not &lt;code class=&quot;highlighter-rouge&quot;&gt;where&lt;/code&gt;. This &lt;a href=&quot;https://stackoverflow.com/a/354094/10114752&quot;&gt;answer&lt;/a&gt; summarizes it well.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;why is the below code incorrect?&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FirstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;City&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;State&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PersonId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PersonId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;the above is all the items in Person that are also in Address&lt;/p&gt;
+
+&lt;p&gt;question wants us to return the columns for each person in the table,whether he has an address or not&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySQL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;City&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;State&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Address&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PersonId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PersonId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;second-highest-salary&quot;&gt;Second Highest Salary&lt;/h2&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySQL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SecondHighestSalary&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;code below is WRONG, as it does not handle the null case&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;interesting question, share my understanding after reading some posts. Query #2 (the inner layer of #1) returns the value as empty string &quot;&quot; (it is still a value though empty).
+NULL, on the other hand is the absence of value or undefined. This happens when the outer layer select from an empty table throws NULL
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySQL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SecondHighestSalary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Desc&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;offset&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;the below case is correct&lt;/p&gt;
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySQL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Desc&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;offset&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SecondHighestSalary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">DBMS Course</summary></entry><entry><title type="html">Generative Adversarial Networks: Triplet Training via Pytorch [Draft]</title><link href="https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html" rel="alternate" type="text/html" title="Generative Adversarial Networks: Triplet Training via Pytorch [Draft]" /><published>2020-06-30T00:00:00-05:00</published><updated>2020-06-30T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -1567,7 +1828,25 @@ Thanks to rmrao for the &lt;a href=&quot;https://github.com/pytorch/pytorch/issu
 &lt;/div&gt;
     
 
-&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/dl-cheat-sheet.jpg" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/dl-cheat-sheet.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Competitive Programming: C++ Cheat Sheet [Draft]</title><link href="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet.html" rel="alternate" type="text/html" title="Competitive Programming: C++ Cheat Sheet [Draft]" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet.html">&lt;p&gt;Syntax and tricks for C++.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/dl-cheat-sheet.jpg" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/dl-cheat-sheet.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Paper Summary: Don’t Mind Me Touching My Wrist: A Case Study of Interacting with On-Body Technology in Public</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions.html" rel="alternate" type="text/html" title="Paper Summary: Don’t Mind Me Touching My Wrist: A Case Study of Interacting with On-Body Technology in Public" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions.html">&lt;blockquote&gt;
+  &lt;p&gt;Halley P. Profita, James Clawson, Scott Gilliland, Clint Zeagler, Thad Starner, Jim Budd, and Ellen Yi-Luen Do. 2013. Don’t mind me touching my wrist: a case study of interacting with on-body technology in public. In Proceedings of the 2013 International Symposium on Wearable Computers (ISWC ’13).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This paper aims to study body interactions in the Public. Wearable tech, especially E-textile, introduces new kinds of on-body interactions. These interactions, however, are nontraditional. People might even find them uncomfortable to perform relative to time or place. These interactions might also be awkward for someone’s culture.&lt;/p&gt;
+
+&lt;p&gt;The authors aimed to answer these concerns by performing a survey-based study. The study involved two actors interacting with each other in a lift. One of the actors would be donning a wearable e-textile, who would receive a call and would reject it through the wearable. The third-party participant would view a video of this scene. The researchers conducted this study in the US and South Korea. The wearable e-textile used in this study was a jog wheel. They considered six different positions for the jog-wheel: collarbone, torso, waist, forearm, wrist and pocket. In each video, the actor would wear this textile in one of the six places. For a baseline, they also recorded videos of participants rejecting the call through their blackberry. After viewing the videos, the participant would answer eleven Likert scale questions from “Strongly Agree” to “Strongly Disagree” on the wearable placement. The researchers asked some additional attitudinal questions on the perception and position of the e-textile. Finally, participants would answer a follow-up questionnaire; they provided open-ended responses to the two most and two least preferred locations. In the results, the US and Korea resembled at some places. There were gender differences with respect to wearable placement and interactions. Interactions were less socially acceptable around the male’s waist area and on the waist and upper body areas of women. The wrist and the forearm came out to be the two most common on-body places for both countries, probably because they are the most common places for a wearable. However, the authors did succeed in finding the differences across cultures. For Americans, the most common concern was accidental triggering, while it was the interface for Koreans. In the follow-up questionnaire, Americans preferred a system that was easy to operate, whereas only 6.9 per cent of Koreans felt the same. South Koreans preferred a system that avoided making the user look weird or awkward.&lt;/p&gt;
+
+&lt;p&gt;There are many avenues we can explore with the help of this study. For example, the lift had opposite genders interacting, one can view the differences if both the characters of the lift are of the same gender. As the focus of the study is to study interactions in public, situations with more than two characters might also bring new insights.&lt;/p&gt;</content><author><name></name></author><summary type="html">Halley P. Profita, James Clawson, Scott Gilliland, Clint Zeagler, Thad Starner, Jim Budd, and Ellen Yi-Luen Do. 2013. Don’t mind me touching my wrist: a case study of interacting with on-body technology in public. In Proceedings of the 2013 International Symposium on Wearable Computers (ISWC ’13).</summary></entry><entry><title type="html">Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators.html" rel="alternate" type="text/html" title="Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators.html">&lt;blockquote&gt;
+  &lt;p&gt;Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives. Faraday Discuss. 176, (2014), 447–458.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This paper aims to review and give updated progress of Triboelectric Nanogenerators or TENG. The TENG is based on the principle of triboelectrification and electrostatic induction. This article also discusses its applications as a new energy generation technology and self-powered active sensors. There has been a boom in mobile computing devices in recent decades. To power these billions of devices, we require billions of batteries. However, the battery has a limited lifetime, and replacing the batteries of billions of gadgets is a humongous task. The direction of portable electronics is towards low power consumption; this makes it possible to harvest energy from the environment around the device. A newly emerging field of nano energy is to create independent nanotech-based power sources. They can harness energy from micro-scale like daily activities to macro-scale like ocean waves. The article also discusses TENG as self-powered sensors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/paper-summary/triboelectric.png&quot; alt=&quot;&quot; title=&quot;Taken from Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The author lays down four fundamental modes of triboelectric nanogenerators. There is vertical contact, lateral sliding, single-electrode, and freestanding triboelectric-layer. With these primary modes, TENGs are explored as both a micro and macro source for power generation. Micro here refers to powering small and mobile gadgets. Macro refers to large-scale energy generation. This article explores the contact electrification between a solid and liquid surface for macro purposes. With these modes and applications, some fundamental problems with triboelectric are discussed as well. First, more clarity is needed on the underlying mechanism of the triboelectric effect. The effect has to be investigated much more in-depth to understand its working better. This article also found a way to quantify the performance of TENG’s based on different modes. This article used a measurement matrix to quantify the performance. Finding the right pair of materials to generate the best output is also a problem to solve. One might say the triboelectric series is helpful, but there is no quantitative measure to compare how much energy two materials in a TENG can generate. External factors like humidity have a significant impact on triboelectricity. This means the TENG should have packaging to protect itself from outdoor conditions. Many more such problems are discussed.&lt;/p&gt;
+
+&lt;p&gt;As this paper is relatively recent, most of the applications are yet to be implemented. However, I firmly believe this technology can have a significant impact on wearables. This article mostly covers the generation before wearables, mobile devices. With wearables, we are moving towards even more portable, smaller, and less power-consuming devices. All of these aspects support the use of TENGs. With the evolution of low powered light devices like LEDs, TENGs might even bring light to thousands of homes across the world, which still don’t have full-time access to electricity.&lt;/p&gt;</content><author><name></name></author><summary type="html">Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives. Faraday Discuss. 176, (2014), 447–458.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/paper-summary/triboelectric.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/paper-summary/triboelectric.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Competitive Programming: C++ Cheat Sheet [Draft]</title><link href="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet.html" rel="alternate" type="text/html" title="Competitive Programming: C++ Cheat Sheet [Draft]" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet.html">&lt;p&gt;Syntax and tricks for C++.&lt;/p&gt;
 &lt;h1 id=&quot;improve-speed&quot;&gt;Improve speed&lt;/h1&gt;
 
 &lt;h2 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h2&gt;
@@ -1635,33 +1914,7 @@ Thanks to rmrao for the &lt;a href=&quot;https://github.com/pytorch/pytorch/issu
 &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ListNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ListNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ListNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//node is the same above&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Syntax and tricks for C++. Improve speed</summary></entry><entry><title type="html">Paper Summary: Toward Silent-Speech Control of Consumer Wearables</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables.html" rel="alternate" type="text/html" title="Paper Summary: Toward Silent-Speech Control of Consumer Wearables" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables.html">&lt;blockquote&gt;
-  &lt;p&gt;Bedri, A., Sahni, H., Thukral, P., Starner, T., Byrd, D., Presti, P., Reyes, G., Ghovanloo, M. and Guo, Z., 2015. Toward silent-speech control of consumer wearables. Computer, 48(10), pp.54-62.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Not being able to speak because of conditions like dysarthria and aphonia can be substantial communication barriers. People with such conditions can use Augmentative and Alternative Communication (AAC) systems, but such systems are much slower than speech. For a person with good mouth articulation, silent speech systems can be a much faster way to communicate. Silent speech can be extended for places with high noise, like firefighters, public transport, combat soldiers. It can also be used the other way around, like jaw gestures for acknowledging a message in stealth environments. The authors realised a vital requirement for silent systems. Such systems have to be unobtrusive. The aim is to make a system that is indistinguishable from devices like earphones.&lt;/p&gt;
-
-&lt;p&gt;The authors first explored the feasibility of the already existing TDS(Tongue Driven System). They achieved 96 per cent accuracy on the test and realised it is possible to work on such systems. Inspired from these interfaces, the authors came up with Tongue-Magnet-Interface (TMI) and Outer-Ear-Interface (OEI). TMI detects tongue movements using google glass with a magnet placed on the tongue. OEI detects jaw movements and can be installed in any ordinary headphone. The researchers tried to conduct various experiments with the TMI and OEI. In the first experiment, they used TMI and OEI together, and they achieved an average user-dependent recognition accuracy of 90 per cent. They then considered experimenting with the OEI alone, as that would eliminate tongue piercing. With the OEI alone they realised that TMI and OEI did not recognise the same phrases, realising they need to design the phrases more carefully. Then they experimented with improved OEI and Simple jaw gestures in which they achieved 84 per cent overall classification accuracy,  user-dependent results had even better results with 97 per cent accuracy. The experiments were helping them in constructing the phrases and well as the design of the wearable. In the last investigation, they explore how heart rate can be used to calibrate the sensors for better performance.&lt;/p&gt;
-
-&lt;p&gt;With the evolution of Deep Learning in the previous five years, one can now use Deep Learning models for the same tasks. It might help in improving accuracy and maybe even help us in noticing some exciting features of the data we get from the sensors. The authors conducted the study of OEI with only a single subject. They concluded that there is a need to carefully design the phrases which will be used for silent speech recognition as OEI and TMI recognises them differently. So a study with more subjects and the improved OEI system can be conducted to determine how these phrases are needed to be designed to help the practitioners who are actually going to use this research and implement it into a solution.&lt;/p&gt;</content><author><name></name></author><summary type="html">Bedri, A., Sahni, H., Thukral, P., Starner, T., Byrd, D., Presti, P., Reyes, G., Ghovanloo, M. and Guo, Z., 2015. Toward silent-speech control of consumer wearables. Computer, 48(10), pp.54-62.</summary></entry><entry><title type="html">Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators.html" rel="alternate" type="text/html" title="Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators.html">&lt;blockquote&gt;
-  &lt;p&gt;Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives. Faraday Discuss. 176, (2014), 447–458.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This paper aims to review and give updated progress of Triboelectric Nanogenerators or TENG. The TENG is based on the principle of triboelectrification and electrostatic induction. This article also discusses its applications as a new energy generation technology and self-powered active sensors. There has been a boom in mobile computing devices in recent decades. To power these billions of devices, we require billions of batteries. However, the battery has a limited lifetime, and replacing the batteries of billions of gadgets is a humongous task. The direction of portable electronics is towards low power consumption; this makes it possible to harvest energy from the environment around the device. A newly emerging field of nano energy is to create independent nanotech-based power sources. They can harness energy from micro-scale like daily activities to macro-scale like ocean waves. The article also discusses TENG as self-powered sensors.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/paper-summary/triboelectric.png&quot; alt=&quot;&quot; title=&quot;Taken from Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives.&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The author lays down four fundamental modes of triboelectric nanogenerators. There is vertical contact, lateral sliding, single-electrode, and freestanding triboelectric-layer. With these primary modes, TENGs are explored as both a micro and macro source for power generation. Micro here refers to powering small and mobile gadgets. Macro refers to large-scale energy generation. This article explores the contact electrification between a solid and liquid surface for macro purposes. With these modes and applications, some fundamental problems with triboelectric are discussed as well. First, more clarity is needed on the underlying mechanism of the triboelectric effect. The effect has to be investigated much more in-depth to understand its working better. This article also found a way to quantify the performance of TENG’s based on different modes. This article used a measurement matrix to quantify the performance. Finding the right pair of materials to generate the best output is also a problem to solve. One might say the triboelectric series is helpful, but there is no quantitative measure to compare how much energy two materials in a TENG can generate. External factors like humidity have a significant impact on triboelectricity. This means the TENG should have packaging to protect itself from outdoor conditions. Many more such problems are discussed.&lt;/p&gt;
-
-&lt;p&gt;As this paper is relatively recent, most of the applications are yet to be implemented. However, I firmly believe this technology can have a significant impact on wearables. This article mostly covers the generation before wearables, mobile devices. With wearables, we are moving towards even more portable, smaller, and less power-consuming devices. All of these aspects support the use of TENGs. With the evolution of low powered light devices like LEDs, TENGs might even bring light to thousands of homes across the world, which still don’t have full-time access to electricity.&lt;/p&gt;</content><author><name></name></author><summary type="html">Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives. Faraday Discuss. 176, (2014), 447–458.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/paper-summary/triboelectric.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/paper-summary/triboelectric.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Paper Summary: Don’t Mind Me Touching My Wrist: A Case Study of Interacting with On-Body Technology in Public</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions.html" rel="alternate" type="text/html" title="Paper Summary: Don’t Mind Me Touching My Wrist: A Case Study of Interacting with On-Body Technology in Public" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions.html">&lt;blockquote&gt;
-  &lt;p&gt;Halley P. Profita, James Clawson, Scott Gilliland, Clint Zeagler, Thad Starner, Jim Budd, and Ellen Yi-Luen Do. 2013. Don’t mind me touching my wrist: a case study of interacting with on-body technology in public. In Proceedings of the 2013 International Symposium on Wearable Computers (ISWC ’13).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This paper aims to study body interactions in the Public. Wearable tech, especially E-textile, introduces new kinds of on-body interactions. These interactions, however, are nontraditional. People might even find them uncomfortable to perform relative to time or place. These interactions might also be awkward for someone’s culture.&lt;/p&gt;
-
-&lt;p&gt;The authors aimed to answer these concerns by performing a survey-based study. The study involved two actors interacting with each other in a lift. One of the actors would be donning a wearable e-textile, who would receive a call and would reject it through the wearable. The third-party participant would view a video of this scene. The researchers conducted this study in the US and South Korea. The wearable e-textile used in this study was a jog wheel. They considered six different positions for the jog-wheel: collarbone, torso, waist, forearm, wrist and pocket. In each video, the actor would wear this textile in one of the six places. For a baseline, they also recorded videos of participants rejecting the call through their blackberry. After viewing the videos, the participant would answer eleven Likert scale questions from “Strongly Agree” to “Strongly Disagree” on the wearable placement. The researchers asked some additional attitudinal questions on the perception and position of the e-textile. Finally, participants would answer a follow-up questionnaire; they provided open-ended responses to the two most and two least preferred locations. In the results, the US and Korea resembled at some places. There were gender differences with respect to wearable placement and interactions. Interactions were less socially acceptable around the male’s waist area and on the waist and upper body areas of women. The wrist and the forearm came out to be the two most common on-body places for both countries, probably because they are the most common places for a wearable. However, the authors did succeed in finding the differences across cultures. For Americans, the most common concern was accidental triggering, while it was the interface for Koreans. In the follow-up questionnaire, Americans preferred a system that was easy to operate, whereas only 6.9 per cent of Koreans felt the same. South Koreans preferred a system that avoided making the user look weird or awkward.&lt;/p&gt;
-
-&lt;p&gt;There are many avenues we can explore with the help of this study. For example, the lift had opposite genders interacting, one can view the differences if both the characters of the lift are of the same gender. As the focus of the study is to study interactions in public, situations with more than two characters might also bring new insights.&lt;/p&gt;</content><author><name></name></author><summary type="html">Halley P. Profita, James Clawson, Scott Gilliland, Clint Zeagler, Thad Starner, Jim Budd, and Ellen Yi-Luen Do. 2013. Don’t mind me touching my wrist: a case study of interacting with on-body technology in public. In Proceedings of the 2013 International Symposium on Wearable Computers (ISWC ’13).</summary></entry><entry><title type="html">Interpreting the C++ programming language</title><link href="https://rohanrajpal.github.io/blog/2020/06/20/xcpp.html" rel="alternate" type="text/html" title="Interpreting the C++ programming language" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/06/20/xcpp</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/06/20/xcpp.html">&lt;!--
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Syntax and tricks for C++. Improve speed</summary></entry><entry><title type="html">Interpreting the C++ programming language</title><link href="https://rohanrajpal.github.io/blog/2020/06/20/xcpp.html" rel="alternate" type="text/html" title="Interpreting the C++ programming language" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/06/20/xcpp</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/06/20/xcpp.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -3110,7 +3363,15 @@ Eigen values:
 &lt;/div&gt;
     
 
-&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Competitive Programming: Problems and Tricks on various concepts. [Draft]</title><link href="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html" rel="alternate" type="text/html" title="Competitive Programming: Problems and Tricks on various concepts. [Draft]" /><published>2020-06-18T00:00:00-05:00</published><updated>2020-06-18T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html">&lt;p&gt;In this blog I’ll document some resources and all the challenging competitive programming problems with the focus on &lt;em&gt;motivation&lt;/em&gt; rather than the solution.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Paper Summary: Toward Silent-Speech Control of Consumer Wearables</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables.html" rel="alternate" type="text/html" title="Paper Summary: Toward Silent-Speech Control of Consumer Wearables" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables.html">&lt;blockquote&gt;
+  &lt;p&gt;Bedri, A., Sahni, H., Thukral, P., Starner, T., Byrd, D., Presti, P., Reyes, G., Ghovanloo, M. and Guo, Z., 2015. Toward silent-speech control of consumer wearables. Computer, 48(10), pp.54-62.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Not being able to speak because of conditions like dysarthria and aphonia can be substantial communication barriers. People with such conditions can use Augmentative and Alternative Communication (AAC) systems, but such systems are much slower than speech. For a person with good mouth articulation, silent speech systems can be a much faster way to communicate. Silent speech can be extended for places with high noise, like firefighters, public transport, combat soldiers. It can also be used the other way around, like jaw gestures for acknowledging a message in stealth environments. The authors realised a vital requirement for silent systems. Such systems have to be unobtrusive. The aim is to make a system that is indistinguishable from devices like earphones.&lt;/p&gt;
+
+&lt;p&gt;The authors first explored the feasibility of the already existing TDS(Tongue Driven System). They achieved 96 per cent accuracy on the test and realised it is possible to work on such systems. Inspired from these interfaces, the authors came up with Tongue-Magnet-Interface (TMI) and Outer-Ear-Interface (OEI). TMI detects tongue movements using google glass with a magnet placed on the tongue. OEI detects jaw movements and can be installed in any ordinary headphone. The researchers tried to conduct various experiments with the TMI and OEI. In the first experiment, they used TMI and OEI together, and they achieved an average user-dependent recognition accuracy of 90 per cent. They then considered experimenting with the OEI alone, as that would eliminate tongue piercing. With the OEI alone they realised that TMI and OEI did not recognise the same phrases, realising they need to design the phrases more carefully. Then they experimented with improved OEI and Simple jaw gestures in which they achieved 84 per cent overall classification accuracy,  user-dependent results had even better results with 97 per cent accuracy. The experiments were helping them in constructing the phrases and well as the design of the wearable. In the last investigation, they explore how heart rate can be used to calibrate the sensors for better performance.&lt;/p&gt;
+
+&lt;p&gt;With the evolution of Deep Learning in the previous five years, one can now use Deep Learning models for the same tasks. It might help in improving accuracy and maybe even help us in noticing some exciting features of the data we get from the sensors. The authors conducted the study of OEI with only a single subject. They concluded that there is a need to carefully design the phrases which will be used for silent speech recognition as OEI and TMI recognises them differently. So a study with more subjects and the improved OEI system can be conducted to determine how these phrases are needed to be designed to help the practitioners who are actually going to use this research and implement it into a solution.&lt;/p&gt;</content><author><name></name></author><summary type="html">Bedri, A., Sahni, H., Thukral, P., Starner, T., Byrd, D., Presti, P., Reyes, G., Ghovanloo, M. and Guo, Z., 2015. Toward silent-speech control of consumer wearables. Computer, 48(10), pp.54-62.</summary></entry><entry><title type="html">Competitive Programming: Problems and Tricks on various concepts. [Draft]</title><link href="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html" rel="alternate" type="text/html" title="Competitive Programming: Problems and Tricks on various concepts. [Draft]" /><published>2020-06-18T00:00:00-05:00</published><updated>2020-06-18T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/18/competitive-programming.html">&lt;p&gt;In this blog I’ll document some resources and all the challenging competitive programming problems with the focus on &lt;em&gt;motivation&lt;/em&gt; rather than the solution.&lt;/p&gt;
 
 &lt;h2 id=&quot;5-problem-solving-tips-for-cracking-coding-interview-questions&quot;&gt;5 Problem Solving Tips for Cracking Coding Interview Questions&lt;/h2&gt;
 
@@ -3603,413 +3864,4 @@ Pretty much all the backtracking problems I have done follows this pattern.
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">In this blog I’ll document some resources and all the challenging competitive programming problems with the focus on motivation rather than the solution.</summary></entry><entry><title type="html">The Virtual Internship: My Experience</title><link href="https://rohanrajpal.github.io/blog/internship/2020/06/17/expedia-internship-experience.html" rel="alternate" type="text/html" title="The Virtual Internship: My Experience" /><published>2020-06-17T05:30:00-05:00</published><updated>2020-06-17T05:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/internship/2020/06/17/expedia-internship-experience</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/internship/2020/06/17/expedia-internship-experience.html">&lt;p&gt;These summers, I interned at one of the largest travel companies of the world, Expedia. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!&lt;/p&gt;
-
-&lt;p&gt;Luckily, my &lt;a href=&quot;/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html&quot;&gt;previous intern&lt;/a&gt; was remote too, so I was kind of used to work from home. In this internship, I majorly worked on cloud and data engineering.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/previews/expedia-preview.png&quot; alt=&quot;&quot; title=&quot;Our kickoff call on the first day&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-induction-week&quot;&gt;The induction week&lt;/h2&gt;
-
-&lt;p&gt;Expedia organized an induction week for us, and it involved workshops on various topics: how to become a better leader, designer, and we even got to know how Expedia operates.
-We kept on having workshops throughout our intern, and there was a lot to learn, so much that I wrote a separate blog &lt;a href=&quot;/blog/internship/2020/06/14/expedia-internship-learning.html&quot;&gt;about it&lt;/a&gt; :grin:.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-setup&quot;&gt;My setup&lt;/h2&gt;
-
-&lt;figure&gt;
-  &lt;div style=&quot;display:flex&quot;&gt;
-  
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/experience/setup-1.jpg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:0.74&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/experience/setup-2.jpg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-  &lt;/div&gt;
-  
-    &lt;figcaption&gt;Not the fanciest setup out there, but enough to get the work done :)
-&lt;/figcaption&gt;
-  
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;my-team---vrbo-stayx-dot-net-modernization-pod&quot;&gt;My Team - Vrbo: Stayx dot net modernization pod&lt;/h2&gt;
-
-&lt;p&gt;I was a part of the stay experience team, which looks after the post-booking experience for a traveler. The team was divided into pods, and I worked on the .Net Stack Modernisation pod. I  worked on making a microservice and how to deploy it to the cloud.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-project&quot;&gt;The project&lt;/h2&gt;
-
-&lt;h3 id=&quot;motivation&quot;&gt;Motivation&lt;/h3&gt;
-
-&lt;p&gt;We have a database which stores the notifications for guests of guests in a homestay. Now we wanted a way in which we can store the data in S3 and keep it updated.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Why are you storing the data in two different places?
-    &lt;ul&gt;
-      &lt;li&gt;This data is not only used to send a notification but also by an analyst or data scientist. The MongoDB database also backs the GoG API, and if everyone does their operations on MongoDB, it might severely affect the API.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We finally came up with the idea to use a  Spark Job. This job would take the data from MongoDB and store it in an S3 bucket.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Why a spark job?
-    &lt;ul&gt;
-      &lt;li&gt;Spark and Scala are the industry standard for data management. The jobs will be able to manage huge amounts of data without any hiccups.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;aim-create-a-spark-job-to-sync-data-from-mongodb-to-s3&quot;&gt;Aim: Create a spark job to sync data from MongoDB to S3&lt;/h3&gt;
-&lt;!-- [The ticket SE-2854](https://jira.homeawaycorp.com/browse/SE-2854) --&gt;
-
-&lt;h3 id=&quot;a-quick-revision&quot;&gt;A quick revision&lt;/h3&gt;
-
-&lt;p&gt;This blog is going to get more technical now, just keeping this for a quick reference if you have a doubt.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What’s MongoDB?&lt;/strong&gt;  It’s a NoSQL database.&lt;br /&gt;
-&lt;strong&gt;What’s scala?&lt;/strong&gt;  It’s a programming language widely used for data management. I did all my coding in the Scala language.&lt;br /&gt;
-&lt;strong&gt;What’s Apache spark?&lt;/strong&gt;  It’s a fast and general-purpose cluster computing system for large scale data processing. Some important things to know about spark are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Dataframe: This is data in the form of a table, just like a relational database table.&lt;/li&gt;
-  &lt;li&gt;Dataset: Extension of Dataframes, they provide the functionality of being type-safe and an object-oriented programming interface.&lt;/li&gt;
-  &lt;li&gt;SparkSession vs SparkContext: Spark session is a unified entry point of a spark application from Spark 2.0. It provides a way to interact with various spark’s functionality with a lesser number of constructs. Instead of having a spark context, hive context, SQL context, now all of it is encapsulated in a Spark session&lt;/li&gt;
-  &lt;li&gt;Prior Spark 2.0, Spark Context was the entry point of any spark application and used to access all spark features and needed a sparkConf which had all the cluster configs and parameters to create a Spark Context object&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;What’s a spark job?&lt;/strong&gt;  In a spark application, when you invoke an action on RDD, a job is created. It’s the main function that has to be done and submitted to spark.&lt;br /&gt;
-&lt;strong&gt;What’s a vault?&lt;/strong&gt;  Hashicorp Vault is a tool for secrets management, encryption as a service, and privileged access management.&lt;br /&gt;
-&lt;strong&gt;What’s an S3 bucket?&lt;/strong&gt;  Just a simple distributed file storage system, think of it like the hard disk on your computer&lt;/p&gt;
-
-&lt;figure&gt;
-  &lt;div style=&quot;display:flex&quot;&gt;
-  
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/mongodb.svg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/spark.svg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/sbt.svg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-      &lt;/div&gt;
-      &lt;div style=&quot;display:flex&quot;&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/vault.svg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/terraform.svg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/consul.svg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/packer.svg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-      &lt;/div&gt;
-      &lt;div style=&quot;display:flex&quot;&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/ec2.jpg&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/parquet.png&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/scala.png&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-    
-      &lt;div style=&quot;flex:1&quot;&gt;
-    
-    
-      &lt;img src=&quot;/blog/images/expedia/stack/s3.png&quot; alt=&quot;&quot; /&gt;
-    
-      &lt;/div&gt;
-    
-    
-  
-  &lt;/div&gt;
-  
-    &lt;figcaption&gt;The technology stack
-&lt;/figcaption&gt;
-  
-&lt;/figure&gt;
-
-&lt;h3 id=&quot;approach&quot;&gt;Approach&lt;/h3&gt;
-
-&lt;div class=&quot;mxgraph&quot; style=&quot;max-width:100%;border:1px solid transparent;margin: auto;&quot; data-mxgraph=&quot;{&amp;quot;highlight&amp;quot;:&amp;quot;#0000ff&amp;quot;,&amp;quot;nav&amp;quot;:true,&amp;quot;resize&amp;quot;:true,&amp;quot;toolbar&amp;quot;:&amp;quot;zoom layers lightbox&amp;quot;,&amp;quot;edit&amp;quot;:&amp;quot;_blank&amp;quot;,&amp;quot;xml&amp;quot;:&amp;quot;&amp;lt;mxfile host=\&amp;quot;app.diagrams.net\&amp;quot; modified=\&amp;quot;2020-06-28T07:51:30.216Z\&amp;quot; agent=\&amp;quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\&amp;quot; etag=\&amp;quot;-2Ve7WmWmoMpoH2KV3nx\&amp;quot; version=\&amp;quot;13.3.5\&amp;quot; type=\&amp;quot;google\&amp;quot;&amp;gt;&amp;lt;diagram id=\&amp;quot;w-l4qnf0UAVcy5WlwC9E\&amp;quot; name=\&amp;quot;Page-1\&amp;quot;&amp;gt;zZdRb9owEMc/DY+bkphA9lgoME2tJg1pffaSI0lxfJHjENinn00cgptAW4l0fQr++yzbv/vfyYzIPNuvBM2TR4yAjTwn2o/I/cjzXIcE6qOVQ634gVMLsUgjE9QK6/QvNCuNWqYRFFagRGQyzW0xRM4hlJZGhcDKDtsgs3fNaQwdYR1S1lWf0kgmtRr4Tqt/hzROmp1dx8xktAk2QpHQCKsziSxGZC4QZf0r28+BaXgNl3rd8sLs6WACuHzLgtV2FXr5r9lTtQ5/0p27Xx7CLyY7O8pKc2FzWHloCECkgJghCplgjJyyRavOBJY8Ar2No0ZtzANirkRXic8g5cFkl5YSlZTIjJnZDXJpJt1Ajesz6I0v3tVIBZYihCsXbDxDRQzyStz4lBFlZcAMpDiodQIYlenOPgc1nopPcS129cOQf0cW3E4WHpHHeD/rJKNFrblVSSphndMjgUoVoI2VitBQDS5C3oGQsL+OuYvFLDh52xS3R6Zf/Vqp2mI5lURyVijEH4plF+ZnsDTw6E63IzXmyKFWlqm+23GLG1ree6PlJ//T8t7rWXqX12NGi8KwLLYgw8QM7CK4genJ2Da9+83pWn7aY3mXOAPBJB2YCpTYKukH/rnC1Xmd60ZZdI4MRWvcQgrcwgtxgO5CJr4NOugB7fWAngzFedzhvFIVpuBCKEAW+n0hMFOf37Rk8pbN+xY4fRunR3pwjvta9VA4/Q7OB9honndcpurzjCnX+/JIv6dAtbNPh3RsI532IfU+EOmk2wlUc3BmZbiFmxpygHr3yUe+JtSwfXsf587+wZDFPw==&amp;lt;/diagram&amp;gt;&amp;lt;/mxfile&amp;gt;&amp;quot;}&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://app.diagrams.net/js/viewer.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;The spark job&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;authenticates the vault and gets the secrets&lt;/li&gt;
-  &lt;li&gt;reads the updated data from MongoDB&lt;/li&gt;
-  &lt;li&gt;reads the data stored as parquet in S3 bucket&lt;/li&gt;
-  &lt;li&gt;does a left anti join on s3 and mongo data, you now have the data that did not change&lt;/li&gt;
-  &lt;li&gt;merge the data that didn’t change with the new data with the new data&lt;/li&gt;
-  &lt;li&gt;write the data as parquet in S3 bucket&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The authentication was a little better than just sending a saved token:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Grab the EC2 metadata and nonce&lt;/li&gt;
-  &lt;li&gt;Send the metadata and nonce to Vault&lt;/li&gt;
-  &lt;li&gt;Vault checks if the EC2 instance is allowed and the nonce is correct&lt;/li&gt;
-  &lt;li&gt;Obtain secrets like AWS access and secret key, and MongoDB password&lt;/li&gt;
-  &lt;li&gt;Send a nonce to the Vault server and get the token&lt;/li&gt;
-  &lt;li&gt;Get the secrets via the token&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Himanshu(My manager) explained me the approach with a nice example:&lt;/p&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Mongo
-id author book updateTime
-1 A1     B1     T1
-2   A2     B2     T2
-3   A3     B3     T3
-4   A4     B4     T4
-S3
-1   A1     B1     T1
-2   A2     B2     T2
-3   A3     B3     T2.1
-Step 1:
-get all docs from mongoDb between updateTime1 and updateTime2 where T2 &amp;lt; updateTime1 &amp;lt; updateTime2
-fetched records:
-3   A3     B3     T3
-4   A4     B4     T4
-Step 2:
-read all records from S3.
-fetched records:
-1   A1     B1     T1
-2   A2     B2     T2
-3   A3     B3     T2.1
-Step 3:
-Left anti join on id between S3 and mongo data so that we have the data that did not change
-1   A1     B1     T1
-2   A2     B2     T2
-Step 4:
-Merge results of Step 3 with data fetched in Step 1:
-new data set:
-1   A1     B1     T1
-2   A2     B2     T2
-3   A3     B3     T3
-4   A4     B4     T4
-This can be put back to S3. You can see how this data is in sync with Mongo data
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;challenges-and-how-i-tackled-them&quot;&gt;Challenges (and how I tackled them)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/experience/intellij-meme.jpg&quot; alt=&quot;&quot; class=&quot;meme&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;VPN Issues:&lt;/strong&gt; The VPN I was using did not support Linux or &lt;a href=&quot;https://github.com/microsoft/WSL/issues/5068&quot;&gt;WSL&lt;/a&gt;, so I had to work on windows. Windows is not at all developer-friendly. It was challenging to find a workaround for one-line commands in Linux.
-    &lt;ul&gt;
-      &lt;li&gt;However, I found a hack for this. I created an EC2 instance on the Expedia network and shifted all my work to that. Not only I could access all the links, but the scripts ran much faster than on my computer.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;RAM Issues:&lt;/strong&gt; I initially was using IntelliJ since it was easier to setup a scala project with it. Intellij was terribly slow and took a lot of RAM.
-    &lt;ul&gt;
-      &lt;li&gt;I later switched to VSCode plus Metals. Although it was a little more time consuming to setup, once understood, all RAM issues were solved, additionally using bloop instead of sbt decreased compile time.&lt;/li&gt;
-      &lt;li&gt;Having a local MongoDB server for testing was also quite RAM hungry, MongoDB Atlas helped me a lot here. I deployed a free cluster in the cloud, and my work was done :)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Spark and MongoDB&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Spark has some underlying concepts which were a little nontrivial to understand, at least for a first-timer like me. Above that the documentation of MongoDB-Spark connector was following old spark conventions at one place and new ones somewhere else. The documentation confused me a bit.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Understanding Vault EC2 authentication&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Authentication took most of the time, being a college student, I really didn’t worry about securing my applications in projects. Since we really didn’t put something into production.&lt;/li&gt;
-      &lt;li&gt;I learned about Hashicorp Vault(Store secrets), Terraform(Build instances from code) and Consul(Backend for Vault)&lt;/li&gt;
-      &lt;li&gt;Rather than having a token to authenticate vault and get the secrets, a better method would be to use the ec2 metadata in which the spark job will be running to authenticate vault.&lt;/li&gt;
-      &lt;li&gt;Making EC2 instances with Terraform and Consul&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Setting up EC2 instances&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;I had some trouble finding the correct configurations so that I am able to SSH into an instance and make sure the instance can access all VPN links.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;demo&quot;&gt;Demo&lt;/h3&gt;
-
-&lt;p&gt;Video: Coming soon.&lt;/p&gt;
-
-&lt;h3 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Clean code, make pull requests.&lt;/li&gt;
-  &lt;li&gt;Try to get the code into production.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-
-&lt;h3 id=&quot;generic&quot;&gt;Generic&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/microsoft/WSL/issues/5068&quot;&gt;WSL2 , problem with network connection when VPN used (PulseSecure) · Issue #5068 · microsoft/WSL&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.baudson.de/blog/stop-and-remove-all-docker-containers-and-images&quot;&gt;Stop and remove all docker containers and images | The humble developer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.sohamkamani.com/blog/2016/06/30/docker-mongo-replica-set/&quot;&gt;Creating a MongoDB replica set using Docker 🍃&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://community.atlassian.com/t5/Jira-Core-questions/Slack-Jira-integration-How-do-I-post-comments-to-issues-from/qaq-p/951175&quot;&gt;Slack/Jira integration: How do I post comments to issues, from Slack?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;task1--mongo-change-streams-to-s3-via-kafka&quot;&gt;Task1 : Mongo change streams to S3 via Kafka&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=06iRM1Ghr1k&quot;&gt;What is Apache Kafka®? (A Confluent Lightboard by Tim Berglund)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5faMjKuB9bc&quot;&gt;What is Database Sharding?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/edenhill/kafkacat&quot;&gt;edenhill/kafkacat: Generic command line non-JVM Apache Kafka producer and consumer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/kafka-connector/master/kafka-source/&quot;&gt;Mongo Kafka connector docs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.confluent.io/blog/getting-started-mongodb-connector-for-apache-kafka-and-mongodb/&quot;&gt;Getting Started with the MongoDB Connector for Apache Kafka and MongoDB&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Kafka Demo&lt;/strong&gt;: &lt;a href=&quot;https://docs.confluent.io/current/tutorials/cp-demo/docs/index.html?utm_source=github&amp;amp;utm_medium=demo&amp;amp;utm_campaign=ch.cp-demo_type.community_content.cp-demo&quot;&gt;Confluent Platform Demo (cp-demo) — Confluent Platform&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;What are change streams?&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Change streams, a feature introduced in MongoDB 3.6, generate event documents that contain changes to data stored in MongoDB in real-time and provide guarantees of durability, security, and idempotency. You can configure change streams to observe changes at the &lt;strong&gt;collection&lt;/strong&gt; , &lt;strong&gt;database&lt;/strong&gt; , or &lt;strong&gt;deployment&lt;/strong&gt; level. See &lt;a href=&quot;https://www.mongodb.com/blog/post/an-introduction-to-change-streams&quot;&gt;An Introduction to Change Streams&lt;/a&gt; for more information.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=eBGC6z1fPs0&quot;&gt;Using Change Streams to Keep Up with Your Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;MongoDB kafka guide&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.confluent.io/blog/getting-started-mongodb-connector-for-apache-kafka-and-mongodb/&quot;&gt;Getting Started with the MongoDB Connector for Apache Kafka and MongoDB&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.mongodb.com/blog/post/getting-started-with-the-mongodb-connector-for-apache-kafka-and-mongodb-atlas&quot;&gt;Getting started with the MongoDB Connector for Apache Kafka and MongoDB Atlas&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/57544201/implement-dockerized-kafka-sink-connector-to-mongo/57629665#57629665&quot;&gt;https://stackoverflow.com/questions/57544201/implement-dockerized-kafka-sink-connector-to-mongo/57629665#57629665&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/mongodb/mongo-kafka&quot;&gt;mongodb/mongo-kafka: MongoDB Kafka Connector&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;task2-create-a-scala-job&quot;&gt;Task2: Create a scala job&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/@achilleus/spark-session-10d0d66d1d24#:~:text=Spark%20session%20is%20a%20unified,encapsulated%20in%20a%20Spark%20session.&quot;&gt;What is a spark session?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=CTRBv45F5I0&quot;&gt;What is Scala?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://spark.apache.org/&quot;&gt;Apache Spark™ - Unified Analytics Engine for Big Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://joelabrahamsson.com/learning-scala-part-three-executing-scala-code/#:~:text=The%20easiest%20way%20to%20execute,folder%20where%20Scala%20is%20installed.&quot;&gt;Running scala code&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=GD4qyXACuTc&quot;&gt;Scala Tutorial 2 - Introduction to SBT (Scala Build Tool)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://kaizen.itversity.com/setup-development-environment-intellij-and-scala-big-data-hadoop-and-spark/&quot;&gt;Setup Spark Development Environment – IntelliJ and Scala | Kaizen&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.homeawaycorp.com/AnalyticsEngineering/ae-fast-data-analytics/blob/master/jobs/booking_fact/src/main/scala/com/homeaway/analyticsengineering/task/BookingLifetimeFactLoad.scala#L102-L106&quot;&gt;Reference code:&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/nscala-time/nscala-time&quot;&gt;nscala-time/nscala-time: A new Scala wrapper for Joda Time based on scala-time&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/48889946/how-can-i-save-an-isodate-field-using-mongospark-save-from-mongodb-spark-connect&quot;&gt;how can I save an isodate field using MongoSpark.save from mongodb spark connector v2.1?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://spark.apache.org/docs/latest/sql-programming-guide.html#data-types&quot;&gt;https://spark.apache.org/docs/latest/sql-programming-guide.html#data-types&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mode.com/blog/anti-join-examples/&quot;&gt;How to Master Anti Joins and Apply Them to Business Problems&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.raphael-brugier.com/blog/mongodb-apache-spark-getting-started-tutorial/&quot;&gt;MongoDB and Apache Spark - Getting started tutorial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.databricks.com/data/data-sources/read-parquet.html#reading-parquet-files-notebook&quot;&gt;https://docs.databricks.com/data/data-sources/read-parquet.html#reading-parquet-files-notebook&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://sparkbyexamples.com/spark/spark-read-write-dataframe-parquet-example/&quot;&gt;Spark Read and Write Apache Parquet file — Spark by {Examples}&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/43186888/left-anti-join-in-spark&quot;&gt;Left Anti join in Spark?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://sparkbyexamples.com/spark/spark-dataframe-union-and-union-all/&quot;&gt;Spark DataFrame Union and UnionAll — Spark by {Examples}&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/53949197/isnt-sql-a-left-join-b-just-a/53949327&quot;&gt;SQL A left join B, just A?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.praveenkumarg.com/install-hadoop-with-spark-on-windows-in-just-5-steps/&quot;&gt;Install hadoop in 5 steps&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.cloudera.com/documentation/enterprise/latest/topics/spark_s3.html&quot;&gt;Spark s3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.channelfutures.com/strategy/a-multi-paas-strategy-have-your-paas-and-eat-it-too&quot;&gt;PaaS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://scalameta.org/metals/docs/editors/vscode.html#gitignore-projectmetalssbt-metals-and-bloop&quot;&gt;Setup scala project with Metals and Bloop (Much better than intellij!)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/@afsal.taj06/scala-with-bloop-and-metals-7bfc411502a6&quot;&gt;blog for scala and bloop&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.scala-lang.org/getting-started/sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html&quot;&gt;Scala and Sbt using the command line&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/58013126/how-to-overwrite-a-parquet-file-from-where-dataframe-is-being-read-in-spark&quot;&gt;Overwrite a parquet file you just read&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.expedia.biz/scala-platform/ha-scala-commons/tree/master/container/config/config-server-aws-vault/src/main/scala/com/homeaway/hascala/container/config/aws&quot;&gt;https://github.expedia.biz/scala-platform/ha-scala-commons/tree/master/container/config/config-server-aws-vault/src/main/scala/com/homeaway/hascala/container/config/aws&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/41253309/connect-to-spark-running-on-vm&quot;&gt;https://stackoverflow.com/questions/41253309/connect-to-spark-running-on-vm&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=SBxNXKhwEX8&quot;&gt;What is Qubole?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=v3yv88h68GY&quot;&gt;What is data lake?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wiki.homeawaycorp.com/display/PTA/Vault+Secrets+Integration+for+Qubole+Spark+Jobs&quot;&gt;Vault secrets-Wiki&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.vaultproject.io/api-docs/auth/aws&quot;&gt;https://www.vaultproject.io/api-docs/auth/aws&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.gruntwork.io/a-guide-to-automating-hashicorp-vault-2-authenticating-with-instance-metadata-c3f9eaeaba53&quot;&gt;Ec2 auth vault&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.vaultproject.io/docs/auth/aws&quot;&gt;Vault docs AWS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Link-local_address&quot;&gt;Link local addresses&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=lMdin-L08p4&quot;&gt;MicroNugget: What are AWS EC2 Key Pairs?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=F1KC0khe4SU&amp;amp;t=31s&quot;&gt;Vault on AWS: Creating an EC2 Key Pair&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.terraform.io/docs/configuration/variables.html&quot;&gt;terraform variable configuration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=RA1mNClGYJ4&amp;amp;t=887s&quot;&gt;terraform setup&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/31900096/10114752&quot;&gt;Spark master slave ec2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">These summers, I interned at one of the largest travel companies of the world, Expedia. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">In this blog I’ll document some resources and all the challenging competitive programming problems with the focus on motivation rather than the solution.</summary></entry></feed>

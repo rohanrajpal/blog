@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>DBMS: Interview Prep [Draft] | Rohan Rajpal · Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="DBMS: Interview Prep [Draft]" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="DBMS Course" />
+<meta property="og:description" content="DBMS Course" />
+<link rel="canonical" href="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html" />
+<meta property="og:url" content="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html" />
+<meta property="og:site_name" content="Rohan Rajpal · Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-10T00:00:00-05:00" />
+<script type="application/ld+json">
+{"headline":"DBMS: Interview Prep [Draft]","dateModified":"2020-07-10T00:00:00-05:00","datePublished":"2020-07-10T00:00:00-05:00","description":"DBMS Course","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal · Blog" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>DBMS: Interview Prep [Draft] | Rohan Rajpal · Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="DBMS: Interview Prep [Draft]" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="DBMS Course" />
+<meta property="og:description" content="DBMS Course" />
+<link rel="canonical" href="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html" />
+<meta property="og:url" content="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html" />
+<meta property="og:site_name" content="Rohan Rajpal · Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-10T00:00:00-05:00" />
+<script type="application/ld+json">
+{"headline":"DBMS: Interview Prep [Draft]","dateModified":"2020-07-10T00:00:00-05:00","datePublished":"2020-07-10T00:00:00-05:00","description":"DBMS Course","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal · Blog" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script></head><body><header class="site-header">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Rohan Rajpal · Blog</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+  
+          <div class="trigger">
+            <a class="page-link" href="/blog/resume/Rohan_Resume.pdf">Resume</a><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/support-me/">Support Me</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+        </nav></div>
+  </header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <script data-ad-client="ca-pub-2665834374828244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <h1 class="post-title p-name" itemprop="name headline">DBMS: Interview Prep [Draft]</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-07-10T00:00:00-05:00" itemprop="datePublished">
+        Jul 10, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#Interview">Interview</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h3"><a href="#database--dbms--database-management-system">Database &amp; DBMS | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#database-vs-filesystem--database-management-system">Database vs Filesystem | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#data-model--database-management-system">Data Model | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#schema-instance--metadata--database-management-system">Schema, Instance &amp; Metadata | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#data-independence--database-management-system">Data Independence | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#database-abstraction--database-management-system">Database Abstraction | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#database-architecture--database-management-system">Database Architecture | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#er-model--database-management-system">ER Model | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#entity-entity-type-entity-set--database-management-system">Entity, Entity Type, Entity Set | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#simple--composite-attributes--database-management-system">Simple &amp; Composite Attributes | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#single-valued-attributes-vs-multivalued-attributes--database-management-system">Single Valued Attributes vs Multivalued Attributes | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#stored-attributes-vs-derived-attributes--database-management-system">Stored Attributes vs Derived Attributes | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#introduction-to-join-in-relational-algebra--database-management-system">Introduction to Join in Relational Algebra | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#inner-join--database-management-system">Inner Join | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#outer-join--database-management-system">Outer Join | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#division-operation-in-relational-algebra--database-management-system">Division Operation in Relational Algebra | Database Management System</a></li>
+<li class="toc-entry toc-h3"><a href="#illustration--what-will-be-the-total-number-of-conflicts-serializable-schedules--dbms">Illustration | What will be the total number of conflicts serializable schedules? | DBMS</a></li>
+<li class="toc-entry toc-h2"><a href="#sql">SQL</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#combine-two-tables">Combine Two Tables</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#second-highest-salary">Second Highest Salary</a></li>
+</ul><p><a href="https://www.youtube.com/watch?v=xAhfQNTIeOM&amp;list=PLx5CT0AzDJCnO9k98RsrPY9WGAXj8yeKL">DBMS Course</a></p>
+
+<h3 id="database--dbms--database-management-system">
+<a class="anchor" href="#database--dbms--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database &amp; DBMS | Database Management System</h3>
+
+<p>Database: Collection of <em>related data.</em>
+Properties:</p>
+<ul>
+  <li>logically coherent relation</li>
+  <li>some aspect of real world</li>
+  <li>specific purpose</li>
+  <li>any size and complexity</li>
+</ul>
+
+<h3 id="database-vs-filesystem--database-management-system">
+<a class="anchor" href="#database-vs-filesystem--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database vs Filesystem | Database Management System</h3>
+
+<ol>
+  <li>Query ability</li>
+  <li>Redundancy control: permissions for each user</li>
+  <li>Access control: same as above?</li>
+  <li>Option to store persistent objects
+    <ul>
+      <li>program closed, variables gone</li>
+      <li>db gives option to store vars</li>
+    </ul>
+  </li>
+  <li>Backup and migrate</li>
+  <li>Multiple user interface</li>
+  <li>Integrity constraints
+    <ul>
+      <li>have relationships between tables</li>
+    </ul>
+  </li>
+  <li>Relationship among data</li>
+  <li>Flexibility
+    <ul>
+      <li>change the schema</li>
+    </ul>
+  </li>
+  <li>App dev time is reduced</li>
+</ol>
+
+<h3 id="data-model--database-management-system">
+<a class="anchor" href="#data-model--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Model | Database Management System</h3>
+
+<ul>
+  <li>logical structure</li>
+  <li>intro. abstraction</li>
+  <li>processed and stored</li>
+</ul>
+
+<p>Three types</p>
+
+<ul>
+  <li>hierachical model
+    <ul>
+      <li>tree like structure</li>
+      <li>one parent may have multiple chidlren, but the child has only one parent</li>
+      <li>one-many relationship</li>
+    </ul>
+  </li>
+  <li>network model
+    <ul>
+      <li>graph like</li>
+      <li>child may have multiple parents
+  -many-many relationship</li>
+    </ul>
+  </li>
+  <li>relational model
+    <ul>
+      <li>data is in some form of table</li>
+      <li>relationship among tables</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="schema-instance--metadata--database-management-system">
+<a class="anchor" href="#schema-instance--metadata--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schema, Instance &amp; Metadata | Database Management System</h3>
+
+<p>schema
+    - description of database
+    - specified during design
+    - not expected to change frequently</p>
+
+<p>instance
+    - snapshot
+    - current state of occurance</p>
+
+<p>metadata
+    - data about data</p>
+
+<h3 id="data-independence--database-management-system">
+<a class="anchor" href="#data-independence--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Independence | Database Management System</h3>
+
+<p>schema
+    - application
+    - logical
+    - physical</p>
+
+<p>logical data independence
+physical data independence</p>
+
+<h3 id="database-abstraction--database-management-system">
+<a class="anchor" href="#database-abstraction--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database Abstraction | Database Management System</h3>
+
+<ol>
+  <li>Physical level
+    <ul>
+      <li>how the data is actually stored in system</li>
+      <li>keep it transparent</li>
+    </ul>
+  </li>
+  <li>Logical level
+    <ul>
+      <li>relationship among data</li>
+    </ul>
+  </li>
+  <li>View level
+    <ul>
+      <li>describe only a part of the db</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="database-architecture--database-management-system">
+<a class="anchor" href="#database-architecture--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database Architecture | Database Management System</h3>
+
+<ul>
+  <li>ODBC (Open database connector)</li>
+</ul>
+
+<h3 id="er-model--database-management-system">
+<a class="anchor" href="#er-model--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>ER Model | Database Management System</h3>
+
+<p>a real world representation of db on paper</p>
+
+<h3 id="entity-entity-type-entity-set--database-management-system">
+<a class="anchor" href="#entity-entity-type-entity-set--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Entity, Entity Type, Entity Set | Database Management System</h3>
+
+<p>entity: object which has indp existence in the real world is called entity
+entity type: table name
+entity set: collection of one or more entity
+attributes: columns
+domain: set of permitted values</p>
+
+<h3 id="simple--composite-attributes--database-management-system">
+<a class="anchor" href="#simple--composite-attributes--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple &amp; Composite Attributes | Database Management System</h3>
+
+<p>composite attribute: the attribute can be divided into further smaller parts, eg: full name</p>
+
+<h3 id="single-valued-attributes-vs-multivalued-attributes--database-management-system">
+<a class="anchor" href="#single-valued-attributes-vs-multivalued-attributes--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Single Valued Attributes vs Multivalued Attributes | Database Management System</h3>
+
+<p>pretty self explainatory lol, multi example: phone number</p>
+
+<h3 id="stored-attributes-vs-derived-attributes--database-management-system">
+<a class="anchor" href="#stored-attributes-vs-derived-attributes--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stored Attributes vs Derived Attributes | Database Management System</h3>
+
+<p>derived is calculated from stored</p>
+
+<h3 id="introduction-to-join-in-relational-algebra--database-management-system">
+<a class="anchor" href="#introduction-to-join-in-relational-algebra--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Join in Relational Algebra | Database Management System</h3>
+
+<p>Join is eq to cross product followed by selective operations</p>
+
+<p>It basically combines tuples from two relations based on some condition</p>
+
+<p>Join
+    - inner join
+        - output or result only contains the matching tuples
+            - theta join
+            - equi join
+            - natural join
+    - outer join
+        - the result will contain all the tuples from one or both of the relation
+            - left outer
+            - right outer
+            - full outer</p>
+
+<h3 id="inner-join--database-management-system">
+<a class="anchor" href="#inner-join--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inner Join | Database Management System</h3>
+
+<ol>
+  <li>Theta join:
+    <ul>
+      <li>most efficient when referential integrity contraints is maintained.</li>
+      <li>tuples whose joining attributes are null, do not appear in the final result</li>
+    </ul>
+  </li>
+  <li>Equi join:
+    <ul>
+      <li>type of join where condition is equality</li>
+    </ul>
+  </li>
+  <li>Natural join:
+    <ul>
+      <li>it is an equijoin where attributes compared are same</li>
+      <li>the result will not have repeating columns</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="outer-join--database-management-system">
+<a class="anchor" href="#outer-join--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Outer Join | Database Management System</h3>
+
+<ol>
+  <li>Left outer</li>
+  <li>Right outer</li>
+  <li>Full outer</li>
+</ol>
+
+<h3 id="division-operation-in-relational-algebra--database-management-system">
+<a class="anchor" href="#division-operation-in-relational-algebra--database-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Division Operation in Relational Algebra | Database Management System</h3>
+
+<p>If all is there you use division operator</p>
+
+<h3 id="illustration--what-will-be-the-total-number-of-conflicts-serializable-schedules--dbms">
+<a class="anchor" href="#illustration--what-will-be-the-total-number-of-conflicts-serializable-schedules--dbms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Illustration | What will be the total number of conflicts serializable schedules? | DBMS</h3>
+
+<p>Conflicting operations : RR, RW, WW</p>
+
+<h2 id="sql">
+<a class="anchor" href="#sql" aria-hidden="true"><span class="octicon octicon-link"></span></a>SQL</h2>
+
+<p><a href="https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/">SQL Joins</a></p>
+<ul>
+  <li>INNER JOIN and JOIN are same</li>
+  <li>left join contains everything from left</li>
+  <li>right join has everything from right</li>
+</ul>
+
+<h3 id="combine-two-tables">
+<a class="anchor" href="#combine-two-tables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combine Two Tables</h3>
+
+<p><a href="https://leetcode.com/problems/combine-two-tables/">Leetcode link</a></p>
+
+<p>mistakes</p>
+
+<ul>
+  <li>with joins you have to use <code class="highlighter-rouge">on</code> and not <code class="highlighter-rouge">where</code>. This <a href="https://stackoverflow.com/a/354094/10114752">answer</a> summarizes it well.</li>
+</ul>
+
+<p>why is the below code incorrect?</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">p</span><span class="p">.</span><span class="n">FirstName</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">LastName</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">City</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="k">State</span>
+<span class="k">from</span> <span class="n">Person</span> <span class="n">p</span><span class="p">,</span> <span class="n">Address</span> <span class="n">a</span> 
+<span class="k">where</span> <span class="n">p</span><span class="p">.</span><span class="n">PersonId</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">PersonId</span><span class="p">;</span>
+</code></pre></div></div>
+<p>the above is all the items in Person that are also in Address</p>
+
+<p>question wants us to return the columns for each person in the table,whether he has an address or not</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">#</span> <span class="k">Write</span> <span class="n">your</span> <span class="n">MySQL</span> <span class="n">query</span> <span class="k">statement</span> <span class="n">below</span>
+<span class="k">select</span> <span class="n">FirstName</span><span class="p">,</span> <span class="n">LastName</span><span class="p">,</span> <span class="n">City</span><span class="p">,</span> <span class="k">State</span> 
+<span class="k">from</span> <span class="n">Person</span> <span class="k">left</span> <span class="k">join</span> <span class="n">Address</span> 
+<span class="k">on</span> <span class="n">Person</span><span class="p">.</span><span class="n">PersonId</span> <span class="o">=</span> <span class="n">Address</span><span class="p">.</span><span class="n">PersonId</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="second-highest-salary">
+<a class="anchor" href="#second-highest-salary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Second Highest Salary</h2>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">#</span> <span class="k">Write</span> <span class="n">your</span> <span class="n">MySQL</span> <span class="n">query</span> <span class="k">statement</span> <span class="n">below</span>
+<span class="k">select</span> <span class="k">MAX</span><span class="p">(</span><span class="n">Salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">SecondHighestSalary</span>
+<span class="k">from</span> <span class="n">Employee</span>
+<span class="k">where</span> <span class="n">Salary</span> <span class="o">&lt;</span> <span class="p">(</span><span class="k">Select</span> <span class="k">MAX</span><span class="p">(</span><span class="n">Salary</span><span class="p">)</span> <span class="k">from</span> <span class="n">Employee</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>code below is WRONG, as it does not handle the null case</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>interesting question, share my understanding after reading some posts. Query #2 (the inner layer of #1) returns the value as empty string "" (it is still a value though empty).
+NULL, on the other hand is the absence of value or undefined. This happens when the outer layer select from an empty table throws NULL
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">#</span> <span class="k">Write</span> <span class="n">your</span> <span class="n">MySQL</span> <span class="n">query</span> <span class="k">statement</span> <span class="n">below</span>
+<span class="k">select</span> <span class="k">distinct</span> <span class="n">Salary</span> <span class="k">as</span> <span class="n">SecondHighestSalary</span> <span class="k">from</span> <span class="n">Employee</span> <span class="k">order</span> <span class="k">by</span> <span class="n">Salary</span> <span class="k">Desc</span> <span class="k">limit</span> <span class="mi">1</span> <span class="k">offset</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>the below case is correct</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">#</span> <span class="k">Write</span> <span class="n">your</span> <span class="n">MySQL</span> <span class="n">query</span> <span class="k">statement</span> <span class="n">below</span>
+<span class="k">select</span> <span class="p">(</span><span class="k">select</span> <span class="k">distinct</span> <span class="n">Salary</span> <span class="k">from</span> <span class="n">Employee</span> <span class="k">order</span> <span class="k">by</span> <span class="n">Salary</span> <span class="k">Desc</span> <span class="k">limit</span> <span class="mi">1</span> <span class="k">offset</span> <span class="mi">1</span><span class="p">)</span> <span class="k">as</span> <span class="n">SecondHighestSalary</span> <span class="p">;</span>
+</code></pre></div></div>
+
+  </div>
+
+  Thanks for reading 😄. If you would like to support my work, you can <a href="https://www.buymeacoffee.com/rohanrajpal">buy me a coffee</a> ☕.<div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html';
+      this.page.identifier = 'https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://https-rohanrajpal-github-io.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/blog/interview/2020/07/10/DBMS-notes.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Read about Data Science · Programming · Design · Mobile</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/rohanrajpal" title="rohanrajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.instagram.com/rohan__rajpal" title="rohan__rajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#instagram"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/rohanrajpal" title="rohanrajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/rohan__rajpal" title="rohan__rajpal"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
