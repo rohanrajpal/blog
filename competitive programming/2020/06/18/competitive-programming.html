@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      14 min read
     
 </span></p>
 
@@ -123,15 +123,22 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#5-problem-solving-tips-for-cracking-coding-interview-questions">5 Problem Solving Tips for Cracking Coding Interview Questions</a></li>
 <li class="toc-entry toc-h2"><a href="#study-plan">Study Plan</a></li>
 <li class="toc-entry toc-h2"><a href="#best-of-the-best-blogs">Best of the best blogs</a></li>
+<li class="toc-entry toc-h2"><a href="#tle-reasons">TLE reasons</a></li>
 <li class="toc-entry toc-h2"><a href="#array">Array</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#remove-duplicates-from-sorted-array">Remove Duplicates from Sorted Array</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#3sum">3Sum</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#set-matrix-zeroes">Set Matrix Zeroes</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#dynamic-programming">Dynamic Programming</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#coin-change-2">Coin Change 2</a></li>
 <li class="toc-entry toc-h3"><a href="#dungeon-game">Dungeon Game</a></li>
+<li class="toc-entry toc-h3"><a href="#distinct-subsequences">Distinct Subsequences</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#maths">Maths</a>
@@ -154,11 +161,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#backtracking">Backtracking</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</a></li>
+<li class="toc-entry toc-h3"><a href="#generate-parentheses">Generate Parentheses</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#linked-list">Linked List</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#add-two-numbers">Add two Numbers</a></li>
+<li class="toc-entry toc-h3"><a href="#odd-even-linked-list">Odd-Even Linked List</a></li>
+<li class="toc-entry toc-h3"><a href="#intersection-of-two-linked-lists">Intersection of Two Linked Lists</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#bit-manipulation">Bit Manipulation</a>
@@ -168,12 +178,13 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#sum-of-two-integers">Sum of Two Integers</a></li>
+<li class="toc-entry toc-h2"><a href="#my-weak-points">My weak points</a></li>
 </ul><p>In this blog I’ll document some resources and all the challenging competitive programming problems with the focus on <em>motivation</em> rather than the solution.</p>
 
 <h2 id="5-problem-solving-tips-for-cracking-coding-interview-questions">
 <a class="anchor" href="#5-problem-solving-tips-for-cracking-coding-interview-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>5 Problem Solving Tips for Cracking Coding Interview Questions</h2>
 
-<p>[<a href="https://www.youtube.com/watch?v=GBuHSRDGZBY">Youtube</a>]<br>
+<p><a href="https://www.youtube.com/watch?v=GBuHSRDGZBY">Youtube</a>]<br>
 Tip #1: Come up with a brute-force solution -<br>
 Tip #2: Think of a simpler version of the problem -<br>
 Tip #3: Think with simpler examples -&gt; try noticing a pattern -<br>
@@ -192,7 +203,7 @@ Generic preparation tips I give to freshers to clear any algorithmic interview a
 4) all Codeforces contests from now till interviews<br>
 5) 200+ Leetcode questions</p>
 
-<p>Take competitive programming course if you haven’t done that already.</p>
+<p>Take the competitive programming course if you haven’t done that already.</p>
 
 <h2 id="best-of-the-best-blogs">
 <a class="anchor" href="#best-of-the-best-blogs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Best of the best blogs</h2>
@@ -222,6 +233,15 @@ Generic preparation tips I give to freshers to clear any algorithmic interview a
 </li>
 </ul>
 
+<h2 id="tle-reasons">
+<a class="anchor" href="#tle-reasons" aria-hidden="true"><span class="octicon octicon-link"></span></a>TLE reasons</h2>
+
+<ul>
+  <li>does not satisfy constraints</li>
+  <li>infinite loop in code</li>
+  <li>created an endless linked list and returned it</li>
+</ul>
+
 <h2 id="array">
 <a class="anchor" href="#array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array</h2>
 
@@ -242,6 +262,89 @@ Generic preparation tips I give to freshers to clear any algorithmic interview a
             <span class="p">}</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">j</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h2 id="3sum">
+<a class="anchor" href="#3sum" aria-hidden="true"><span class="octicon octicon-link"></span></a>3Sum</h2>
+
+<p><a href="https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/776/">Leet link</a></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">threeSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">ans</span><span class="p">;</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">front</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">back</span><span class="o">=</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">target</span><span class="o">=-</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="c1">// cout&lt;&lt;"in\n";</span>
+            <span class="k">while</span><span class="p">(</span><span class="n">front</span><span class="o">&lt;</span><span class="n">back</span><span class="p">){</span>
+                <span class="c1">// cout&lt;&lt;front&lt;&lt;" "&lt;&lt;back&lt;&lt;"\n";</span>
+                <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">front</span><span class="p">]</span><span class="o">+</span><span class="n">nums</span><span class="p">[</span><span class="n">back</span><span class="p">];</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="o">&lt;</span><span class="n">target</span><span class="p">)</span>
+                    <span class="n">front</span><span class="o">++</span><span class="p">;</span>
+                <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="o">&gt;</span><span class="n">target</span><span class="p">)</span>
+                    <span class="n">back</span><span class="o">--</span><span class="p">;</span>
+                <span class="k">else</span><span class="p">{</span>
+                    <span class="c1">// cout&lt;&lt;"ansadd\n";</span>
+                    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">elem</span> <span class="o">=</span> <span class="p">{</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">nums</span><span class="p">[</span><span class="n">front</span><span class="p">],</span><span class="n">nums</span><span class="p">[</span><span class="n">back</span><span class="p">]};</span>
+                    <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">elem</span><span class="p">);</span>
+                    <span class="n">front</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">back</span><span class="o">--</span><span class="p">;</span>
+                    <span class="c1">//find duplicates of idx 1</span>
+                    <span class="k">while</span><span class="p">(</span><span class="n">front</span><span class="o">&lt;</span><span class="n">back</span> <span class="n">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">front</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">front</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="n">front</span><span class="o">++</span><span class="p">;</span>
+                    <span class="c1">//find duplicates of idx 2</span>
+                    <span class="k">while</span><span class="p">(</span><span class="n">front</span><span class="o">&lt;</span><span class="n">back</span> <span class="n">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">back</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">back</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="n">back</span><span class="o">--</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="n">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="set-matrix-zeroes">
+<a class="anchor" href="#set-matrix-zeroes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set Matrix Zeroes</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/777/">Leetcode Solution</a></td>
+      <td><a href="https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/777/discuss/26014/Any-shorter-O(1)-space-solution">Solution</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Brute approach: Just store an alternative matrix that would store whether the i,j element should be zero or not. This is O(mxn) space solution.</p>
+
+<p>Brute space efficient approach: For each arr[i][j] which is zero, go through the row and column and mark it zero with a flag. Might not work if the constraints are full integer.</p>
+
+<p>O(m+n) approach: Have some state array for row and column, which tells whether i and j is 0.</p>
+
+<p>O(1) approach: We have though of the O(m+n) approach, how about we just store those states in the 2d array itself?</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">void</span> <span class="n">setZeroes</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">matrix</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="n">matrix</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="n">n</span><span class="o">=</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">(),</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">--</span><span class="p">)</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span> <span class="n">or</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">col</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div></div>
@@ -328,6 +431,11 @@ We dont really need to make an extra array when doing bottom up.</p>
     <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div></div>
+
+<h3 id="distinct-subsequences">
+<a class="anchor" href="#distinct-subsequences" aria-hidden="true"><span class="octicon octicon-link"></span></a>Distinct Subsequences</h3>
+
+<p><a href="https://leetcode.com/problems/distinct-subsequences/">Leetcode Questions</a></p>
 
 <h2 id="maths">
 <a class="anchor" href="#maths" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maths</h2>
@@ -577,6 +685,41 @@ Pretty much all the backtracking problems I have done follows this pattern.
 <span class="p">};</span>
 </code></pre></div></div>
 
+<h3 id="generate-parentheses">
+<a class="anchor" href="#generate-parentheses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generate Parentheses</h3>
+
+<p><a href="https://leetcode.com/explore/interview/card/top-interview-questions-medium/109/backtracking/794">Leetcode link</a></p>
+
+<p>What would be a brute force solution here? Try all 2^n combinations and check if they are valid or not.</p>
+
+<p>A better way would be to instead construct only those parentheses which are valid. Now when is a parentheses valid? When we have more ‘(‘ than ‘).’ So lets construct from the left and only add ‘)’ when their number is less than ‘(‘</p>
+
+<p>Bonus: change the string you’re making in place to save space and time.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">generateParenthesis</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="n">n</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">;</span>
+        <span class="n">string</span> <span class="n">s</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+        <span class="n">genP</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">res</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="n">genP</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">open</span><span class="p">,</span> <span class="kt">int</span> <span class="n">close</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">res</span><span class="p">,</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">open</span><span class="o">==</span><span class="n">n</span> <span class="n">and</span> <span class="n">close</span><span class="o">==</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="sc">'('</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">open</span><span class="o">&lt;</span><span class="n">n</span><span class="p">)</span> <span class="n">genP</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">open</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">close</span><span class="p">,</span><span class="n">res</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="sc">')'</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">close</span><span class="o">&lt;</span><span class="n">open</span><span class="p">)</span> <span class="n">genP</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">open</span><span class="p">,</span><span class="n">close</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">res</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
 <h2 id="linked-list">
 <a class="anchor" href="#linked-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linked List</h2>
 
@@ -602,6 +745,55 @@ Pretty much all the backtracking problems I have done follows this pattern.
 <span class="p">};</span>
 </code></pre></div></div>
 
+<h3 id="odd-even-linked-list">
+<a class="anchor" href="#odd-even-linked-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Odd-Even Linked List</h3>
+
+<p><a href="https://leetcode.com/explore/interview/card/top-interview-questions-medium/107/linked-list/784/">Leetcode</a></p>
+
+<p>Doing this problem in place is quite interesting. Since we want to separate out odd and even groups lets just maintain different pointers? In the end we shall link the lists.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">ListNode</span><span class="o">*</span> <span class="n">oddEvenList</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">head</span><span class="o">==</span><span class="nb">nullptr</span><span class="p">)</span> <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
+        <span class="n">ListNode</span> <span class="o">*</span><span class="n">even</span><span class="o">=</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">,</span><span class="o">*</span><span class="n">evenHead</span><span class="o">=</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">,</span><span class="o">*</span><span class="n">odd</span><span class="o">=</span><span class="n">head</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">even</span><span class="o">!=</span> <span class="nb">nullptr</span> <span class="n">and</span> <span class="n">even</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="nb">nullptr</span><span class="p">){</span>
+            <span class="n">odd</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">odd</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">even</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">even</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">odd</span> <span class="o">=</span> <span class="n">odd</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">even</span> <span class="o">=</span> <span class="n">even</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">odd</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">evenHead</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="intersection-of-two-linked-lists">
+<a class="anchor" href="#intersection-of-two-linked-lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intersection of Two Linked Lists</h3>
+
+<p><a href="https://leetcode.com/explore/interview/card/top-interview-questions-medium/107/linked-list/785/">Leetcode</a></p>
+
+<p>A simple solution would be to calculate the difference between their lengths and adjust the position of the pointers.</p>
+
+<p>Can we do it without calculating the lengths? Well yes. Let’s say the length of A is a+c and of B is b+c. 
+Lets say that A has covered a+c length, B has covered b+c length. They both shall meet when they have the same distance covered, so if the pointer of A goes to the head of B and same for the other, then both will cover a+c+b and b+c+a distance. They will meet at the intersection now.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">ListNode</span> <span class="o">*</span><span class="n">getIntersectionNode</span><span class="p">(</span><span class="n">ListNode</span> <span class="o">*</span><span class="n">headA</span><span class="p">,</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">headB</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="n">ListNode</span> <span class="o">*</span><span class="n">a</span><span class="o">=</span><span class="n">headA</span><span class="p">,</span><span class="o">*</span><span class="n">b</span><span class="o">=</span><span class="n">headB</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="o">!=</span><span class="n">b</span><span class="p">){</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">==</span><span class="nb">nullptr</span> <span class="o">?</span> <span class="n">headB</span> <span class="o">:</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">==</span><span class="nb">nullptr</span> <span class="o">?</span> <span class="n">headA</span> <span class="o">:</span> <span class="n">b</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
 <h2 id="bit-manipulation">
 <a class="anchor" href="#bit-manipulation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bit Manipulation</h2>
 
@@ -616,11 +808,9 @@ Pretty much all the backtracking problems I have done follows this pattern.
 <span class="nl">public:</span>
     <span class="kt">int</span> <span class="n">singleNumber</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-        
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">i</span><span class="o">:</span><span class="n">nums</span><span class="p">){</span>
             <span class="n">ans</span> <span class="o">^=</span> <span class="n">i</span><span class="p">;</span>
         <span class="p">}</span>
-        
         <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">};</span>
@@ -640,7 +830,7 @@ Pretty much all the backtracking problems I have done follows this pattern.
 
 <ul>
   <li>Resets after k elements</li>
-  <li>Counter should be unaffected by 0</li>
+  <li>The counter should be unaffected by 0</li>
   <li>It should increment by 1 if it sees one</li>
 </ul>
 
@@ -691,6 +881,15 @@ Pretty much all the backtracking problems I have done follows this pattern.
     <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div></div>
+
+<h2 id="my-weak-points">
+<a class="anchor" href="#my-weak-points" aria-hidden="true"><span class="octicon octicon-link"></span></a>My weak points</h2>
+
+<ul>
+  <li>cpp string questions</li>
+  <li>dynamic programming</li>
+  <li>linked lists</li>
+</ul>
 
   </div>
 
