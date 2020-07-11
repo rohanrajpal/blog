@@ -9,7 +9,7 @@ In this blog I'll document some resources and all the challenging competitive pr
 
 ## 5 Problem Solving Tips for Cracking Coding Interview Questions
 
-[[Youtube](https://www.youtube.com/watch?v=GBuHSRDGZBY)]  
+[Youtube](https://www.youtube.com/watch?v=GBuHSRDGZBY)]  
 Tip #1: Come up with a brute-force solution -  
 Tip #2: Think of a simpler version of the problem -  
 Tip #3: Think with simpler examples -> try noticing a pattern -  
@@ -27,7 +27,7 @@ Generic preparation tips I give to freshers to clear any algorithmic interview a
 4) all Codeforces contests from now till interviews  
 5) 200+ Leetcode questions  
 
-Take competitive programming course if you haven't done that already.
+Take the competitive programming course if you haven't done that already.
   
 ## Best of the best blogs
 
@@ -42,6 +42,12 @@ Take competitive programming course if you haven't done that already.
 - [How To Get Hired -- What CS Students Need to Know](http://www.kegel.com/academy/getting-hired.html)
 - [Topcoder tutorials](https://www.topcoder.com/community/competitive-programming/tutorials/)
 <!-- [Google resource](https://docs.google.com/presentation/d/1_6c6eu1oaDcJeKGcu43wtal8OeFNL6xMmmoSiDt9l5A/edit#slide=id.g3b1a8a6735_157_5) -->
+
+## TLE reasons
+
+- does not satisfy constraints
+- infinite loop in code
+- created an endless linked list and returned it
 
 ## Array
 
@@ -62,6 +68,82 @@ public:
             }
         }
         return j;
+    }
+};
+
+```
+
+## 3Sum
+
+[Leet link](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/776/)
+
+```c++
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> ans;
+        sort(nums.begin(),nums.end());
+        
+        for(int i=0;i<nums.size();i++){
+            int front=i+1,back=nums.size()-1,target=-nums[i];
+            // cout<<"in\n";
+            while(front<back){
+                // cout<<front<<" "<<back<<"\n";
+                int sum = nums[front]+nums[back];
+
+                if(sum<target)
+                    front++;
+                else if(sum>target)
+                    back--;
+                else{
+                    // cout<<"ansadd\n";
+                    vector<int> elem = {nums[i],nums[front],nums[back]};
+                    ans.push_back(elem);
+                    front++;
+                    back--;
+                    //find duplicates of idx 1
+                    while(front<back and nums[front] == nums[front-1]) front++;
+                    //find duplicates of idx 2
+                    while(front<back and nums[back] == nums[back+1]) back--;
+                }
+            }
+
+            while(i+1 < nums.size() and nums[i]==nums[i+1]) i++;
+        }
+        return ans;
+    }
+};
+```
+
+### Set Matrix Zeroes
+
+[Leetcode Solution](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/777/) | [Solution](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/777/discuss/26014/Any-shorter-O(1)-space-solution)
+
+Brute approach: Just store an alternative matrix that would store whether the i,j element should be zero or not. This is O(mxn) space solution.
+
+Brute space efficient approach: For each arr[i][j] which is zero, go through the row and column and mark it zero with a flag. Might not work if the constraints are full integer.
+
+O(m+n) approach: Have some state array for row and column, which tells whether i and j is 0.
+
+O(1) approach: We have though of the O(m+n) approach, how about we just store those states in the 2d array itself?
+
+```c++
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        int m=matrix.size(),n=matrix[0].size(),col=1;
+        for(int i=0;i<m;i++){
+            if(matrix[i][0]==0) col=0;
+            for(int j=1;j<n;j++)
+                if(matrix[i][j]==0)
+                    matrix[0][j] = matrix[i][0] = 0;
+        }
+        for(int i=m-1;i>=0;i--){
+            for(int j=n-1;j>=1;j--)
+                if(matrix[0][j]==0 or matrix[i][0]==0)
+                    matrix[i][j]=0;
+            if(col==0) matrix[i][0]=0;
+        }
     }
 };
 ```
@@ -148,6 +230,12 @@ public:
     }
 };
 ```
+
+### Distinct Subsequences
+
+[Leetcode Questions](https://leetcode.com/problems/distinct-subsequences/)
+
+
 
 ## Maths
 
@@ -382,6 +470,41 @@ public:
 };
 ```
 
+### Generate Parentheses
+
+[Leetcode link](https://leetcode.com/explore/interview/card/top-interview-questions-medium/109/backtracking/794)  
+
+What would be a brute force solution here? Try all 2^n combinations and check if they are valid or not.
+
+A better way would be to instead construct only those parentheses which are valid. Now when is a parentheses valid? When we have more '(' than ').' So lets construct from the left and only add ')' when their number is less than '('
+
+Bonus: change the string you're making in place to save space and time.
+
+```c++
+class Solution {
+public:
+    vector<string> generateParenthesis(int n) {
+        int m=n;
+        vector<string> res;
+        string s="";
+        genP(n,0,0,res,s);
+        return res;
+    }
+    void genP(int n, int open, int close, vector<string> &res, string &s){
+        if(open==n and close==n) {
+            res.push_back(s);
+            return;
+        }
+        s.push_back('(');
+        if(open<n) genP(n,open+1,close,res,s);
+        s.pop_back();
+        s.push_back(')');
+        if(close<open) genP(n,open,close+1,res,s);
+        s.pop_back();
+    }
+};
+```
+
 ## Linked List
 
 ### Add two Numbers
@@ -406,6 +529,55 @@ public:
 };
 ```
 
+### Odd-Even Linked List
+
+[Leetcode](https://leetcode.com/explore/interview/card/top-interview-questions-medium/107/linked-list/784/)
+
+Doing this problem in place is quite interesting. Since we want to separate out odd and even groups lets just maintain different pointers? In the end we shall link the lists.
+
+```c++
+class Solution {
+public:
+    ListNode* oddEvenList(ListNode* head) {
+        if(head==nullptr) return head;
+        ListNode *even=head->next,*evenHead=head->next,*odd=head;
+        while(even!= nullptr and even->next!=nullptr){
+            odd->next = odd->next->next;
+            even->next = even->next->next;
+            odd = odd->next;
+            even = even->next;
+        }
+        odd->next = evenHead;
+        return head;
+    }
+};
+```
+
+### Intersection of Two Linked Lists
+
+[Leetcode](https://leetcode.com/explore/interview/card/top-interview-questions-medium/107/linked-list/785/)
+
+A simple solution would be to calculate the difference between their lengths and adjust the position of the pointers.
+
+Can we do it without calculating the lengths? Well yes. Let's say the length of A is a+c and of B is b+c. 
+Lets say that A has covered a+c length, B has covered b+c length. They both shall meet when they have the same distance covered, so if the pointer of A goes to the head of B and same for the other, then both will cover a+c+b and b+c+a distance. They will meet at the intersection now.
+
+```c++
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        
+        ListNode *a=headA,*b=headB;
+        while(a!=b){
+            a = a==nullptr ? headB : a->next;
+            b = b==nullptr ? headA : b->next;
+        }
+        
+        return a;
+    }
+};
+```
+
 ## Bit Manipulation
 
 ### Single Number
@@ -419,11 +591,9 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int ans=0;
-        
         for(int &i:nums){
             ans ^= i;
         }
-        
         return ans;
     }
 };
@@ -441,7 +611,7 @@ We'll have to think of integers in terms of bits to solve this problem.
 Aim: Develop a counter which
 
 - Resets after k elements
-- Counter should be unaffected by 0
+- The counter should be unaffected by 0
 - It should increment by 1 if it sees one
 
 ```c++
@@ -490,3 +660,9 @@ public:
     }
 };
 ```
+
+## My weak points
+
+- cpp string questions
+- dynamic programming
+- linked lists
