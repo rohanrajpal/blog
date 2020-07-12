@@ -6,7 +6,7 @@ permalink: /about/
 
 ![dpmain]({{ site.baseurl }}/images/about/dp.jpg){: .dp}
 
-I'm a third-year student CSE student at [IIITD](https://www.iiitd.ac.in/), a Google Summer of Code 2019 [student](https://summerofcode.withgoogle.com/archive/2019/projects/6144888880496640/) under [VideoLAN](https://www.videolan.org/index.html) and an intern at Expedia for Summer 2020.
+I'm a third-year CSE student at [IIITD](https://www.iiitd.ac.in/), a Google Summer of Code 2019 [student](https://summerofcode.withgoogle.com/archive/2019/projects/6144888880496640/) under [VideoLAN](https://www.videolan.org/index.html) and an intern at Expedia for Summer 2020.
 
 I have experience in Cloud (AWS,GCP,Spark,Vault), Frontend(Qt,HTML/CSS,Unity) and Database (MongoDB, Elasticsearch, SQL, Logstash).
 
