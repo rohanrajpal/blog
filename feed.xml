@@ -1,4 +1,391 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-07-12T23:33:19-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal · Blog</title><subtitle>Read about Data Science · Programming · Design · Mobile</subtitle><entry><title type="html">DBMS: Interview Prep [Draft]</title><link href="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html" rel="alternate" type="text/html" title="DBMS: Interview Prep [Draft]" /><published>2020-07-10T00:00:00-05:00</published><updated>2020-07-10T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xAhfQNTIeOM&amp;amp;list=PLx5CT0AzDJCnO9k98RsrPY9WGAXj8yeKL&quot;&gt;DBMS Course&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-07-12T23:43:21-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal · Blog</title><subtitle>Read about Data Science · Programming · Design · Mobile</subtitle><entry><title type="html">The Virtual Internship: My Experience.</title><link href="https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience.html" rel="alternate" type="text/html" title="The Virtual Internship: My Experience." /><published>2020-07-13T05:30:00-05:00</published><updated>2020-07-13T05:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience.html">&lt;p&gt;These summers, I interned at one of the largest travel companies of the world, Expedia Group™️. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!&lt;/p&gt;
+
+&lt;p&gt;Luckily, my &lt;a href=&quot;/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html&quot;&gt;previous intern&lt;/a&gt; was remote too, so I was kind of used to work from home. In this internship, I majorly worked on cloud and data engineering.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/previews/expedia-preview.png&quot; alt=&quot;&quot; title=&quot;Our kickoff call on the first day&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-induction-week&quot;&gt;The induction week&lt;/h2&gt;
+
+&lt;p&gt;Expedia organized an induction week for us, and it involved workshops on various topics: how to become a better leader, designer, and we even got to know how Expedia operates.
+We kept on having workshops throughout our intern, and there was a lot to learn from each session.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-setup&quot;&gt;My setup&lt;/h2&gt;
+
+&lt;figure&gt;
+  &lt;div style=&quot;display:flex&quot;&gt;
+  
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/experience/setup-1.jpg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:0.74&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/experience/setup-2.jpg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+  &lt;/div&gt;
+  
+    &lt;figcaption&gt;Not the fanciest setup out there, but enough to get the work done :)
+&lt;/figcaption&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;my-team---vrbo-stayx-dot-net-modernization-pod&quot;&gt;My Team - Vrbo: Stayx dot net modernization pod&lt;/h2&gt;
+
+&lt;p&gt;I was a part of the Stay Experience team, which looks after the post-booking experience for a traveller. The team was divided into pods, and I worked on the .Net Stack Modernisation pod. My work involved making a microservice and figuring out how to deploy it to the cloud.&lt;br /&gt;
+I worked with a manager and a buddy. We synced up every week and discussed work updates every day. It motivated me to stay on track. I also synced up with our project sponsor a few times. I enjoyed such one on one sessions. They helped me connect with the team better.&lt;br /&gt;
+All the Vrbo interns together had a weekly sync with the Vrbo managers. We socialized, played some games, get help on some issues. It was nice to have someone for support throughout the program, and these calls also helped me get to know the other interns better.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-project&quot;&gt;The project&lt;/h2&gt;
+
+&lt;h3 id=&quot;motivation&quot;&gt;Motivation&lt;/h3&gt;
+
+&lt;p&gt;We have a database which stores the notifications for guests of guests in a homestay. Now we wanted a way in which we can store the data in S3 and keep it updated.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Why are you storing the data in two different places?
+    &lt;ul&gt;
+      &lt;li&gt;This data is not only used to send a notification but also by an analyst or data scientist. The MongoDB database also backs the GoG API, and if everyone does their operations on MongoDB, it might severely affect the API.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We finally came up with the idea to use a  Spark Job. This job would take the data from MongoDB and store it in an S3 bucket.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Why a spark job?
+    &lt;ul&gt;
+      &lt;li&gt;Spark and Scala are the industry standard for data management. The jobs will be able to manage huge amounts of data without any hiccups.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;aim-create-a-spark-job-to-sync-data-from-mongodb-to-s3&quot;&gt;Aim: Create a spark job to sync data from MongoDB to S3&lt;/h3&gt;
+&lt;!-- [The ticket SE-2854](https://jira.homeawaycorp.com/browse/SE-2854) --&gt;
+
+&lt;h3 id=&quot;a-quick-revision&quot;&gt;A quick revision&lt;/h3&gt;
+
+&lt;p&gt;This blog is going to get more technical now, just keeping this for a quick reference if you have a doubt.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What’s MongoDB?&lt;/strong&gt;  It’s a NoSQL database.&lt;br /&gt;
+&lt;strong&gt;What’s scala?&lt;/strong&gt;  It’s a programming language widely used for data management. I did all my coding in the Scala language.&lt;br /&gt;
+&lt;strong&gt;What’s Apache spark?&lt;/strong&gt;  It’s a fast and general-purpose cluster computing system for large scale data processing. Some important things to know about spark are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dataframe: This is data in the form of a table, just like a relational database table.&lt;/li&gt;
+  &lt;li&gt;Dataset: Extension of Dataframes, they provide the functionality of being type-safe and an object-oriented programming interface.&lt;/li&gt;
+  &lt;li&gt;SparkSession vs SparkContext: Spark session is a unified entry point of a spark application from Spark 2.0. It provides a way to interact with various spark’s functionality with a lesser number of constructs. Instead of having a spark context, hive context, SQL context, now all of it is encapsulated in a Spark session&lt;/li&gt;
+  &lt;li&gt;Prior Spark 2.0, Spark Context was the entry point of any spark application and used to access all spark features and needed a sparkConf which had all the cluster configs and parameters to create a Spark Context object&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;What’s a spark job?&lt;/strong&gt;  In a spark application, when you invoke an action on RDD, a job is created. It’s the main function that has to be done and submitted to spark.&lt;br /&gt;
+&lt;strong&gt;What’s a vault?&lt;/strong&gt;  Hashicorp Vault is a tool for secrets management, encryption as a service, and privileged access management.&lt;br /&gt;
+&lt;strong&gt;What’s an S3 bucket?&lt;/strong&gt;  Just a simple distributed file storage system, think of it like the hard disk on your computer&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;div style=&quot;display:flex&quot;&gt;
+  
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/mongodb.svg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/spark.svg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/sbt.svg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+      &lt;/div&gt;
+      &lt;div style=&quot;display:flex&quot;&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/vault.svg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/terraform.svg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/consul.svg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/packer.svg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+      &lt;/div&gt;
+      &lt;div style=&quot;display:flex&quot;&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/ec2.jpg&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/parquet.png&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1; padding:0 3% 3% 0&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/scala.png&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+    
+      &lt;div style=&quot;flex:1&quot;&gt;
+    
+    
+      &lt;img src=&quot;/blog/images/expedia/stack/s3.png&quot; alt=&quot;&quot; /&gt;
+    
+      &lt;/div&gt;
+    
+    
+  
+  &lt;/div&gt;
+  
+    &lt;figcaption&gt;The technology stack
+&lt;/figcaption&gt;
+  
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;approach&quot;&gt;Approach&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/experience/datasync-job.jpg&quot; alt=&quot;job&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The spark job&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Authenticates the vault and gets the secrets&lt;/li&gt;
+  &lt;li&gt;Reads the updated data from MongoDB&lt;/li&gt;
+  &lt;li&gt;Reads the data stored as parquet in S3 bucket&lt;/li&gt;
+  &lt;li&gt;Does a left anti join on s3 and mongo data, you now have the data that did not change&lt;/li&gt;
+  &lt;li&gt;Merge the data that didn’t change with the new data with the new data&lt;/li&gt;
+  &lt;li&gt;Write the data as parquet in S3 bucket&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The authentication was a little better than just sending a saved token:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Grab the EC2 metadata and nonce&lt;/li&gt;
+  &lt;li&gt;Send the metadata and nonce to Vault&lt;/li&gt;
+  &lt;li&gt;Vault checks if the EC2 instance is allowed and the nonce is correct&lt;/li&gt;
+  &lt;li&gt;Obtain secrets like AWS access and secret key, and MongoDB password&lt;/li&gt;
+  &lt;li&gt;Send a nonce to the Vault server and get the token&lt;/li&gt;
+  &lt;li&gt;Get the secrets via the token&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here’s a nice example explaining everything:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Mongo
+id author book updateTime
+1 A1     B1     T1
+2   A2     B2     T2
+3   A3     B3     T3
+4   A4     B4     T4
+S3
+1   A1     B1     T1
+2   A2     B2     T2
+3   A3     B3     T2.1
+Step 1:
+get all docs from mongoDb between updateTime1 and updateTime2 where T2 &amp;lt; updateTime1 &amp;lt; updateTime2
+fetched records:
+3   A3     B3     T3
+4   A4     B4     T4
+Step 2:
+read all records from S3.
+fetched records:
+1   A1     B1     T1
+2   A2     B2     T2
+3   A3     B3     T2.1
+Step 3:
+Left anti join on id between S3 and mongo data so that we have the data that did not change
+1   A1     B1     T1
+2   A2     B2     T2
+Step 4:
+Merge results of Step 3 with data fetched in Step 1:
+new data set:
+1   A1     B1     T1
+2   A2     B2     T2
+3   A3     B3     T3
+4   A4     B4     T4
+This can be put back to S3. You can see how this data is in sync with Mongo data
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;challenges-and-how-i-tackled-them&quot;&gt;Challenges (and how I tackled them)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/expedia/experience/intellij-meme.jpg&quot; alt=&quot;&quot; class=&quot;meme&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;VPN Issues:&lt;/strong&gt; The VPN I was using did not support Linux or &lt;a href=&quot;https://github.com/microsoft/WSL/issues/5068&quot;&gt;WSL&lt;/a&gt;, so I had to work on windows. Windows is not at all developer-friendly. It was challenging to find a workaround for one-line commands in Linux.
+    &lt;ul&gt;
+      &lt;li&gt;However, I found a hack for this. I created an EC2 instance on the Expedia network and shifted all my work to that. Not only I could access all the links, but the scripts ran much faster than on my computer.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;RAM Issues:&lt;/strong&gt; I initially was using IntelliJ since it was easier to setup a scala project with it. Intellij was terribly slow and took a lot of RAM.
+    &lt;ul&gt;
+      &lt;li&gt;I later switched to VSCode plus Metals. Although it was a little more time consuming to setup, once understood, all RAM issues were solved, additionally using bloop instead of sbt decreased compile time.&lt;/li&gt;
+      &lt;li&gt;Having a local MongoDB server for testing was also quite RAM hungry, MongoDB Atlas helped me a lot here. I deployed a free cluster in the cloud, and my work was done :)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Spark and MongoDB&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Spark has some underlying concepts which were a little nontrivial to understand, at least for a first-timer like me. Above that the documentation of MongoDB-Spark connector was following old spark conventions at one place and new ones somewhere else. The documentation confused me a bit.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Understanding Vault EC2 authentication&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Authentication took most of the time, being a college student, I really didn’t worry about securing my applications in projects. Since we really didn’t put something into production.&lt;/li&gt;
+      &lt;li&gt;I learned about Hashicorp Vault(Store secrets), Terraform(Build instances from code) and Consul(Backend for Vault)&lt;/li&gt;
+      &lt;li&gt;Rather than having a token to authenticate vault and get the secrets, a better method would be to use the ec2 metadata in which the spark job will be running to authenticate vault.&lt;/li&gt;
+      &lt;li&gt;Making EC2 instances with Terraform and Consul&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Setting up EC2 instances&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;I had some trouble finding the correct configurations so that I am able to SSH into an instance and make sure the instance can access all VPN links.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ## References
+
+### Generic
+
+- [WSL2 , problem with network connection when VPN used (PulseSecure) · Issue #5068 · microsoft/WSL](https://github.com/microsoft/WSL/issues/5068)
+- [Stop and remove all docker containers and images \| The humble developer](https://blog.baudson.de/blog/stop-and-remove-all-docker-containers-and-images)
+- [Creating a MongoDB replica set using Docker 🍃](https://www.sohamkamani.com/blog/2016/06/30/docker-mongo-replica-set/)
+- [Slack/Jira integration: How do I post comments to issues, from Slack?](https://community.atlassian.com/t5/Jira-Core-questions/Slack-Jira-integration-How-do-I-post-comments-to-issues-from/qaq-p/951175)
+
+### Task1 : Mongo change streams to S3 via Kafka
+
+- [What is Apache Kafka®? (A Confluent Lightboard by Tim Berglund)](https://www.youtube.com/watch?v=06iRM1Ghr1k)
+- [What is Database Sharding?](https://www.youtube.com/watch?v=5faMjKuB9bc)
+- [edenhill/kafkacat: Generic command line non-JVM Apache Kafka producer and consumer](https://github.com/edenhill/kafkacat)
+- [Mongo Kafka connector docs](https://docs.mongodb.com/kafka-connector/master/kafka-source/)
+- [Getting Started with the MongoDB Connector for Apache Kafka and MongoDB](https://www.confluent.io/blog/getting-started-mongodb-connector-for-apache-kafka-and-mongodb/)
+- **Kafka Demo**: [Confluent Platform Demo (cp-demo) — Confluent Platform](https://docs.confluent.io/current/tutorials/cp-demo/docs/index.html?utm_source=github&amp;amp;utm_medium=demo&amp;amp;utm_campaign=ch.cp-demo_type.community_content.cp-demo)
+- **What are change streams?**
+  - Change streams, a feature introduced in MongoDB 3.6, generate event documents that contain changes to data stored in MongoDB in real-time and provide guarantees of durability, security, and idempotency. You can configure change streams to observe changes at the **collection** , **database** , or **deployment** level. See [An Introduction to Change Streams](https://www.mongodb.com/blog/post/an-introduction-to-change-streams) for more information.
+- [Using Change Streams to Keep Up with Your Data](https://www.youtube.com/watch?v=eBGC6z1fPs0)
+- **MongoDB kafka guide**
+  - [Getting Started with the MongoDB Connector for Apache Kafka and MongoDB](https://www.confluent.io/blog/getting-started-mongodb-connector-for-apache-kafka-and-mongodb/)
+  - [Getting started with the MongoDB Connector for Apache Kafka and MongoDB Atlas](https://www.mongodb.com/blog/post/getting-started-with-the-mongodb-connector-for-apache-kafka-and-mongodb-atlas)
+  - [https://stackoverflow.com/questions/57544201/implement-dockerized-kafka-sink-connector-to-mongo/57629665#57629665](https://stackoverflow.com/questions/57544201/implement-dockerized-kafka-sink-connector-to-mongo/57629665#57629665)
+  - [mongodb/mongo-kafka: MongoDB Kafka Connector](https://github.com/mongodb/mongo-kafka)
+
+### Task2: Create a scala job
+
+- [What is a spark session?](https://medium.com/@achilleus/spark-session-10d0d66d1d24#:~:text=Spark%20session%20is%20a%20unified,encapsulated%20in%20a%20Spark%20session.)
+- [What is Scala?](https://www.youtube.com/watch?v=CTRBv45F5I0)
+- [Apache Spark™ - Unified Analytics Engine for Big Data](https://spark.apache.org/)
+- [Running scala code](http://joelabrahamsson.com/learning-scala-part-three-executing-scala-code/#:~:text=The%20easiest%20way%20to%20execute,folder%20where%20Scala%20is%20installed.)
+- [Scala Tutorial 2 - Introduction to SBT (Scala Build Tool)](https://www.youtube.com/watch?v=GD4qyXACuTc)
+- [Setup Spark Development Environment – IntelliJ and Scala \| Kaizen](https://kaizen.itversity.com/setup-development-environment-intellij-and-scala-big-data-hadoop-and-spark/)
+- [Reference code:](https://github.homeawaycorp.com/AnalyticsEngineering/ae-fast-data-analytics/blob/master/jobs/booking_fact/src/main/scala/com/homeaway/analyticsengineering/task/BookingLifetimeFactLoad.scala#L102-L106)
+- [nscala-time/nscala-time: A new Scala wrapper for Joda Time based on scala-time](https://github.com/nscala-time/nscala-time)
+- [how can I save an isodate field using MongoSpark.save from mongodb spark connector v2.1?](https://stackoverflow.com/questions/48889946/how-can-i-save-an-isodate-field-using-mongospark-save-from-mongodb-spark-connect)
+- [https://spark.apache.org/docs/latest/sql-programming-guide.html#data-types](https://spark.apache.org/docs/latest/sql-programming-guide.html#data-types)
+- [How to Master Anti Joins and Apply Them to Business Problems](https://mode.com/blog/anti-join-examples/)
+- [MongoDB and Apache Spark - Getting started tutorial](https://www.raphael-brugier.com/blog/mongodb-apache-spark-getting-started-tutorial/)
+- [https://docs.databricks.com/data/data-sources/read-parquet.html#reading-parquet-files-notebook](https://docs.databricks.com/data/data-sources/read-parquet.html#reading-parquet-files-notebook)
+- [Spark Read and Write Apache Parquet file — Spark by {Examples}](https://sparkbyexamples.com/spark/spark-read-write-dataframe-parquet-example/)
+- [Left Anti join in Spark?](https://stackoverflow.com/questions/43186888/left-anti-join-in-spark)
+- [Spark DataFrame Union and UnionAll — Spark by {Examples}](https://sparkbyexamples.com/spark/spark-dataframe-union-and-union-all/)
+- [SQL A left join B, just A?](https://stackoverflow.com/questions/53949197/isnt-sql-a-left-join-b-just-a/53949327)
+- [Install hadoop in 5 steps](http://www.praveenkumarg.com/install-hadoop-with-spark-on-windows-in-just-5-steps/)
+- [Spark s3](https://docs.cloudera.com/documentation/enterprise/latest/topics/spark_s3.html)
+- [PaaS](https://www.channelfutures.com/strategy/a-multi-paas-strategy-have-your-paas-and-eat-it-too)
+- [Setup scala project with Metals and Bloop (Much better than intellij!)](https://scalameta.org/metals/docs/editors/vscode.html#gitignore-projectmetalssbt-metals-and-bloop)
+- [blog for scala and bloop](https://medium.com/@afsal.taj06/scala-with-bloop-and-metals-7bfc411502a6)
+- [Scala and Sbt using the command line](https://docs.scala-lang.org/getting-started/sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html)
+- [Overwrite a parquet file you just read](https://stackoverflow.com/questions/58013126/how-to-overwrite-a-parquet-file-from-where-dataframe-is-being-read-in-spark)
+- [https://github.expedia.biz/scala-platform/ha-scala-commons/tree/master/container/config/config-server-aws-vault/src/main/scala/com/homeaway/hascala/container/config/aws](https://github.expedia.biz/scala-platform/ha-scala-commons/tree/master/container/config/config-server-aws-vault/src/main/scala/com/homeaway/hascala/container/config/aws)
+- [https://stackoverflow.com/questions/41253309/connect-to-spark-running-on-vm](https://stackoverflow.com/questions/41253309/connect-to-spark-running-on-vm)
+- [What is Qubole?](https://www.youtube.com/watch?v=SBxNXKhwEX8)
+- [What is data lake?](https://www.youtube.com/watch?v=v3yv88h68GY)
+- [Vault secrets-Wiki](https://wiki.homeawaycorp.com/display/PTA/Vault+Secrets+Integration+for+Qubole+Spark+Jobs)
+- [https://www.vaultproject.io/api-docs/auth/aws](https://www.vaultproject.io/api-docs/auth/aws)
+- [Ec2 auth vault](https://blog.gruntwork.io/a-guide-to-automating-hashicorp-vault-2-authenticating-with-instance-metadata-c3f9eaeaba53)
+- [Vault docs AWS](https://www.vaultproject.io/docs/auth/aws)
+- [Link local addresses](https://en.wikipedia.org/wiki/Link-local_address)
+- [MicroNugget: What are AWS EC2 Key Pairs?](https://www.youtube.com/watch?v=lMdin-L08p4)
+- [Vault on AWS: Creating an EC2 Key Pair](https://www.youtube.com/watch?v=F1KC0khe4SU&amp;amp;t=31s)
+- [terraform variable configuration](https://www.terraform.io/docs/configuration/variables.html)
+- [terraform setup](https://www.youtube.com/watch?v=RA1mNClGYJ4&amp;t=887s)
+- [Spark master slave ec2](https://stackoverflow.com/a/31900096/10114752) --&gt;</content><author><name></name></author><summary type="html">These summers, I interned at one of the largest travel companies of the world, Expedia Group™️. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">DBMS: Interview Prep [Draft]</title><link href="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html" rel="alternate" type="text/html" title="DBMS: Interview Prep [Draft]" /><published>2020-07-10T00:00:00-05:00</published><updated>2020-07-10T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xAhfQNTIeOM&amp;amp;list=PLx5CT0AzDJCnO9k98RsrPY9WGAXj8yeKL&quot;&gt;DBMS Course&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;database--dbms--database-management-system&quot;&gt;Database &amp;amp; DBMS | Database Management System&lt;/h3&gt;
 
@@ -1867,121 +2254,7 @@ Thanks to rmrao for the &lt;a href=&quot;https://github.com/pytorch/pytorch/issu
 &lt;/div&gt;
     
 
-&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/dl-cheat-sheet.jpg" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/dl-cheat-sheet.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Paper Summary: Toward Silent-Speech Control of Consumer Wearables</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables.html" rel="alternate" type="text/html" title="Paper Summary: Toward Silent-Speech Control of Consumer Wearables" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables.html">&lt;blockquote&gt;
-  &lt;p&gt;Bedri, A., Sahni, H., Thukral, P., Starner, T., Byrd, D., Presti, P., Reyes, G., Ghovanloo, M. and Guo, Z., 2015. Toward silent-speech control of consumer wearables. Computer, 48(10), pp.54-62.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Not being able to speak because of conditions like dysarthria and aphonia can be substantial communication barriers. People with such conditions can use Augmentative and Alternative Communication (AAC) systems, but such systems are much slower than speech. For a person with good mouth articulation, silent speech systems can be a much faster way to communicate. Silent speech can be extended for places with high noise, like firefighters, public transport, combat soldiers. It can also be used the other way around, like jaw gestures for acknowledging a message in stealth environments. The authors realised a vital requirement for silent systems. Such systems have to be unobtrusive. The aim is to make a system that is indistinguishable from devices like earphones.&lt;/p&gt;
-
-&lt;p&gt;The authors first explored the feasibility of the already existing TDS(Tongue Driven System). They achieved 96 per cent accuracy on the test and realised it is possible to work on such systems. Inspired from these interfaces, the authors came up with Tongue-Magnet-Interface (TMI) and Outer-Ear-Interface (OEI). TMI detects tongue movements using google glass with a magnet placed on the tongue. OEI detects jaw movements and can be installed in any ordinary headphone. The researchers tried to conduct various experiments with the TMI and OEI. In the first experiment, they used TMI and OEI together, and they achieved an average user-dependent recognition accuracy of 90 per cent. They then considered experimenting with the OEI alone, as that would eliminate tongue piercing. With the OEI alone they realised that TMI and OEI did not recognise the same phrases, realising they need to design the phrases more carefully. Then they experimented with improved OEI and Simple jaw gestures in which they achieved 84 per cent overall classification accuracy,  user-dependent results had even better results with 97 per cent accuracy. The experiments were helping them in constructing the phrases and well as the design of the wearable. In the last investigation, they explore how heart rate can be used to calibrate the sensors for better performance.&lt;/p&gt;
-
-&lt;p&gt;With the evolution of Deep Learning in the previous five years, one can now use Deep Learning models for the same tasks. It might help in improving accuracy and maybe even help us in noticing some exciting features of the data we get from the sensors. The authors conducted the study of OEI with only a single subject. They concluded that there is a need to carefully design the phrases which will be used for silent speech recognition as OEI and TMI recognises them differently. So a study with more subjects and the improved OEI system can be conducted to determine how these phrases are needed to be designed to help the practitioners who are actually going to use this research and implement it into a solution.&lt;/p&gt;</content><author><name></name></author><summary type="html">Bedri, A., Sahni, H., Thukral, P., Starner, T., Byrd, D., Presti, P., Reyes, G., Ghovanloo, M. and Guo, Z., 2015. Toward silent-speech control of consumer wearables. Computer, 48(10), pp.54-62.</summary></entry><entry><title type="html">Paper Summary: Don’t Mind Me Touching My Wrist: A Case Study of Interacting with On-Body Technology in Public</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions.html" rel="alternate" type="text/html" title="Paper Summary: Don’t Mind Me Touching My Wrist: A Case Study of Interacting with On-Body Technology in Public" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions.html">&lt;blockquote&gt;
-  &lt;p&gt;Halley P. Profita, James Clawson, Scott Gilliland, Clint Zeagler, Thad Starner, Jim Budd, and Ellen Yi-Luen Do. 2013. Don’t mind me touching my wrist: a case study of interacting with on-body technology in public. In Proceedings of the 2013 International Symposium on Wearable Computers (ISWC ’13).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This paper aims to study body interactions in the Public. Wearable tech, especially E-textile, introduces new kinds of on-body interactions. These interactions, however, are nontraditional. People might even find them uncomfortable to perform relative to time or place. These interactions might also be awkward for someone’s culture.&lt;/p&gt;
-
-&lt;p&gt;The authors aimed to answer these concerns by performing a survey-based study. The study involved two actors interacting with each other in a lift. One of the actors would be donning a wearable e-textile, who would receive a call and would reject it through the wearable. The third-party participant would view a video of this scene. The researchers conducted this study in the US and South Korea. The wearable e-textile used in this study was a jog wheel. They considered six different positions for the jog-wheel: collarbone, torso, waist, forearm, wrist and pocket. In each video, the actor would wear this textile in one of the six places. For a baseline, they also recorded videos of participants rejecting the call through their blackberry. After viewing the videos, the participant would answer eleven Likert scale questions from “Strongly Agree” to “Strongly Disagree” on the wearable placement. The researchers asked some additional attitudinal questions on the perception and position of the e-textile. Finally, participants would answer a follow-up questionnaire; they provided open-ended responses to the two most and two least preferred locations. In the results, the US and Korea resembled at some places. There were gender differences with respect to wearable placement and interactions. Interactions were less socially acceptable around the male’s waist area and on the waist and upper body areas of women. The wrist and the forearm came out to be the two most common on-body places for both countries, probably because they are the most common places for a wearable. However, the authors did succeed in finding the differences across cultures. For Americans, the most common concern was accidental triggering, while it was the interface for Koreans. In the follow-up questionnaire, Americans preferred a system that was easy to operate, whereas only 6.9 per cent of Koreans felt the same. South Koreans preferred a system that avoided making the user look weird or awkward.&lt;/p&gt;
-
-&lt;p&gt;There are many avenues we can explore with the help of this study. For example, the lift had opposite genders interacting, one can view the differences if both the characters of the lift are of the same gender. As the focus of the study is to study interactions in public, situations with more than two characters might also bring new insights.&lt;/p&gt;</content><author><name></name></author><summary type="html">Halley P. Profita, James Clawson, Scott Gilliland, Clint Zeagler, Thad Starner, Jim Budd, and Ellen Yi-Luen Do. 2013. Don’t mind me touching my wrist: a case study of interacting with on-body technology in public. In Proceedings of the 2013 International Symposium on Wearable Computers (ISWC ’13).</summary></entry><entry><title type="html">Competitive Programming: C++ Cheat Sheet [Draft]</title><link href="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet.html" rel="alternate" type="text/html" title="Competitive Programming: C++ Cheat Sheet [Draft]" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/competitive%20programming/2020/06/20/cpp-cheat-sheet.html">&lt;p&gt;Syntax and tricks for C++.&lt;/p&gt;
-
-&lt;h2 id=&quot;improve-speed&quot;&gt;Improve speed&lt;/h2&gt;
-
-&lt;h3 id=&quot;leetcode&quot;&gt;Leetcode&lt;/h3&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fastio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ios&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sync_with_stdio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;normal-compile&quot;&gt;Normal compile&lt;/h3&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#define fast ios_base::sync_with_stdio(false),cin.tie(NULL)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;header-template&quot;&gt;Header Template&lt;/h2&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
-#define ll long long
-#define ld long double
-#define vll vector&amp;lt;ll&amp;gt;
-#define vii vector&amp;lt;int&amp;gt;
-#define vvll vector&amp;lt; vll &amp;gt;
-#define pll pair&amp;lt;ll ,ll &amp;gt;
-#define MOD 1000000007
-#define rall(v) v.rbegin(),v.rend()
-#define fst first
-#define mp make_pair
-#define pb push_back
-#define fast ios_base::sync_with_stdio(false),cin.tie(NULL)
-#define int long long
-#define endl &quot;\n&quot;
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define all(v) v.begin(),v.end()
-#define scd second
-#define for1(i,n) for(ll (i) = 1 ; (i) &amp;lt;= (n) ; ++(i))
-#define forr(i,n) for(ll (i) = (n)-1 ; (i)&amp;gt;=0 ; --(i))
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define forn(i,n) for(ll (i) = 0 ; (i) &amp;lt; (n) ; ++(i))
-#define forab(i,a,b,c) for(ll (i) = a ; (i) &amp;lt;= (b) ; (i)+=(c))
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define mst(A) memset( (A) , 0 , sizeof(A) );
-#define tc() int t; cin &amp;gt;&amp;gt; t ; while (t--)
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;comparators&quot;&gt;Comparators&lt;/h2&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
-
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;twoCitySchedCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;costs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;costs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;costs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),[](&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];});&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;costs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;costs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;costs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;costs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;pointers-and-addresses&quot;&gt;Pointers and Addresses&lt;/h2&gt;
-
-&lt;p&gt;A pointer stores a memory address.&lt;/p&gt;
-
-&lt;p&gt;Some ways to do the same thing&lt;/p&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ListNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ListNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ListNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//node is the same above&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;hashmap&quot;&gt;Hashmap&lt;/h2&gt;
-
-&lt;h3 id=&quot;map-of-pairs&quot;&gt;Map of pairs&lt;/h3&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_pair&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;T2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-        &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; 
-
-&lt;span class=&quot;n&quot;&gt;unordered_map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash_pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;um&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;increase-map-speed&quot;&gt;Increase map speed&lt;/h3&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;umap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reserve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Syntax and tricks for C++.</summary></entry><entry><title type="html">Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators.html" rel="alternate" type="text/html" title="Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators.html">&lt;blockquote&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/dl-cheat-sheet.jpg" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/dl-cheat-sheet.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators.html" rel="alternate" type="text/html" title="Paper Summary: Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems and perspectives" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/triboelectric-nanogenerators.html">&lt;blockquote&gt;
   &lt;p&gt;Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives. Faraday Discuss. 176, (2014), 447–458.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1991,7 +2264,15 @@ Thanks to rmrao for the &lt;a href=&quot;https://github.com/pytorch/pytorch/issu
 
 &lt;p&gt;The author lays down four fundamental modes of triboelectric nanogenerators. There is vertical contact, lateral sliding, single-electrode, and freestanding triboelectric-layer. With these primary modes, TENGs are explored as both a micro and macro source for power generation. Micro here refers to powering small and mobile gadgets. Macro refers to large-scale energy generation. This article explores the contact electrification between a solid and liquid surface for macro purposes. With these modes and applications, some fundamental problems with triboelectric are discussed as well. First, more clarity is needed on the underlying mechanism of the triboelectric effect. The effect has to be investigated much more in-depth to understand its working better. This article also found a way to quantify the performance of TENG’s based on different modes. This article used a measurement matrix to quantify the performance. Finding the right pair of materials to generate the best output is also a problem to solve. One might say the triboelectric series is helpful, but there is no quantitative measure to compare how much energy two materials in a TENG can generate. External factors like humidity have a significant impact on triboelectricity. This means the TENG should have packaging to protect itself from outdoor conditions. Many more such problems are discussed.&lt;/p&gt;
 
-&lt;p&gt;As this paper is relatively recent, most of the applications are yet to be implemented. However, I firmly believe this technology can have a significant impact on wearables. This article mostly covers the generation before wearables, mobile devices. With wearables, we are moving towards even more portable, smaller, and less power-consuming devices. All of these aspects support the use of TENGs. With the evolution of low powered light devices like LEDs, TENGs might even bring light to thousands of homes across the world, which still don’t have full-time access to electricity.&lt;/p&gt;</content><author><name></name></author><summary type="html">Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives. Faraday Discuss. 176, (2014), 447–458.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/paper-summary/triboelectric.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/paper-summary/triboelectric.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Interpreting the C++ programming language</title><link href="https://rohanrajpal.github.io/blog/2020/06/20/xcpp.html" rel="alternate" type="text/html" title="Interpreting the C++ programming language" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/06/20/xcpp</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/06/20/xcpp.html">&lt;!--
+&lt;p&gt;As this paper is relatively recent, most of the applications are yet to be implemented. However, I firmly believe this technology can have a significant impact on wearables. This article mostly covers the generation before wearables, mobile devices. With wearables, we are moving towards even more portable, smaller, and less power-consuming devices. All of these aspects support the use of TENGs. With the evolution of low powered light devices like LEDs, TENGs might even bring light to thousands of homes across the world, which still don’t have full-time access to electricity.&lt;/p&gt;</content><author><name></name></author><summary type="html">Wang, Z.L. 2014. Triboelectric nanogenerators as new energy technology and self-powered sensors – Principles, problems, and perspectives. Faraday Discuss. 176, (2014), 447–458.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/paper-summary/triboelectric.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/paper-summary/triboelectric.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Paper Summary: Toward Silent-Speech Control of Consumer Wearables</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables.html" rel="alternate" type="text/html" title="Paper Summary: Toward Silent-Speech Control of Consumer Wearables" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/silent-speech-wearables.html">&lt;blockquote&gt;
+  &lt;p&gt;Bedri, A., Sahni, H., Thukral, P., Starner, T., Byrd, D., Presti, P., Reyes, G., Ghovanloo, M. and Guo, Z., 2015. Toward silent-speech control of consumer wearables. Computer, 48(10), pp.54-62.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Not being able to speak because of conditions like dysarthria and aphonia can be substantial communication barriers. People with such conditions can use Augmentative and Alternative Communication (AAC) systems, but such systems are much slower than speech. For a person with good mouth articulation, silent speech systems can be a much faster way to communicate. Silent speech can be extended for places with high noise, like firefighters, public transport, combat soldiers. It can also be used the other way around, like jaw gestures for acknowledging a message in stealth environments. The authors realised a vital requirement for silent systems. Such systems have to be unobtrusive. The aim is to make a system that is indistinguishable from devices like earphones.&lt;/p&gt;
+
+&lt;p&gt;The authors first explored the feasibility of the already existing TDS(Tongue Driven System). They achieved 96 per cent accuracy on the test and realised it is possible to work on such systems. Inspired from these interfaces, the authors came up with Tongue-Magnet-Interface (TMI) and Outer-Ear-Interface (OEI). TMI detects tongue movements using google glass with a magnet placed on the tongue. OEI detects jaw movements and can be installed in any ordinary headphone. The researchers tried to conduct various experiments with the TMI and OEI. In the first experiment, they used TMI and OEI together, and they achieved an average user-dependent recognition accuracy of 90 per cent. They then considered experimenting with the OEI alone, as that would eliminate tongue piercing. With the OEI alone they realised that TMI and OEI did not recognise the same phrases, realising they need to design the phrases more carefully. Then they experimented with improved OEI and Simple jaw gestures in which they achieved 84 per cent overall classification accuracy,  user-dependent results had even better results with 97 per cent accuracy. The experiments were helping them in constructing the phrases and well as the design of the wearable. In the last investigation, they explore how heart rate can be used to calibrate the sensors for better performance.&lt;/p&gt;
+
+&lt;p&gt;With the evolution of Deep Learning in the previous five years, one can now use Deep Learning models for the same tasks. It might help in improving accuracy and maybe even help us in noticing some exciting features of the data we get from the sensors. The authors conducted the study of OEI with only a single subject. They concluded that there is a need to carefully design the phrases which will be used for silent speech recognition as OEI and TMI recognises them differently. So a study with more subjects and the improved OEI system can be conducted to determine how these phrases are needed to be designed to help the practitioners who are actually going to use this research and implement it into a solution.&lt;/p&gt;</content><author><name></name></author><summary type="html">Bedri, A., Sahni, H., Thukral, P., Starner, T., Byrd, D., Presti, P., Reyes, G., Ghovanloo, M. and Guo, Z., 2015. Toward silent-speech control of consumer wearables. Computer, 48(10), pp.54-62.</summary></entry><entry><title type="html">Interpreting the C++ programming language</title><link href="https://rohanrajpal.github.io/blog/2020/06/20/xcpp.html" rel="alternate" type="text/html" title="Interpreting the C++ programming language" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/2020/06/20/xcpp</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/2020/06/20/xcpp.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -3440,4 +3721,12 @@ Eigen values:
 &lt;/div&gt;
     
 
-&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Paper Summary: Don’t Mind Me Touching My Wrist: A Case Study of Interacting with On-Body Technology in Public</title><link href="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions.html" rel="alternate" type="text/html" title="Paper Summary: Don’t Mind Me Touching My Wrist: A Case Study of Interacting with On-Body Technology in Public" /><published>2020-06-20T00:00:00-05:00</published><updated>2020-06-20T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/paper%20summary/2020/06/20/on-body-interactions.html">&lt;blockquote&gt;
+  &lt;p&gt;Halley P. Profita, James Clawson, Scott Gilliland, Clint Zeagler, Thad Starner, Jim Budd, and Ellen Yi-Luen Do. 2013. Don’t mind me touching my wrist: a case study of interacting with on-body technology in public. In Proceedings of the 2013 International Symposium on Wearable Computers (ISWC ’13).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This paper aims to study body interactions in the Public. Wearable tech, especially E-textile, introduces new kinds of on-body interactions. These interactions, however, are nontraditional. People might even find them uncomfortable to perform relative to time or place. These interactions might also be awkward for someone’s culture.&lt;/p&gt;
+
+&lt;p&gt;The authors aimed to answer these concerns by performing a survey-based study. The study involved two actors interacting with each other in a lift. One of the actors would be donning a wearable e-textile, who would receive a call and would reject it through the wearable. The third-party participant would view a video of this scene. The researchers conducted this study in the US and South Korea. The wearable e-textile used in this study was a jog wheel. They considered six different positions for the jog-wheel: collarbone, torso, waist, forearm, wrist and pocket. In each video, the actor would wear this textile in one of the six places. For a baseline, they also recorded videos of participants rejecting the call through their blackberry. After viewing the videos, the participant would answer eleven Likert scale questions from “Strongly Agree” to “Strongly Disagree” on the wearable placement. The researchers asked some additional attitudinal questions on the perception and position of the e-textile. Finally, participants would answer a follow-up questionnaire; they provided open-ended responses to the two most and two least preferred locations. In the results, the US and Korea resembled at some places. There were gender differences with respect to wearable placement and interactions. Interactions were less socially acceptable around the male’s waist area and on the waist and upper body areas of women. The wrist and the forearm came out to be the two most common on-body places for both countries, probably because they are the most common places for a wearable. However, the authors did succeed in finding the differences across cultures. For Americans, the most common concern was accidental triggering, while it was the interface for Koreans. In the follow-up questionnaire, Americans preferred a system that was easy to operate, whereas only 6.9 per cent of Koreans felt the same. South Koreans preferred a system that avoided making the user look weird or awkward.&lt;/p&gt;
+
+&lt;p&gt;There are many avenues we can explore with the help of this study. For example, the lift had opposite genders interacting, one can view the differences if both the characters of the lift are of the same gender. As the focus of the study is to study interactions in public, situations with more than two characters might also bring new insights.&lt;/p&gt;</content><author><name></name></author><summary type="html">Halley P. Profita, James Clawson, Scott Gilliland, Clint Zeagler, Thad Starner, Jim Budd, and Ellen Yi-Luen Do. 2013. Don’t mind me touching my wrist: a case study of interacting with on-body technology in public. In Proceedings of the 2013 International Symposium on Wearable Computers (ISWC ’13).</summary></entry></feed>
