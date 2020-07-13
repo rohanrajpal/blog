@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "The Virtual Internship: My Experience"
-date:   2020-06-17 16:00:00 +0530
+title:  "The Virtual Internship: My Experience."
+date:   2020-07-13 16:00:00 +0530
 comments: true
-hide: true
 categories: Internship
 image:  images/previews/expedia-preview.png
 toc: true
@@ -38,7 +37,7 @@ setup:
   - aspect: "0.74"
     image_path: "images/expedia/experience/setup-2.jpg"
 ---
-These summers, I interned at one of the largest travel companies of the world, Expedia. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!
+These summers, I interned at one of the largest travel companies of the world, Expedia Group™️. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!
 
 Luckily, my [previous intern]({{ site.baseurl }}/gsoc/2019/08/12/GSoC-with-VideoLAN.html) was remote too, so I was kind of used to work from home. In this internship, I majorly worked on cloud and data engineering.
 
@@ -47,7 +46,7 @@ Luckily, my [previous intern]({{ site.baseurl }}/gsoc/2019/08/12/GSoC-with-Video
 ## The induction week
 
 Expedia organized an induction week for us, and it involved workshops on various topics: how to become a better leader, designer, and we even got to know how Expedia operates.
-We kept on having workshops throughout our intern, and there was a lot to learn, so much that I wrote a separate blog [about it]({{ site.baseurl }}/internship/2020/06/14/expedia-internship-learning.html) :grin:.
+We kept on having workshops throughout our intern, and there was a lot to learn from each session.
 
 ## My setup
 
@@ -55,7 +54,9 @@ We kept on having workshops throughout our intern, and there was a lot to learn,
 
 ## My Team - Vrbo: Stayx dot net modernization pod
 
-I was a part of the stay experience team, which looks after the post-booking experience for a traveler. The team was divided into pods, and I worked on the .Net Stack Modernisation pod. I  worked on making a microservice and how to deploy it to the cloud.
+I was a part of the Stay Experience team, which looks after the post-booking experience for a traveller. The team was divided into pods, and I worked on the .Net Stack Modernisation pod. My work involved making a microservice and figuring out how to deploy it to the cloud.  
+I worked with a manager and a buddy. We synced up every week and discussed work updates every day. It motivated me to stay on track. I also synced up with our project sponsor a few times. I enjoyed such one on one sessions. They helped me connect with the team better.  
+All the Vrbo interns together had a weekly sync with the Vrbo managers. We socialized, played some games, get help on some issues. It was nice to have someone for support throughout the program, and these calls also helped me get to know the other interns better.
 
 ## The project
 
@@ -94,17 +95,16 @@ This blog is going to get more technical now, just keeping this for a quick refe
 
 ### Approach
 
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;margin: auto;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-06-28T07:51:30.216Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\&quot; etag=\&quot;-2Ve7WmWmoMpoH2KV3nx\&quot; version=\&quot;13.3.5\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;w-l4qnf0UAVcy5WlwC9E\&quot; name=\&quot;Page-1\&quot;&gt;zZdRb9owEMc/DY+bkphA9lgoME2tJg1pffaSI0lxfJHjENinn00cgptAW4l0fQr++yzbv/vfyYzIPNuvBM2TR4yAjTwn2o/I/cjzXIcE6qOVQ634gVMLsUgjE9QK6/QvNCuNWqYRFFagRGQyzW0xRM4hlJZGhcDKDtsgs3fNaQwdYR1S1lWf0kgmtRr4Tqt/hzROmp1dx8xktAk2QpHQCKsziSxGZC4QZf0r28+BaXgNl3rd8sLs6WACuHzLgtV2FXr5r9lTtQ5/0p27Xx7CLyY7O8pKc2FzWHloCECkgJghCplgjJyyRavOBJY8Ar2No0ZtzANirkRXic8g5cFkl5YSlZTIjJnZDXJpJt1Ajesz6I0v3tVIBZYihCsXbDxDRQzyStz4lBFlZcAMpDiodQIYlenOPgc1nopPcS129cOQf0cW3E4WHpHHeD/rJKNFrblVSSphndMjgUoVoI2VitBQDS5C3oGQsL+OuYvFLDh52xS3R6Zf/Vqp2mI5lURyVijEH4plF+ZnsDTw6E63IzXmyKFWlqm+23GLG1ree6PlJ//T8t7rWXqX12NGi8KwLLYgw8QM7CK4genJ2Da9+83pWn7aY3mXOAPBJB2YCpTYKukH/rnC1Xmd60ZZdI4MRWvcQgrcwgtxgO5CJr4NOugB7fWAngzFedzhvFIVpuBCKEAW+n0hMFOf37Rk8pbN+xY4fRunR3pwjvta9VA4/Q7OB9honndcpurzjCnX+/JIv6dAtbNPh3RsI532IfU+EOmk2wlUc3BmZbiFmxpygHr3yUe+JtSwfXsf587+wZDFPw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-<script type="text/javascript" src="https://app.diagrams.net/js/viewer.min.js"></script>
+![job]({{ site.baseurl }}/images/expedia/experience/datasync-job.jpg)
 
 The spark job
 
-- authenticates the vault and gets the secrets
-- reads the updated data from MongoDB
-- reads the data stored as parquet in S3 bucket
-- does a left anti join on s3 and mongo data, you now have the data that did not change
-- merge the data that didn't change with the new data with the new data
-- write the data as parquet in S3 bucket
+- Authenticates the vault and gets the secrets
+- Reads the updated data from MongoDB
+- Reads the data stored as parquet in S3 bucket
+- Does a left anti join on s3 and mongo data, you now have the data that did not change
+- Merge the data that didn't change with the new data with the new data
+- Write the data as parquet in S3 bucket
 
 The authentication was a little better than just sending a saved token:
 
@@ -115,7 +115,7 @@ The authentication was a little better than just sending a saved token:
 - Send a nonce to the Vault server and get the token
 - Get the secrets via the token
 
-Himanshu(My manager) explained me the approach with a nice example:
+Here's a nice example explaining everything:  
 
 ```text
 Mongo
@@ -172,16 +172,7 @@ This can be put back to S3. You can see how this data is in sync with Mongo data
 - **Setting up EC2 instances**
   - I had some trouble finding the correct configurations so that I am able to SSH into an instance and make sure the instance can access all VPN links.
 
-### Demo
-
-Video: Coming soon.
-
-### Next Steps
-
-- Clean code, make pull requests.
-- Try to get the code into production.
-
-## References
+<!-- ## References
 
 ### Generic
 
@@ -246,4 +237,4 @@ Video: Coming soon.
 - [Vault on AWS: Creating an EC2 Key Pair](https://www.youtube.com/watch?v=F1KC0khe4SU&amp;t=31s)
 - [terraform variable configuration](https://www.terraform.io/docs/configuration/variables.html)
 - [terraform setup](https://www.youtube.com/watch?v=RA1mNClGYJ4&t=887s)
-- [Spark master slave ec2](https://stackoverflow.com/a/31900096/10114752)
+- [Spark master slave ec2](https://stackoverflow.com/a/31900096/10114752) -->
