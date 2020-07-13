@@ -3,7 +3,6 @@ layout: post
 title:  "The Virtual Internship: Learning from the Experts [Draft]"
 toc: true
 comments: true
-hide: true
 categories: ["Internship"]
 tech-leaders:  
   - aspect: "1"
@@ -34,7 +33,7 @@ Every week, we got a chance to meet the leaders in Expedia and know about their 
 
 - **Stephen Lochhead**, Global Head of Talent Acquisition  
   <sup>27th May, 2020</sup>
-  - I learned the importance of brand building. A good brand helps provides employees with the right direction and motivation
+  - I learned the importance of the brand building. A good brand helps provides employees with the right direction and motivation
   - People and diverse opinions can actually turn from a differentiator to a competitive advantage for an organization.
 
 ![]({{ site.baseurl }}/images/expedia/learning/greg.png){:.single-person-call}
