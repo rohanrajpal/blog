@@ -63,4 +63,8 @@ I like contributing to the community, here's what I'm trying to do from my side:
 
 Feel free to connect with me on [LinkedIn.](https://www.linkedin.com/in/rohanrajpal/)
 
+### My Stats
+
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=rohanrajpal)](https://github.com/anuraghazra/github-readme-stats)
+
 <embed src="https://wakatime.com/share/@8069ddb1-f7b3-4e88-a57a-25095df142a2/0c65f5ce-4db9-4f5a-bc85-06214c9abba8.svg">
