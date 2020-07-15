@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Competitive Programming: Problems and Tricks on various concepts. [Draft]"
+title:  "DSA Interview Prep Resources"
 toc: true
 comments: true
-categories: ["Competitive Programming"]
+categories: ["Interview"]
 ---
 In this blog I'll document some resources and all the challenging competitive programming problems with the focus on *motivation* rather than the solution.
 
@@ -235,7 +235,30 @@ public:
 
 [Leetcode Questions](https://leetcode.com/problems/distinct-subsequences/)
 
+## Strings
 
+### Longest Substring Without Repeating Characters
+
+[Leetcode link](https://leetcode.com/explore/interview/card/top-interview-questions-medium/103/array-and-strings/779)
+Redundant step: no need to clear previous dictionary values, just update the start
+
+```c++
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int start=-1,maxlen=0;
+        unordered_map<char,int> umap;
+        for(int i=0;i<s.size();i++){
+            if(umap.count(s[i])!=0){
+                start=max(start,umap[s[i]]);
+            }
+            umap[s[i]]=i;
+            if(maxlen<i-start) maxlen=i-start;
+        }
+        return maxlen;
+    }
+};
+```
 
 ## Maths
 
@@ -317,6 +340,25 @@ public:
             nums.erase(nums.begin()+idx);
         }
         return seq;
+    }
+};
+```
+
+### Number of 1 Bits
+
+[Leetcode link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/99/others/565)
+A nice trick to avoid going through zeros as well.
+
+```c++
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int count=0;
+        while(n){
+            count+=1;
+            n=n&(n-1);
+        }
+        return count;
     }
 };
 ```
