@@ -12,3 +12,5 @@ _notebooks/.ipynb_checkpoints
 .tweet-cache
 __pycache__
 *.Identifier
+*.ini
+images/copied_from_nb/*
