@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Competitive Programming: C++ Cheat Sheet [Draft]"
+title:  "Competitive Programming: C++ Cheat Sheet"
 toc: true
 comments: true
 categories: ["Competitive Programming"]
@@ -110,4 +110,33 @@ unordered_map<pair<int, int>, bool, hash_pair> um;
 
 ```c++
 umap.reserve(n)
+```
+
+### String stuff
+
+int to string
+
+```c++
+class Solution {
+public:
+    vector<string> fizzBuzz(int n) {
+        vector<string> ans(n);
+        for(int i=1;i<=n;i++){
+            if(i%3==0 and i%5==0) ans[i-1]="FizzBuzz";
+            else if(i%3==0) ans[i-1]="Fizz";
+            else if(i%5==0) ans[i-1]="Buzz";
+            else ans[i-1]=to_string(i);
+        }
+        return ans;
+    }
+};
+```
+
+### Priority Queue
+
+```c++
+//max heap
+priority_queue <int> g = gq;
+//min heap
+priority_queue <int, vector<int>, greater<int>> gquiz;
 ```
