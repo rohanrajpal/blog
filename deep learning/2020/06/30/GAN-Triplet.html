@@ -3,19 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Generative Adversarial Networks: Triplet Training via Pytorch [Draft] | Rohan Rajpal · Blog</title>
+<title>Generative Adversarial Networks: Triplet Training via Pytorch | Rohan Rajpal · Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Generative Adversarial Networks: Triplet Training via Pytorch [Draft]" />
+<meta property="og:title" content="Generative Adversarial Networks: Triplet Training via Pytorch" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Read about Data Science · Programming · Design · Mobile" />
 <meta property="og:description" content="Read about Data Science · Programming · Design · Mobile" />
 <link rel="canonical" href="https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html" />
 <meta property="og:url" content="https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html" />
 <meta property="og:site_name" content="Rohan Rajpal · Blog" />
+<meta property="og:image" content="https://rohanrajpal.github.io/blog/images/previews/gan-triplet.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-30T00:00:00-05:00" />
 <script type="application/ld+json">
-{"headline":"Generative Adversarial Networks: Triplet Training via Pytorch [Draft]","dateModified":"2020-06-30T00:00:00-05:00","datePublished":"2020-06-30T00:00:00-05:00","description":"Read about Data Science · Programming · Design · Mobile","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html","@context":"https://schema.org"}</script>
+{"headline":"Generative Adversarial Networks: Triplet Training via Pytorch","dateModified":"2020-06-30T00:00:00-05:00","datePublished":"2020-06-30T00:00:00-05:00","description":"Read about Data Science · Programming · Design · Mobile","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html"},"@type":"BlogPosting","image":"https://rohanrajpal.github.io/blog/images/previews/gan-triplet.png","url":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rohanrajpal.github.io/blog/feed.xml" title="Rohan Rajpal · Blog" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -24,19 +25,20 @@
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-145665153-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
 
 <link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Generative Adversarial Networks: Triplet Training via Pytorch [Draft] | Rohan Rajpal · Blog</title>
+<title>Generative Adversarial Networks: Triplet Training via Pytorch | Rohan Rajpal · Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Generative Adversarial Networks: Triplet Training via Pytorch [Draft]" />
+<meta property="og:title" content="Generative Adversarial Networks: Triplet Training via Pytorch" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Read about Data Science · Programming · Design · Mobile" />
 <meta property="og:description" content="Read about Data Science · Programming · Design · Mobile" />
 <link rel="canonical" href="https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html" />
 <meta property="og:url" content="https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html" />
 <meta property="og:site_name" content="Rohan Rajpal · Blog" />
+<meta property="og:image" content="https://rohanrajpal.github.io/blog/images/previews/gan-triplet.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-30T00:00:00-05:00" />
 <script type="application/ld+json">
-{"headline":"Generative Adversarial Networks: Triplet Training via Pytorch [Draft]","dateModified":"2020-06-30T00:00:00-05:00","datePublished":"2020-06-30T00:00:00-05:00","description":"Read about Data Science · Programming · Design · Mobile","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html"},"@type":"BlogPosting","url":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html","@context":"https://schema.org"}</script>
+{"headline":"Generative Adversarial Networks: Triplet Training via Pytorch","dateModified":"2020-06-30T00:00:00-05:00","datePublished":"2020-06-30T00:00:00-05:00","description":"Read about Data Science · Programming · Design · Mobile","mainEntityOfPage":{"@type":"WebPage","@id":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html"},"@type":"BlogPosting","image":"https://rohanrajpal.github.io/blog/images/previews/gan-triplet.png","url":"https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -96,13 +98,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Generative Adversarial Networks: Triplet Training via Pytorch [Draft]</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-30T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Generative Adversarial Networks: Triplet Training via Pytorch</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-30T00:00:00-05:00" itemprop="datePublished">
         Jun 30, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -141,38 +143,38 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Approach">Approach </a></li>
-<li class="toc-entry toc-h1"><a href="#Imports">Imports </a></li>
-<li class="toc-entry toc-h1"><a href="#References">References </a></li>
-<li class="toc-entry toc-h1"><a href="#Utils">Utils </a></li>
-<li class="toc-entry toc-h1"><a href="#Datasets">Datasets </a></li>
-<li class="toc-entry toc-h1"><a href="#GAN">GAN </a>
+<li class="toc-entry toc-h2"><a href="#Approach">Approach </a></li>
+<li class="toc-entry toc-h2"><a href="#Imports">Imports </a></li>
+<li class="toc-entry toc-h2"><a href="#References">References </a></li>
+<li class="toc-entry toc-h2"><a href="#Utils">Utils </a></li>
+<li class="toc-entry toc-h2"><a href="#Datasets">Datasets </a></li>
+<li class="toc-entry toc-h2"><a href="#GAN">GAN </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#Architecture:-Generator-and-Discriminator">Architecture: Generator and Discriminator </a></li>
+<li class="toc-entry toc-h3"><a href="#Architecture:-Generator-and-Discriminator">Architecture: Generator and Discriminator </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#Pretraining">Pretraining </a>
+<li class="toc-entry toc-h2"><a href="#Pretraining">Pretraining </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#GAN-Class">GAN Class </a></li>
-<li class="toc-entry toc-h2"><a href="#Pretrain-GAN">Pretrain GAN </a>
+<li class="toc-entry toc-h3"><a href="#GAN-Class">GAN Class </a></li>
+<li class="toc-entry toc-h3"><a href="#Pretrain-GAN">Pretrain GAN </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Original-GAN-objective">Original GAN objective </a></li>
-<li class="toc-entry toc-h3"><a href="#m=16">m=16 </a></li>
-<li class="toc-entry toc-h3"><a href="#m=32">m=32 </a></li>
+<li class="toc-entry toc-h4"><a href="#Original-GAN-objective">Original GAN objective </a></li>
+<li class="toc-entry toc-h4"><a href="#m=16">m=16 </a></li>
+<li class="toc-entry toc-h4"><a href="#m=32">m=32 </a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#Main-Training">Main Training </a>
+<li class="toc-entry toc-h2"><a href="#Main-Training">Main Training </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Improved-GAN-Objective-+-Triplet-loss">Improved GAN Objective + Triplet loss </a></li>
-<li class="toc-entry toc-h3"><a href="#Triplet-M=16-N=100">Triplet M=16 N=100 </a></li>
-<li class="toc-entry toc-h3"><a href="#Triplet-M=16-N=200">Triplet M=16 N=200 </a></li>
-<li class="toc-entry toc-h3"><a href="#Triplet-M=32-N=100">Triplet M=32 N=100 </a></li>
-<li class="toc-entry toc-h2"><a href="#Results">Results </a></li>
+<li class="toc-entry toc-h4"><a href="#Improved-GAN-Objective-+-Triplet-loss">Improved GAN Objective + Triplet loss </a></li>
+<li class="toc-entry toc-h4"><a href="#Triplet-M=16-N=100">Triplet M=16 N=100 </a></li>
+<li class="toc-entry toc-h4"><a href="#Triplet-M=16-N=200">Triplet M=16 N=200 </a></li>
+<li class="toc-entry toc-h4"><a href="#Triplet-M=32-N=100">Triplet M=32 N=100 </a></li>
+<li class="toc-entry toc-h3"><a href="#Results">Results </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#Clear-GPU">Clear GPU </a></li>
+<li class="toc-entry toc-h2"><a href="#Clear-GPU">Clear GPU </a></li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
@@ -193,28 +195,16 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
-<p>This is an implementation of the paper:Zieba, Maciej, and Lei Wang. "Training triplet networks with gan." arXiv preprint arXiv:1704.02227 (2017).</p>
+<p>This is an implementation of the paper:Zieba, Maciej, and Lei Wang. "Training triplet networks with gan." arXiv preprint arXiv:1704.02227 (2017).<br>
+What is triplet training?
+Triplet training helps us learn distributed embeddings by the notion of similarity and dissimilarity. Read more about it <a href="https://towardsdatascience.com/image-similarity-using-triplet-loss-3744c0f67973">here</a></p>
 </blockquote>
-<h1 id="Approach">
+<p>This paper tries to replace triplet loss with the classification losss of the discriminator and compare the results.</p>
+<h2 id="Approach">
 <a class="anchor" href="#Approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Approach<a class="anchor-link" href="#Approach"> </a>
-</h1>
-<p><strong>Data:</strong><br>
-I have used the MNIST dataset. It has 60,000 training and 10,000 testing samples. The labelled set has N (100 or 200) samples and the unlabelled set had all 60,000 samples.<br>
-<strong>Preprocessing:</strong><br>
-No preprocessing, as mentioned in the paper.<br>
-<strong>Architecture:</strong><br>
-I have followed the architecture used in Improved GAN (Salimans et al. 2016). The discriminator outputs M (16 or 32) features. The hyperparameters are same as in TripletGAN.<br>
-<strong>Loss:</strong><br>
-For pretraining the GAN, I have followed the standard objective (Goodfellow, Ian, et al. 2014) 
-For training the Improved GAN with Triplet loss, I have followed the Improved GAN objective (Salimans et al. 2016) with Triplet Loss in the Discriminator.<br>
-<strong>Training:</strong><br>
-I initially pretrain the GAN with normal objective, for 50 epochs. Post that I train with the Improved GAN objective for 10 epochs.<br>
-<strong>Postprocessing:</strong><br>
-No postprocessing, as mentioned in the paper.<br>
-<strong>Classifier:</strong><br>
-I have used a 9-nearest neighbour classifier on top of M(16 or 32) features extracted by the discriminator.<br>
-<strong>Image Generation:</strong><br>
-Created an array with noise and sent it to the generator to get the image. Have plotted them in the table below.</p>
+</h2>
+<p>I initially pretrained the GAN with the original GAN objective, for 50 epochs. Post that I train with the Improved GAN objective for 10 epochs.</p>
+<p>The discriminator of the GAN generates M features, we take these M features and put it into the classifier. For classification I have used a 9-nearest neighbour classifier.</p>
 
 </div>
 </div>
@@ -222,9 +212,9 @@ Created an array with noise and sent it to the generator to get the image. Have 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Imports">
+<h2 id="Imports">
 <a class="anchor" href="#Imports" aria-hidden="true"><span class="octicon octicon-link"></span></a>Imports<a class="anchor-link" href="#Imports"> </a>
-</h1>
+</h2>
 </div>
 </div>
 </div>
@@ -243,6 +233,8 @@ Created an array with noise and sent it to the generator to get the image. Have 
 <span class="c1"># https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier.score</span>
 <span class="c1"># https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html</span>
 <span class="c1"># https://github.com/andreasveit/triplet-network-pytorch</span>
+<span class="o">!</span>pip install livelossplot &gt; /tmp/xxy
+
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -281,9 +273,9 @@ Created an array with noise and sent it to the generator to get the image. Have 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="References">
+<h2 id="References">
 <a class="anchor" href="#References" aria-hidden="true"><span class="octicon octicon-link"></span></a>References<a class="anchor-link" href="#References"> </a>
-</h1>
+</h2>
 </div>
 </div>
 </div>
@@ -317,9 +309,11 @@ Created an array with noise and sent it to the generator to get the image. Have 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Utils">
+<h2 id="Utils">
 <a class="anchor" href="#Utils" aria-hidden="true"><span class="octicon octicon-link"></span></a>Utils<a class="anchor-link" href="#Utils"> </a>
-</h1>
+</h2>
+<p>I combined all the handy functions used throughout the notebook into one place, for easier access.</p>
+
 </div>
 </div>
 </div>
@@ -411,9 +405,11 @@ Created an array with noise and sent it to the generator to get the image. Have 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Datasets">
+<h2 id="Datasets">
 <a class="anchor" href="#Datasets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Datasets<a class="anchor-link" href="#Datasets"> </a>
-</h1>
+</h2>
+<p>Below is the MNIST dataset. It has 60,000 training and 10,000 testing samples. The labelled set has N (100 or 200) samples and the unlabelled set had all 60,000 samples.</p>
+
 </div>
 </div>
 </div>
@@ -564,29 +560,35 @@ Transform: Compose(
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="GAN">
+<h2 id="GAN">
 <a class="anchor" href="#GAN" aria-hidden="true"><span class="octicon octicon-link"></span></a>GAN<a class="anchor-link" href="#GAN"> </a>
-</h1>
+</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Architecture:-Generator-and-Discriminator">
+<h3 id="Architecture:-Generator-and-Discriminator">
 <a class="anchor" href="#Architecture:-Generator-and-Discriminator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Architecture: Generator and Discriminator<a class="anchor-link" href="#Architecture:-Generator-and-Discriminator"> </a>
-</h2>
+</h3>
+<p>This notebook follows the architecture used in Improved GAN (Salimans et al. 2016). The discriminator outputs M (16 or 32) features. The hyperparameters are same as in TripletGAN.</p>
+
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># https://github.com/Sleepychord/ImprovedGAN-pytorch/blob/master/Nets.py</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<span class="c1"># https://github.com/Sleepychord/ImprovedGAN-pytorch/blob/master/Nets.py</span>
 <span class="k">class</span> <span class="nc">Discriminator</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span> <span class="o">=</span> <span class="mi">28</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">output_dim</span> <span class="o">=</span> <span class="mi">10</span><span class="p">):</span>
     <span class="nb">super</span><span class="p">(</span><span class="n">Discriminator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -657,24 +659,27 @@ Transform: Compose(
 </div>
 </div>
 
+    </details>
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Pretraining">
+<h2 id="Pretraining">
 <a class="anchor" href="#Pretraining" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pretraining<a class="anchor-link" href="#Pretraining"> </a>
-</h1>
+</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="GAN-Class">
+<h3 id="GAN-Class">
 <a class="anchor" href="#GAN-Class" aria-hidden="true"><span class="octicon octicon-link"></span></a>GAN Class<a class="anchor-link" href="#GAN-Class"> </a>
-</h2>
+</h3>
+<p>For pretraining the GAN, I have followed the standard objective (Goodfellow, Ian, et al. 2014)</p>
+
 </div>
 </div>
 </div>
@@ -825,29 +830,33 @@ Transform: Compose(
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Pretrain-GAN">
+<h3 id="Pretrain-GAN">
 <a class="anchor" href="#Pretrain-GAN" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pretrain GAN<a class="anchor-link" href="#Pretrain-GAN"> </a>
-</h2>
+</h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Original-GAN-objective">
+<h4 id="Original-GAN-objective">
 <a class="anchor" href="#Original-GAN-objective" aria-hidden="true"><span class="octicon octicon-link"></span></a>Original GAN objective<a class="anchor-link" href="#Original-GAN-objective"> </a>
-</h3>
+</h4>
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pretrain</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<span class="k">def</span> <span class="nf">pretrain</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
   <span class="c1"># Reference: https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/gan/gan.py</span>
   <span class="n">plotlosses</span> <span class="o">=</span> <span class="n">PlotLosses</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s1">'loss'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'generator'</span><span class="p">,</span> <span class="s1">'discriminator'</span><span class="p">]})</span>
   <span class="c1"># Tensor = torch.cuda.FloatTensor if args.cuda else torch.FloatTensor</span>
@@ -916,26 +925,34 @@ Transform: Compose(
 </div>
 </div>
 
+    </details>
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="m=16">
+<h4 id="m=16">
 <a class="anchor" href="#m=16" aria-hidden="true"><span class="octicon octicon-link"></span></a>m=16<a class="anchor-link" href="#m=16"> </a>
-</h3>
+</h4>
+<p>To generate the images, I created an array with noise and sent it to the generator to get the image.</p>
+
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">args</span><span class="o">.</span><span class="n">load_saved</span><span class="o">=</span><span class="kc">True</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+
+<span class="n">args</span><span class="o">.</span><span class="n">load_saved</span><span class="o">=</span><span class="kc">True</span>
 <span class="n">args</span><span class="o">.</span><span class="n">epochs</span><span class="o">=</span><span class="mi">50</span>
 <span class="n">args</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="s1">'pretrain'</span>
 
@@ -953,6 +970,7 @@ Transform: Compose(
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -998,20 +1016,24 @@ Done w cdist
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="m=32">
+<h4 id="m=32">
 <a class="anchor" href="#m=32" aria-hidden="true"><span class="octicon octicon-link"></span></a>m=32<a class="anchor-link" href="#m=32"> </a>
-</h3>
+</h4>
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># m=32 n=100</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<span class="c1"># m=32 n=100</span>
 <span class="n">args</span><span class="o">.</span><span class="n">features</span><span class="o">=</span><span class="mi">32</span>
 <span class="n">gan</span> <span class="o">=</span> <span class="n">ImprovedGAN</span><span class="p">(</span><span class="n">Generator</span><span class="p">(</span><span class="n">z_dim</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span> <span class="n">Discriminator</span><span class="p">(</span><span class="n">output_dim</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">features</span><span class="p">),</span> <span class="n">MNISTLabel</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">labeled</span><span class="o">/</span><span class="mi">10</span><span class="p">),</span> <span class="n">MNISTUnlabel</span><span class="p">(),</span> <span class="n">MNISTTest</span><span class="p">())</span>
 <span class="n">gan</span><span class="o">.</span><span class="n">pretrain</span><span class="p">()</span>
@@ -1024,6 +1046,7 @@ Done w cdist
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1069,29 +1092,36 @@ Done w cdist
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Main-Training">
+<h2 id="Main-Training">
 <a class="anchor" href="#Main-Training" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Training<a class="anchor-link" href="#Main-Training"> </a>
-</h1>
+</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Improved-GAN-Objective-+-Triplet-loss">
+<h4 id="Improved-GAN-Objective-+-Triplet-loss">
 <a class="anchor" href="#Improved-GAN-Objective-+-Triplet-loss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Improved GAN Objective + Triplet loss<a class="anchor-link" href="#Improved-GAN-Objective-+-Triplet-loss"> </a>
-</h3>
+</h4>
+<p>For training the Improved GAN with Triplet loss, I have followed the Improved GAN objective (Salimans et al. 2016) with Triplet Loss in the Discriminator.</p>
+
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reference: https://github.com/Sleepychord/ImprovedGAN-pytorch/blob/master/ImprovedGAN.py</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+
+<span class="c1"># Reference: https://github.com/Sleepychord/ImprovedGAN-pytorch/blob/master/ImprovedGAN.py</span>
 <span class="k">def</span> <span class="nf">train_Discriminator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">x3</span><span class="p">,</span> <span class="n">x_unlabel</span><span class="p">):</span>
   <span class="n">output_unlabel</span><span class="p">,</span> <span class="n">output_fake</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">D</span><span class="p">(</span><span class="n">x_unlabel</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">D</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">G</span><span class="p">(</span><span class="n">x_unlabel</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">x_unlabel</span><span class="o">.</span><span class="n">size</span><span class="p">())</span><span class="o">.</span><span class="n">detach</span><span class="p">())</span> 
   <span class="n">loss_supervised</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tripletloss</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">D</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">D</span><span class="p">(</span><span class="n">x2</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">D</span><span class="p">(</span><span class="n">x3</span><span class="p">))</span>
@@ -1160,26 +1190,34 @@ Done w cdist
 </div>
 </div>
 
+    </details>
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Triplet-M=16-N=100">
+<h4 id="Triplet-M=16-N=100">
 <a class="anchor" href="#Triplet-M=16-N=100" aria-hidden="true"><span class="octicon octicon-link"></span></a>Triplet M=16 N=100<a class="anchor-link" href="#Triplet-M=16-N=100"> </a>
-</h3>
+</h4>
+<p>Here M is the number of features generated by the discriminator and N is the number of samples on which we did supervised training.</p>
+
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+
+<span class="o">%%time</span>
 <span class="n">args</span><span class="o">.</span><span class="n">load_saved</span><span class="o">=</span><span class="kc">True</span>
 <span class="n">args</span><span class="o">.</span><span class="n">epochs</span><span class="o">=</span><span class="mi">70</span>
 <span class="n">args</span><span class="o">.</span><span class="n">labeled</span><span class="o">=</span><span class="mi">100</span>
@@ -1197,6 +1235,7 @@ Done w cdist
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1245,20 +1284,25 @@ Wall time: 1h 5min 43s
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Triplet-M=16-N=200">
+<h4 id="Triplet-M=16-N=200">
 <a class="anchor" href="#Triplet-M=16-N=200" aria-hidden="true"><span class="octicon octicon-link"></span></a>Triplet M=16 N=200<a class="anchor-link" href="#Triplet-M=16-N=200"> </a>
-</h3>
+</h4>
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">args</span><span class="o">.</span><span class="n">load_saved</span><span class="o">=</span><span class="kc">True</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+
+<span class="n">args</span><span class="o">.</span><span class="n">load_saved</span><span class="o">=</span><span class="kc">True</span>
 <span class="n">args</span><span class="o">.</span><span class="n">epochs</span><span class="o">=</span><span class="mi">70</span>
 <span class="n">args</span><span class="o">.</span><span class="n">labeled</span><span class="o">=</span><span class="mi">200</span>
 <span class="n">args</span><span class="o">.</span><span class="n">features</span><span class="o">=</span><span class="mi">16</span>
@@ -1274,6 +1318,7 @@ Wall time: 1h 5min 43s
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1320,20 +1365,25 @@ Done argsort
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Triplet-M=32-N=100">
+<h4 id="Triplet-M=32-N=100">
 <a class="anchor" href="#Triplet-M=32-N=100" aria-hidden="true"><span class="octicon octicon-link"></span></a>Triplet M=32 N=100<a class="anchor-link" href="#Triplet-M=32-N=100"> </a>
-</h3>
+</h4>
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">args</span><span class="o">.</span><span class="n">load_saved</span><span class="o">=</span><span class="kc">True</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+
+<span class="n">args</span><span class="o">.</span><span class="n">load_saved</span><span class="o">=</span><span class="kc">True</span>
 <span class="n">args</span><span class="o">.</span><span class="n">epochs</span><span class="o">=</span><span class="mi">70</span>
 <span class="n">args</span><span class="o">.</span><span class="n">labeled</span><span class="o">=</span><span class="mi">100</span>
 <span class="n">args</span><span class="o">.</span><span class="n">features</span><span class="o">=</span><span class="mi">32</span>
@@ -1349,6 +1399,7 @@ Done argsort
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1395,20 +1446,24 @@ Done argsort
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Results">
+<h3 id="Results">
 <a class="anchor" href="#Results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results<a class="anchor-link" href="#Results"> </a>
-</h2>
+</h3>
 </div>
 </div>
 </div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># batchwise iterate through data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<span class="c1"># batchwise iterate through data</span>
 <span class="c1"># fit the batch for the classifier</span>
 <span class="c1"># get accuracy and mAP</span>
 
@@ -1419,6 +1474,7 @@ Done argsort
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1441,9 +1497,9 @@ Done argsort
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Clear-GPU">
+<h2 id="Clear-GPU">
 <a class="anchor" href="#Clear-GPU" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clear GPU<a class="anchor-link" href="#Clear-GPU"> </a>
-</h1>
+</h2>
 </div>
 </div>
 </div>
@@ -1496,7 +1552,8 @@ Done argsort
 
   </div>
 
-  Thanks for reading 😄. If you would like to support my work, you can <a href="https://www.buymeacoffee.com/rohanrajpal">buy me a coffee</a> ☕.<div id="disqus_thread"></div>
+  Thanks for reading 😄. If you would like to support my work, you can <a href="https://www.buymeacoffee.com/rohanrajpal">buy me a coffee</a> ☕.
+  <br><div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
       this.page.url = 'https://rohanrajpal.github.io/blog/deep%20learning/2020/06/30/GAN-Triplet.html';
