@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-07-13T00:00:24-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal · Blog</title><subtitle>Read about Data Science · Programming · Design · Mobile</subtitle><entry><title type="html">The Virtual Internship: My Experience.</title><link href="https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience.html" rel="alternate" type="text/html" title="The Virtual Internship: My Experience." /><published>2020-07-13T05:30:00-05:00</published><updated>2020-07-13T05:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience.html">&lt;p&gt;These summers, I interned at one of the largest travel companies of the world, Expedia Group™️. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-07-15T00:22:13-05:00</updated><id>https://rohanrajpal.github.io/blog/feed.xml</id><title type="html">Rohan Rajpal · Blog</title><subtitle>Read about Data Science · Programming · Design · Mobile</subtitle><entry><title type="html">The Virtual Internship: My Experience.</title><link href="https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience.html" rel="alternate" type="text/html" title="The Virtual Internship: My Experience." /><published>2020-07-13T05:30:00-05:00</published><updated>2020-07-13T05:30:00-05:00</updated><id>https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/internship/2020/07/13/expedia-internship-experience.html">&lt;p&gt;These summers, I interned at one of the largest travel companies of the world, Expedia Group™️. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!&lt;/p&gt;
 
 &lt;p&gt;Luckily, my &lt;a href=&quot;/blog/gsoc/2019/08/12/GSoC-with-VideoLAN.html&quot;&gt;previous intern&lt;/a&gt; was remote too, so I was kind of used to work from home. In this internship, I majorly worked on cloud and data engineering.&lt;/p&gt;
 
@@ -385,268 +385,32 @@ This can be put back to S3. You can see how this data is in sync with Mongo data
 - [Vault on AWS: Creating an EC2 Key Pair](https://www.youtube.com/watch?v=F1KC0khe4SU&amp;amp;t=31s)
 - [terraform variable configuration](https://www.terraform.io/docs/configuration/variables.html)
 - [terraform setup](https://www.youtube.com/watch?v=RA1mNClGYJ4&amp;t=887s)
-- [Spark master slave ec2](https://stackoverflow.com/a/31900096/10114752) --&gt;</content><author><name></name></author><summary type="html">These summers, I interned at one of the largest travel companies of the world, Expedia Group™️. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">DBMS: Interview Prep [Draft]</title><link href="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html" rel="alternate" type="text/html" title="DBMS: Interview Prep [Draft]" /><published>2020-07-10T00:00:00-05:00</published><updated>2020-07-10T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-notes.html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xAhfQNTIeOM&amp;amp;list=PLx5CT0AzDJCnO9k98RsrPY9WGAXj8yeKL&quot;&gt;DBMS Course&lt;/a&gt;&lt;/p&gt;
+- [Spark master slave ec2](https://stackoverflow.com/a/31900096/10114752) --&gt;</content><author><name></name></author><summary type="html">These summers, I interned at one of the largest travel companies of the world, Expedia Group™️. Who knew during a pandemic when travel is at an all time low, Expedia had a great intern program planned for us!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" /><media:content medium="image" url="https://rohanrajpal.github.io/blog/images/previews/expedia-preview.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">DBMS Interview Prep Resources</title><link href="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-interview-resources.html" rel="alternate" type="text/html" title="DBMS Interview Prep Resources" /><published>2020-07-10T00:00:00-05:00</published><updated>2020-07-10T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-interview-resources</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/interview/2020/07/10/DBMS-interview-resources.html">&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;/h2&gt;
 
-&lt;h3 id=&quot;database--dbms--database-management-system&quot;&gt;Database &amp;amp; DBMS | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;Database: Collection of &lt;em&gt;related data.&lt;/em&gt;
-Properties:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;logically coherent relation&lt;/li&gt;
-  &lt;li&gt;some aspect of real world&lt;/li&gt;
-  &lt;li&gt;specific purpose&lt;/li&gt;
-  &lt;li&gt;any size and complexity&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;database-vs-filesystem--database-management-system&quot;&gt;Database vs Filesystem | Database Management System&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Query ability&lt;/li&gt;
-  &lt;li&gt;Redundancy control: permissions for each user&lt;/li&gt;
-  &lt;li&gt;Access control: same as above?&lt;/li&gt;
-  &lt;li&gt;Option to store persistent objects
-    &lt;ul&gt;
-      &lt;li&gt;program closed, variables gone&lt;/li&gt;
-      &lt;li&gt;db gives option to store vars&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Backup and migrate&lt;/li&gt;
-  &lt;li&gt;Multiple user interface&lt;/li&gt;
-  &lt;li&gt;Integrity constraints
-    &lt;ul&gt;
-      &lt;li&gt;have relationships between tables&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Relationship among data&lt;/li&gt;
-  &lt;li&gt;Flexibility
-    &lt;ul&gt;
-      &lt;li&gt;change the schema&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;App dev time is reduced&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;data-model--database-management-system&quot;&gt;Data Model | Database Management System&lt;/h3&gt;
+&lt;h3 id=&quot;basic-of-dbms-relational-algebra-and-sql&quot;&gt;Basic of DBMS, Relational Algebra and SQL&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;logical structure&lt;/li&gt;
-  &lt;li&gt;intro. abstraction&lt;/li&gt;
-  &lt;li&gt;processed and stored&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLx5CT0AzDJCnO9k98RsrPY9WGAXj8yeKL&quot;&gt;Playlist link&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Three types&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/videoseries?list=PLx5CT0AzDJCnO9k98RsrPY9WGAXj8yeKL&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;transaction-management&quot;&gt;Transaction Management&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;hierachical model
-    &lt;ul&gt;
-      &lt;li&gt;tree like structure&lt;/li&gt;
-      &lt;li&gt;one parent may have multiple chidlren, but the child has only one parent&lt;/li&gt;
-      &lt;li&gt;one-many relationship&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;network model
-    &lt;ul&gt;
-      &lt;li&gt;graph like&lt;/li&gt;
-      &lt;li&gt;child may have multiple parents
-  -many-many relationship&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;relational model
-    &lt;ul&gt;
-      &lt;li&gt;data is in some form of table&lt;/li&gt;
-      &lt;li&gt;relationship among tables&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLcV9HJoLZqnSlySIzXxAWoAsoRyqUCReg&quot;&gt;Playlist link&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/videoseries?list=PLcV9HJoLZqnSlySIzXxAWoAsoRyqUCReg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;h3 id=&quot;schema-instance--metadata--database-management-system&quot;&gt;Schema, Instance &amp;amp; Metadata | Database Management System&lt;/h3&gt;
+&lt;h2 id=&quot;b-trees&quot;&gt;B+ Trees&lt;/h2&gt;
 
-&lt;p&gt;schema
-    - description of database
-    - specified during design
-    - not expected to change frequently&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/aZjYr87r1b8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;instance
-    - snapshot
-    - current state of occurance&lt;/p&gt;
-
-&lt;p&gt;metadata
-    - data about data&lt;/p&gt;
-
-&lt;h3 id=&quot;data-independence--database-management-system&quot;&gt;Data Independence | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;schema
-    - application
-    - logical
-    - physical&lt;/p&gt;
-
-&lt;p&gt;logical data independence
-physical data independence&lt;/p&gt;
-
-&lt;h3 id=&quot;database-abstraction--database-management-system&quot;&gt;Database Abstraction | Database Management System&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Physical level
-    &lt;ul&gt;
-      &lt;li&gt;how the data is actually stored in system&lt;/li&gt;
-      &lt;li&gt;keep it transparent&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Logical level
-    &lt;ul&gt;
-      &lt;li&gt;relationship among data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;View level
-    &lt;ul&gt;
-      &lt;li&gt;describe only a part of the db&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;database-architecture--database-management-system&quot;&gt;Database Architecture | Database Management System&lt;/h3&gt;
+&lt;h2 id=&quot;problems&quot;&gt;Problems&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;ODBC (Open database connector)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;er-model--database-management-system&quot;&gt;ER Model | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;a real world representation of db on paper&lt;/p&gt;
-
-&lt;h3 id=&quot;entity-entity-type-entity-set--database-management-system&quot;&gt;Entity, Entity Type, Entity Set | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;entity: object which has indp existence in the real world is called entity
-entity type: table name
-entity set: collection of one or more entity
-attributes: columns
-domain: set of permitted values&lt;/p&gt;
-
-&lt;h3 id=&quot;simple--composite-attributes--database-management-system&quot;&gt;Simple &amp;amp; Composite Attributes | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;composite attribute: the attribute can be divided into further smaller parts, eg: full name&lt;/p&gt;
-
-&lt;h3 id=&quot;single-valued-attributes-vs-multivalued-attributes--database-management-system&quot;&gt;Single Valued Attributes vs Multivalued Attributes | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;pretty self explainatory lol, multi example: phone number&lt;/p&gt;
-
-&lt;h3 id=&quot;stored-attributes-vs-derived-attributes--database-management-system&quot;&gt;Stored Attributes vs Derived Attributes | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;derived is calculated from stored&lt;/p&gt;
-
-&lt;h3 id=&quot;introduction-to-join-in-relational-algebra--database-management-system&quot;&gt;Introduction to Join in Relational Algebra | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;Join is eq to cross product followed by selective operations&lt;/p&gt;
-
-&lt;p&gt;It basically combines tuples from two relations based on some condition&lt;/p&gt;
-
-&lt;p&gt;Join
-    - inner join
-        - output or result only contains the matching tuples
-            - theta join
-            - equi join
-            - natural join
-    - outer join
-        - the result will contain all the tuples from one or both of the relation
-            - left outer
-            - right outer
-            - full outer&lt;/p&gt;
-
-&lt;h3 id=&quot;inner-join--database-management-system&quot;&gt;Inner Join | Database Management System&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Theta join:
-    &lt;ul&gt;
-      &lt;li&gt;most efficient when referential integrity contraints is maintained.&lt;/li&gt;
-      &lt;li&gt;tuples whose joining attributes are null, do not appear in the final result&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Equi join:
-    &lt;ul&gt;
-      &lt;li&gt;type of join where condition is equality&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Natural join:
-    &lt;ul&gt;
-      &lt;li&gt;it is an equijoin where attributes compared are same&lt;/li&gt;
-      &lt;li&gt;the result will not have repeating columns&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;outer-join--database-management-system&quot;&gt;Outer Join | Database Management System&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Left outer&lt;/li&gt;
-  &lt;li&gt;Right outer&lt;/li&gt;
-  &lt;li&gt;Full outer&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;division-operation-in-relational-algebra--database-management-system&quot;&gt;Division Operation in Relational Algebra | Database Management System&lt;/h3&gt;
-
-&lt;p&gt;If all is there you use division operator&lt;/p&gt;
-
-&lt;h3 id=&quot;illustration--what-will-be-the-total-number-of-conflicts-serializable-schedules--dbms&quot;&gt;Illustration | What will be the total number of conflicts serializable schedules? | DBMS&lt;/h3&gt;
-
-&lt;p&gt;Conflicting operations : RR, RW, WW&lt;/p&gt;
-
-&lt;h2 id=&quot;sql&quot;&gt;SQL&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/&quot;&gt;SQL Joins&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;INNER JOIN and JOIN are same&lt;/li&gt;
-  &lt;li&gt;left join contains everything from left&lt;/li&gt;
-  &lt;li&gt;right join has everything from right&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;combine-two-tables&quot;&gt;Combine Two Tables&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/combine-two-tables/&quot;&gt;Leetcode link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;mistakes&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;with joins you have to use &lt;code class=&quot;highlighter-rouge&quot;&gt;on&lt;/code&gt; and not &lt;code class=&quot;highlighter-rouge&quot;&gt;where&lt;/code&gt;. This &lt;a href=&quot;https://stackoverflow.com/a/354094/10114752&quot;&gt;answer&lt;/a&gt; summarizes it well.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;why is the below code incorrect?&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FirstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;City&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;State&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PersonId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PersonId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;the above is all the items in Person that are also in Address&lt;/p&gt;
-
-&lt;p&gt;question wants us to return the columns for each person in the table,whether he has an address or not&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySQL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;City&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;State&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Address&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PersonId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PersonId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;second-highest-salary&quot;&gt;Second Highest Salary&lt;/h2&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySQL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SecondHighestSalary&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;code below is WRONG, as it does not handle the null case&lt;/p&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;interesting question, share my understanding after reading some posts. Query #2 (the inner layer of #1) returns the value as empty string &quot;&quot; (it is still a value though empty).
-NULL, on the other hand is the absence of value or undefined. This happens when the outer layer select from an empty table throws NULL
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySQL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SecondHighestSalary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Desc&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;offset&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;the below case is correct&lt;/p&gt;
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Write&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySQL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;statement&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Desc&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;offset&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SecondHighestSalary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">DBMS Course</summary></entry><entry><title type="html">Probability: Learning concepts via problems [Draft]</title><link href="https://rohanrajpal.github.io/blog/deep%20learning/2020/07/05/probability-questions.html" rel="alternate" type="text/html" title="Probability: Learning concepts via problems [Draft]" /><published>2020-07-05T00:00:00-05:00</published><updated>2020-07-05T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/deep%20learning/2020/07/05/probability-questions</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/deep%20learning/2020/07/05/probability-questions.html">&lt;p&gt;A simple blog on me trying to brush up my probability concepts while preparing for data science companies.&lt;/p&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sanfoundry.com/1000-database-management-system-questions-answers/&quot;&gt;Topic wise DBMS questions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Concepts</summary></entry><entry><title type="html">Probability: Learning concepts via problems [Draft]</title><link href="https://rohanrajpal.github.io/blog/deep%20learning/2020/07/05/probability-questions.html" rel="alternate" type="text/html" title="Probability: Learning concepts via problems [Draft]" /><published>2020-07-05T00:00:00-05:00</published><updated>2020-07-05T00:00:00-05:00</updated><id>https://rohanrajpal.github.io/blog/deep%20learning/2020/07/05/probability-questions</id><content type="html" xml:base="https://rohanrajpal.github.io/blog/deep%20learning/2020/07/05/probability-questions.html">&lt;p&gt;A simple blog on me trying to brush up my probability concepts while preparing for data science companies.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/dalmia/Deep-Learning-Book-Chapter-Summaries&quot;&gt;https://github.com/dalmia/Deep-Learning-Book-Chapter-Summaries&lt;/a&gt;&lt;/p&gt;
 
