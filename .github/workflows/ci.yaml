@@ -51,11 +51,7 @@ jobs:
         cp CNAME _site/ 2>/dev/null || :
 
     - name: Deploy
-<<<<<<< HEAD
-      if: github.event_name	== 'push'
-=======
       if: github.event_name == 'push'
->>>>>>> template/master
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.SSH_DEPLOY_KEY }}
