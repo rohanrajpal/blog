@@ -8,11 +8,11 @@ permalink: /about/
 
 I'm a third-year CSE student at [IIITD](https://www.iiitd.ac.in/), a Google Summer of Code 2019 [student](https://summerofcode.withgoogle.com/archive/2019/projects/6144888880496640/) under [VideoLAN](https://www.videolan.org/index.html) and an intern at Expedia for Summer 2020.
 
-I have experience in Cloud (AWS,GCP,Spark,Vault), Frontend(Qt,HTML/CSS,Unity) and Database (MongoDB, Elasticsearch, SQL, Logstash).
+My expertise lies in Cloud (AWS,GCP,Spark,Vault), Frontend(Qt,HTML/CSS,Unity), Database (MongoDB, Elasticsearch, SQL, Logstash) and Deep Learning (mainly Computer Vision).
 
 Here is my [Resume](https://rohanrajpal.github.io/blog/resume/Rohan_Resume.pdf).
 
-### Notable Coursework
+### Notable Coursework at IIITD
 
 - Deep Learning
 - Wearable Applications, Research, Devices,
@@ -22,6 +22,7 @@ Interactions
 - Designing Human-Centered Systems
 - Analysis and Design of Algorithms
 - Database Management System
+- Advanced Programming
 - Discrete Maths
 - Operating Systems
 - Data Structures and Algorithms
