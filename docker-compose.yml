@@ -36,6 +36,4 @@ services:
       - .:/data/
     command: >
      bash -c "gem install bundler
-     && jekyll serve --trace --strict_front_matter"
      && chmod -R u+rwx . && jekyll serve --trace --strict_front_matter"
-
