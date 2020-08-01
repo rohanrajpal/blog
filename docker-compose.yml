@@ -28,7 +28,7 @@ services:
 
   jekyll:
     working_dir: /data
-    image: hamelsmu/fastpages-jekyll
+    image: jekyll/jekyll:4.0.1
     restart: unless-stopped
     ports:
       - "4000:4000"
@@ -37,4 +37,5 @@ services:
     command: >
      bash -c "gem install bundler
      && jekyll serve --trace --strict_front_matter"
+     && chmod -R u+rwx . && jekyll serve --trace --strict_front_matter"
 

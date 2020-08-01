@@ -47,6 +47,7 @@ minima:
 
 disqus:
   shortname: https-rohanrajpal-github-io
+
 # Set this to true to get LaTeX math equation support
 use_math: 
 

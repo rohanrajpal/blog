@@ -86,3 +86,7 @@ Many founders are scrappy and solve problems quickly with limited resources. Wha
 When the pandemic started, everyone had to work from home. For corporates and schools, this meant a massive increase in VPN use, leading to slower internet speeds. I had to connect to a VPN almost every time, and the slow VPN speeds significantly affected browsing and video call experience. I just wanted a way I can use the VPN only for the server. So I finally figured out a way to selectively use VPN only for servers and use other applications without any restrictions. I shared my approach in a blog with my friends, and they found it quite useful, I have been using this split VPN approach ever since then.
 
 [Here's the approach](https://rohanrajpal.github.io/blog/2020/04/25/Selective-network-routing.html)
+
+This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+
+[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.

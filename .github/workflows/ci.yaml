@@ -12,8 +12,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      
+    - name: Check if secret exists
+      if: github.event_name == 'push'
+      run: |
+        if [ -z "$deploy_key" ]
+        then
+          echo "You do not have a secret named SSH_DEPLOY_KEY.  This means you did not follow the setup instructions carefully.  Please try setting up your repo again with the right secrets."
+          exit 1;
+        fi
+      env:
+       deploy_key: ${{ secrets.SSH_DEPLOY_KEY }}
+          
+
     - name: Copy Repository Contents
-      uses: actions/checkout@master
+      uses: actions/checkout@main
       with:
         persist-credentials: false
 
@@ -38,7 +51,11 @@ jobs:
         cp CNAME _site/ 2>/dev/null || :
 
     - name: Deploy
+<<<<<<< HEAD
       if: github.event_name	== 'push'
+=======
+      if: github.event_name == 'push'
+>>>>>>> template/master
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.SSH_DEPLOY_KEY }}
