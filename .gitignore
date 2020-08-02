@@ -13,7 +13,6 @@ _notebooks/.ipynb_checkpoints
 __pycache__
 *.Identifier
 *.ini
-images/copied_from_nb/*
 _posts/2020-06-25-deep-learning-cheat-sheet.md
 _posts/2020-06-30-GAN-Triplet.md
 *.aux
