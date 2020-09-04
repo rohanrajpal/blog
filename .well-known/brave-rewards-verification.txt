@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: rohanrajpal.github.io
-Token: 05188f4badfb26b458160d8ea5b40dc47f4682b1276961516b4626d6b64416b2
+Token: 83151967f6da8ba9ca3b34a5bd65c4eddfdb138e4c6c2b25e25d4d58b5540161
