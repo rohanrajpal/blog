@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.com/" rel="alternate" type="text/html" /><updated>2020-11-29T12:51:07-06:00</updated><id>https://rohanrajpal.com/feed.xml</id><title type="html">Rohan Rajpal · Blog</title><subtitle>Read about Data Science · Programming · Design · Mobile</subtitle><entry><title type="html">OS Interview Prep Resources</title><link href="https://rohanrajpal.com/interview/2020/07/15/OS-interview-prep.html" rel="alternate" type="text/html" title="OS Interview Prep Resources" /><published>2020-07-15T00:00:00-05:00</published><updated>2020-07-15T00:00:00-05:00</updated><id>https://rohanrajpal.com/interview/2020/07/15/OS-interview-prep</id><content type="html" xml:base="https://rohanrajpal.com/interview/2020/07/15/OS-interview-prep.html">&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://rohanrajpal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rohanrajpal.com/" rel="alternate" type="text/html" /><updated>2020-11-29T13:00:52-06:00</updated><id>https://rohanrajpal.com/feed.xml</id><title type="html">Rohan Rajpal · Blog</title><subtitle>Read about Data Science · Programming · Design · Mobile</subtitle><entry><title type="html">OS Interview Prep Resources</title><link href="https://rohanrajpal.com/interview/2020/07/15/OS-interview-prep.html" rel="alternate" type="text/html" title="OS Interview Prep Resources" /><published>2020-07-15T00:00:00-05:00</published><updated>2020-07-15T00:00:00-05:00</updated><id>https://rohanrajpal.com/interview/2020/07/15/OS-interview-prep</id><content type="html" xml:base="https://rohanrajpal.com/interview/2020/07/15/OS-interview-prep.html">&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://nptel.ac.in/courses/106/102/106102132/&quot;&gt;NPTEL Link&lt;/a&gt;&lt;/li&gt;
@@ -442,7 +442,7 @@ This can be put back to S3. You can see how this data is in sync with Mongo data
 &lt;div class=&quot;cell border-box-sizing text_cell rendered&quot;&gt;&lt;div class=&quot;inner_cell&quot;&gt;
 &lt;div class=&quot;text_cell_render border-box-sizing rendered_html&quot;&gt;
 &lt;h2 id=&quot;What-will-I-get-from-this-blog?&quot;&gt;What will I get from this blog?&lt;a class=&quot;anchor-link&quot; href=&quot;#What-will-I-get-from-this-blog?&quot;&gt; &lt;/a&gt;&lt;/h2&gt;&lt;p&gt;By the end of this blog we'll be able to make a model that can generate the below numers from random noise&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/blog/images/copied_from_nb/images/gan/gan-diagram.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/copied_from_nb/images/gan/gan-diagram.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1718,7 +1718,7 @@ The paper presents an excellent motivation to improve unsupervised methods of le
 &lt;div class=&quot;text_cell_render border-box-sizing rendered_html&quot;&gt;
 &lt;p&gt;Having worked on Deep Learning for almost a year, I kept noting useful resources and snippets I used frequently. I've compiled all of them in one place below.
 &lt;strong&gt;Feel free to share some of your hacks/resources/snippets below. Leave a comment below, pull requests are welcome too!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/blog/images/copied_from_nb/images/dl-cheat-sheet.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/copied_from_nb/images/dl-cheat-sheet.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
