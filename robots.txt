@@ -1,1 +1,1 @@
-Sitemap: https://rohanrajpal.github.io/blog/sitemap.xml
+Sitemap: https://rohanrajpal.com/sitemap.xml
