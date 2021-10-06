@@ -15,19 +15,19 @@ gem "minima"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem 'jekyll-octicons'
+  gem 'jekyll-octicons', '>= 9.5.0'
   gem 'jekyll-remote-theme'
   gem "jekyll-twitter-plugin"
   gem 'jekyll-relative-links'
   gem 'jekyll-seo-tag'
-  gem 'jekyll-toc'
+  gem 'jekyll-toc', '>= 0.13.1'
   gem 'jekyll-gist'
   gem 'jekyll-paginate'
   gem 'jekyll-sitemap'
 end
 
 gem "kramdown-math-katex"
-gem "jemoji"
+gem "jemoji", ">= 0.12.0"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
